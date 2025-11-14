@@ -23,6 +23,7 @@ This repository showcases practical, modern exploit development and vulnerabilit
 ---
 
 ## 📂 Portfolio Structure
+```
 pentest-portfolio/
 ├── cloud-attacks/
 ├── web-app-attacks/
@@ -32,6 +33,7 @@ pentest-portfolio/
 ├── labs/
 ├── writeups/
 └── assets/diagrams/
+```
 
 Each directory contains:
 - A **technical writeup**
