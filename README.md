@@ -1,4 +1,4 @@
-balajrmz  — Offensive Security Engineering Portfolio
+Jan  — Offensive Security Engineering Portfolio
 
 **Penetration Testing | Cloud Security | Application Security | Automation | OSCP (In Progress)**
 
