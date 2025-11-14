@@ -8,10 +8,8 @@ app = Flask(__name__)
 SECRET_KEY = "secret123"
 
 # Mock user database
-USERS = {
-    "jan": {"password": "password123", "role": "user"},
-    "admin": {"password": "admin123", "role": "admin"}
-}
+USERNAME = "jan"
+PASSWORD = "password123"
 
 @app.route("/login", methods=["POST"])
 def login():
