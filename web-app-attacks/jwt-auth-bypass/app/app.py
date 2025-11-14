@@ -4,28 +4,36 @@ import datetime
 
 app = Flask(__name__)
 
-# ⚠️ INTENTIONALLY WEAK SECRET FOR LAB PURPOSES
+# ⚠️ INTENTIONALLY WEAK SECRET FOR LAB PURPOSES (for the exploit)
 SECRET_KEY = "secret123"
 
-# Mock user database
-USERNAME = "jan"
-PASSWORD = "password123"
+# Mock user database for the lab
+USERS = {
+    "jan":   {"password": "password123", "role": "user"},
+    "admin": {"password": "admin123",   "role": "admin"},
+}
 
 @app.route("/login", methods=["POST"])
 def login():
-    data = request.json
+    # Be defensive about JSON parsing so we don't 500
+    data = request.get_json(silent=True) or {}
+
     username = data.get("username")
     password = data.get("password")
 
-    if username in USERS and USERS[username]["password"] == password:
+    if not username or not password:
+        return jsonify({"message": "Missing username or password"}), 400
+
+    user = USERS.get(username)
+    if user and user["password"] == password:
         token = jwt.encode(
             {
                 "username": username,
-                "role": USERS[username]["role"],
-                "exp": datetime.datetime.utcnow() + datetime.timedelta(minutes=30)
+                "role": user["role"],
+                "exp": datetime.datetime.utcnow() + datetime.timedelta(minutes=30),
             },
             SECRET_KEY,
-            algorithm="HS256"
+            algorithm="HS256",
         )
         return jsonify({"token": token})
 
