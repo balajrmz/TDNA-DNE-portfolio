@@ -1,83 +1,77 @@
-🚀 SentinelFlow
+# 🚀 SentinelFlow  
+**AI-Driven Network Threat Detection Pipeline**  
+*(Synthetic Network Traffic → Feature Engineering → ML Model → FastAPI Inference API)*
 
-AI-Driven Network Threat Detection Pipeline
-(Synthetic Network Traffic → Feature Engineering → ML Model → FastAPI Inference API)
+---
 
-📌 Overview
+## 📌 Overview
 
-SentinelFlow is an end-to-end, AI-powered cybersecurity lab project designed to simulate real SOC workflows:
+**SentinelFlow** is an end-to-end, AI-powered cybersecurity lab project designed to simulate real SOC detection pipelines. It:
 
-Generate synthetic network flow logs
+1. Generates synthetic network traffic  
+2. Engineers ML features  
+3. Trains a RandomForest threat-detection model  
+4. Saves model + metrics for reproducibility  
+5. Serves real-time predictions through FastAPI  
 
-Engineer ML features
+This mirrors how modern EDR/SIEM enrichment engines and ML-driven detections work inside enterprise environments.
 
-Train a baseline threat-detection model
+---
 
-Export the trained model + metrics
+## ✨ Key Features
 
-Serve real-time predictions via a FastAPI microservice
+### 🔹 Synthetic Network Traffic Generator
+Creates realistic flow-style events including:
 
-This design mirrors how modern cloud-native detection pipelines operate inside enterprise SOCs.
+- Normal internal → external movement  
+- Port scans  
+- DoS-like “bursty” traffic  
+- TCP / UDP / ICMP  
+- Common port distribution: 22, 80, 443, 3306, 8080, etc.
 
-✨ Key Features
-🔹 Synthetic Network Traffic Generator
+Enables safe experimentation without exposing private logs.
 
-Creates realistic flow-style events using randomized patterns:
+---
 
-Internal → External movement
+### 🔹 Feature Engineering
 
-Common ports (22, 80, 443, 3306, 8080…)
+SentinelFlow produces consistent, ML-ready feature vectors using:
 
-Protocols: TCP / UDP / ICMP
+- `bytes_in`, `bytes_out`, `packet_count`
+- Derived metrics (`byte_ratio`, burst patterns)
+- One-hot encoded:
+  - Protocol  
+  - Destination port
 
-“Normal” vs. “Scan” vs. “DoS-like” patterns
+These engineered features match the type of numeric embeddings used in cloud security ML pipelines.
 
-This avoids the need for production logs while producing rich training data.
+---
 
-🔹 Feature Engineering
+### 🔹 Model Training
 
-SentinelFlow builds ML-ready features using:
+Uses `RandomForestClassifier` for stable, interpretable multi-class classification.
 
-bytes_in, bytes_out, packet_count
+Artifacts saved under `data/processed`:
 
-Derived metrics like:
+- `model.joblib` – serialized trained model  
+- `report.json` – metrics + diagnostics  
+- `feature_columns.json` – **persisted feature ordering**  
 
-byte_ratio (bytes_in / bytes_out)
+Persisting the training-time feature order eliminates schema drift between training and inference.
 
-traffic_burst patterns
+---
 
-One-hot encodings for:
+### 🔹 FastAPI Inference Service
 
-Protocol
+The API exposes:
 
-Destination port
+#### `GET /health`
+Simple health probe.
 
-All preprocessing steps are consistent across training and inference.
+#### `POST /predict`
+Example input:
 
-🔹 Model Training
-
-Uses RandomForestClassifier for interpretable, low-variance detection.
-
-Outputs include:
-
-model.joblib – serialized model
-
-report.json – metrics & evaluation summary
-
-feature_columns.json – persisted training-time feature ordering (critical for inference)
-
-🔹 API Service (FastAPI + Uvicorn)
-
-An inference microservice exposes:
-
-GET /health
-
-Quick health/status probe.
-
-POST /predict
-
-Accepts lightweight JSON network events:
-
+```json
 {
   "bytes_in": 10000,
   "bytes_out": 500,
@@ -85,20 +79,24 @@ Accepts lightweight JSON network events:
   "protocol": "TCP",
   "dst_port": 22
 }
+```
 
+Example output:
 
-Returns:
-
+```json
 {
   "prediction": "scan",
   "confidence": 0.99
 }
+```
 
-🧠 Architecture Diagram
-Synthetic Data  →  Feature Engineering  →  RandomForest Model  →  FastAPI Service
-    generator        (one-hot, ratios)         (trained)           (/predict)
+Ideal for integration into SIEM alert enrichment or lab simulations.
 
-🏗️ Project Structure
+---
+
+## 🏗️ Project Structure
+
+```
 sentinelflow/
 │
 ├── api.py                  # FastAPI inference service
@@ -108,69 +106,98 @@ sentinelflow/
 ├── pipeline.py             # Training pipeline
 │
 ├── data/
-│   ├── raw/                # Synthetic CSVs
+│   ├── raw/                # Synthetic generated CSVs
 │   └── processed/
 │       ├── model.joblib
 │       ├── report.json
 │       └── feature_columns.json
 │
 └── tests/
-    └── test_pipeline.py    # Basic tests (placeholder)
+    └── test_pipeline.py    # Future test suite
+```
 
-🏃 How to Run
-1️⃣ Create a virtual environment
+---
+
+## 🏃 How to Run
+
+### 1️⃣ Create a virtual environment
+
+```bash
 python -m venv .venv
+```
 
+Activate:
 
-Activate it:
-
-PowerShell
-
+**PowerShell**
+```bash
 . .venv\Scripts\Activate.ps1
+```
 
-2️⃣ Install requirements
+---
+
+### 2️⃣ Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-3️⃣ Train the Model
+---
+
+### 3️⃣ Train the model
+
+```bash
 python -m sentinelflow.pipeline
+```
 
+This generates:
 
-Outputs appear under:
-
-data/processed/
-
-4️⃣ Start the API
-uvicorn sentinelflow.api:app --reload
-
-
-Navigate to:
-
-http://127.0.0.1:8000/docs
-
-
-Use SwaggerUI to test predictions.
-
-📝 Design Notes / Engineering Decisions
-
-Feature mismatch prevention
-Real ML systems often crash when inference-time features don’t match training.
-SentinelFlow solves this by saving training column order to:
-
+```
+data/processed/model.joblib
+data/processed/report.json
 data/processed/feature_columns.json
+```
 
+---
 
-Incoming requests are reindexed to this schema before prediction.
+### 4️⃣ Start the API
 
-Synthetic data generation
-Enables repeatable tests without exposing private logs.
+```bash
+uvicorn sentinelflow.api:app --reload
+```
 
-Lightweight, SOC-style architecture
-The project mimics real-world detection pipelines used in EDR/SIEM engines.
+Then open:
 
-FastAPI for modern microservices
-Production-ready async server, easily containerized.
+```
+http://127.0.0.1:8000/docs
+```
 
-📈 Example Output (report.json)
+Use the built-in Swagger UI to send predictions.
+
+---
+
+## 🧠 Engineering Decisions
+
+- **Feature mismatch protection**  
+  A common ML failure mode occurs when inference-time input columns don’t match training-time one-hot encodings.  
+  SentinelFlow solves this by saving the training-time feature column list to:  
+
+  ```
+  data/processed/feature_columns.json
+  ```
+
+  The inference pipeline **reindexes** incoming data to match this schema.
+
+- **Synthetic data for safe experimentation**  
+  Avoids sensitive log exposure while enabling repeatable lab experiments.
+
+- **Microservice architecture**  
+  FastAPI mirrors modern SOC/EDR inference microservices and is easy to deploy via Docker/Kubernetes.
+
+---
+
+## 📈 Example `report.json`
+
+```json
 {
   "model": "RandomForestClassifier",
   "samples": 5000,
@@ -180,33 +207,23 @@ Production-ready async server, easily containerized.
     "recall": 0.92
   }
 }
+```
 
-🐳 Docker (Optional Future Addition)
+---
 
-I can generate a complete Dockerfile + docker-compose for this project on request.
-This would allow:
+## 🔮 Roadmap
 
-Containerized training
+- [ ] Add additional attack patterns (SSH brute force, DNS tunneling)  
+- [ ] Add SHAP model explainability  
+- [ ] Add retraining scheduler  
+- [ ] Add Grafana dashboard for inference telemetry  
+- [ ] Build Docker container + optional Kubernetes manifest  
 
-Containerized inference
+---
 
-API deployment to cloud / Kubernetes
+## 👤 Author
 
-🔮 Roadmap
+**Jan Zabala**  
+Offensive Security • Cloud Security • AI  
+Part of the *pentest-portfolio* project.
 
- Expand synthetic dataset (SSH brute force, DNS tunneling)
-
- Add SHAP explainability
-
- Add model retraining scheduler
-
- Build Grafana dashboard for prediction telemetry
-
- Containerize with Docker
-
-👤 Author
-
-Jan Zabala — Offensive Security Engineering • Cloud • AI
-Part of the pentest-portfolio project.
-
-If you want, I can also:
