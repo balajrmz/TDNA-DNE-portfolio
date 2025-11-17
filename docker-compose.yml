@@ -1,7 +1,0 @@
-version: "3.9"
-services:
-  jwt-lab:
-    build: ./web-app-attacks/jwt-auth-bypass/app
-    ports:
-      - "5000:5000"
-    container_name: jwt_lab
