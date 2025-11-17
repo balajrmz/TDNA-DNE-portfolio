@@ -1,0 +1,33 @@
+{
+  "dos": {
+    "precision": 0.7272727272727273,
+    "recall": 0.6,
+    "f1-score": 0.6575342465753424,
+    "support": 40.0
+  },
+  "normal": {
+    "precision": 0.9823594266813671,
+    "recall": 0.99,
+    "f1-score": 0.9861649142224682,
+    "support": 900.0
+  },
+  "scan": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 60.0
+  },
+  "accuracy": 0.975,
+  "macro avg": {
+    "precision": 0.9032107179846981,
+    "recall": 0.8633333333333333,
+    "f1-score": 0.8812330535992702,
+    "support": 1000.0
+  },
+  "weighted avg": {
+    "precision": 0.9732143931041395,
+    "recall": 0.975,
+    "f1-score": 0.9738497926632351,
+    "support": 1000.0
+  }
+}

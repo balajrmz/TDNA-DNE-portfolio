@@ -1,0 +1,12 @@
+[
+  "bytes_in",
+  "bytes_out",
+  "packet_count",
+  "byte_ratio",
+  "protocol_UDP",
+  "dst_port_53",
+  "dst_port_80",
+  "dst_port_443",
+  "dst_port_3389",
+  "dst_port_8080"
+]
