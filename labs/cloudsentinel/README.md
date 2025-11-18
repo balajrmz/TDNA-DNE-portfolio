@@ -3,6 +3,7 @@
 CloudSentinel is a hybrid security analysis engine that inspects AWS IAM policies and cloud configuration JSON to detect over-permissive access, privilege escalation paths, wildcard abuses, and ML-predicted risk levels. It combines deterministic rule-based detection with a machine learning classifier, similar to real CSPM platforms like Wiz, Lacework, and Panther. CloudSentinel is part of my Offensive Security Engineering Portfolio.
 
 ## Project Structure
+```
 cloudsentinel/
 │
 ├── cloudsentinel/
@@ -24,7 +25,7 @@ cloudsentinel/
 │
 ├── README.md
 └── requirements.txt
-
+```
 ## Installation
 
 1. Clone the repository:
