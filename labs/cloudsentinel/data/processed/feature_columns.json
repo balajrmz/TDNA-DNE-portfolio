@@ -1,0 +1,13 @@
+[
+  "num_statements",
+  "num_findings",
+  "num_low",
+  "num_medium",
+  "num_high",
+  "num_critical",
+  "has_wildcard_action",
+  "has_wildcard_resource",
+  "has_high_risk_wildcard",
+  "has_priv_esc_pattern",
+  "has_admin_like_action"
+]

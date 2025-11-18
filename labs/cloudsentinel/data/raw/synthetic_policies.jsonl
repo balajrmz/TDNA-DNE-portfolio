@@ -1,0 +1,200 @@
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["sts:AssumeRole"], "Resource": "arn:aws:iam::111122223333:role/ReadOnlyRole"}, {"Effect": "Allow", "Action": ["s3:ListBucket"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iam:PassRole", "ec2:RunInstances"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["*"], "Resource": "*"}, {"Effect": "Allow", "Action": ["iam:*"], "Resource": "*"}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
+{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["s3:GetObject", "logs:DescribeLogGroups", "logs:GetLogEvents"], "Resource": ["arn:aws:s3:::example-bucket/*", "arn:aws:logs:us-east-1:111122223333:log-group:example-group:*"]}]}
