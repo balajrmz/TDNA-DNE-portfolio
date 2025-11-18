@@ -30,36 +30,45 @@ cloudsentinel/
 
 1. Clone the repository:
 git clone https://github.com/balajrmz/pentest-portfolio.git
+```
 cd labs/cloudsentinel
-
+```
 2. Create a virtual environment:
+```
 python -m venv .venv
-
+```
 3. Activate it (Windows PowerShell):
+```
 .venv\Scripts\Activate.ps1
-
+```
 4. Install dependencies:
+```
 pip install -r requirements.txt
-
+```
 ## Training the ML Model (Optional)
+```
 python -m cloudsentinel.pipeline
+```
 This creates:
 - model.joblib
 - processed feature data
 - synthetic training report
 
 ## Running the API
+```
 uvicorn cloudsentinel.api:app --reload
-
+```
 Open Swagger UI:
+```
 http://127.0.0.1:8000/docs
-
+```
 ## Endpoints
 
 ### GET /health
 Response:
+```
 { "status": "ok" }
-
+```
 ### POST /analyze
 ```
 Example input:
