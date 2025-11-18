@@ -61,6 +61,7 @@ Response:
 { "status": "ok" }
 
 ### POST /analyze
+```
 Example input:
 {
   "policy": {
@@ -104,7 +105,7 @@ Example output:
     }
   }
 }
-
+```
 ## How CloudSentinel Works
 
 Rule Engine:
