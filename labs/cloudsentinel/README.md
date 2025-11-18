@@ -29,7 +29,7 @@ cloudsentinel/
 ## Installation
 
 1. Clone the repository:
-git clone https://github.com/YOUR-USERNAME/pentest-portfolio.git
+git clone https://github.com/balajrmz/pentest-portfolio.git
 cd labs/cloudsentinel
 
 2. Create a virtual environment:
