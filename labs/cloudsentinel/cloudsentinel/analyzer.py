@@ -1,341 +1,183 @@
 """
-CloudSentinel rule engine.
+CloudSentinel analyzer.
 
 In plain English:
-- This file contains the "if this, then that" logic for risky IAM policies.
-- It does NOT do machine learning – it just applies security best-practice checks.
-- The analyzer and API will call these functions to get a list of issues.
+- This file glues everything together for a single IAM policy.
+- It runs the rule engine, summarizes the findings, calculates a simple
+  risk score, and builds numeric "features" that a machine learning model
+  can use later.
 
-We treat each check as a "rule" that can produce one or more findings.
+The API layer will call analyze_policy() and return that result as JSON.
 """
 
 from __future__ import annotations
 
-from dataclasses import dataclass
-from typing import Any, Dict, List, Iterable, Set
+from dataclasses import asdict
+from typing import Any, Dict, List, Tuple
+
+from .rules import Finding, evaluate_policy
 
 
 # -----------------------------
-# Data structures
+# Risk scoring helpers
 # -----------------------------
 
+# Basic numeric weights for each severity level.
+# These are intentionally simple and easy to explain in an interview.
+SEVERITY_WEIGHTS: Dict[str, int] = {
+    "low": 1,
+    "medium": 2,
+    "high": 3,
+    "critical": 4,
+}
 
-@dataclass
-class Finding:
+
+def _score_findings(findings: List[Finding]) -> Tuple[int, str]:
     """
-    Simple container for a single rule result.
+    Convert a list of findings into:
+    - an integer "risk score"
+    - a human-friendly risk level (none / low / medium / high / critical)
 
     In plain English:
-    - rule_id: short code so we know which rule fired (e.g., R01_WILDCARD_ACTION)
-    - severity: how bad this is from a risk perspective (low / medium / high / critical)
-    - message: explanation a human can read
-    - location: where we saw the problem (e.g., "Statement[0]" or "Resource: *")
+    - Each finding adds points based on severity.
+    - We sum those points and map them into a simple risk bucket.
     """
+    score = 0
+    for f in findings:
+        score += SEVERITY_WEIGHTS.get(f.severity.lower(), 1)
 
-    rule_id: str
-    severity: str
-    message: str
-    location: str | None = None
-
-
-# Some services are more sensitive than others. Wildcards here are especially scary.
-HIGH_RISK_SERVICES: Set[str] = {"iam", "kms", "sts", "organizations"}
-
-# Small set of actions used in common privilege escalation paths.
-PASSROLE_ACTION = "iam:PassRole"
-ASSUME_ROLE_ACTION = "sts:AssumeRole"
-EC2_RUN_INSTANCES = "ec2:RunInstances"
-LAMBDA_CREATE_FUNCTION = "lambda:CreateFunction"
-LAMBDA_UPDATE_FUNCTION = "lambda:UpdateFunctionCode"
-
-
-# -----------------------------
-# Helper functions
-# -----------------------------
-
-
-def _to_list(value: Any) -> List[Any]:
-    """
-    Normalize IAM JSON fields to a list.
-
-    AWS allows "Action" and "Resource" to be either:
-    - a single string, or
-    - a list of strings
-
-    This helper makes life easier by always returning a list.
-    """
-    if value is None:
-        return []
-    if isinstance(value, list):
-        return value
-    return [value]
-
-
-def _extract_actions(statement: Dict[str, Any]) -> List[str]:
-    """Return a list of actions from a single policy statement."""
-    return [str(a) for a in _to_list(statement.get("Action"))]
-
-
-def _extract_resources(statement: Dict[str, Any]) -> List[str]:
-    """Return a list of resources from a single policy statement."""
-    return [str(r) for r in _to_list(statement.get("Resource"))]
-
-
-def _service_prefix(action: str) -> str:
-    """
-    Return the service part of an action, e.g.:
-
-        "iam:PassRole" -> "iam"
-        "s3:PutObject" -> "s3"
-
-    If the action is just "*" we return "*" to indicate "all services".
-    """
-    if ":" not in action:
-        return action
-    return action.split(":", 1)[0]
-
-
-# -----------------------------
-# Rule implementations
-# -----------------------------
-
-
-def rule_wildcard_action(actions: Iterable[str], location: str) -> List[Finding]:
-    """
-    R01: Flag wildcard actions.
-
-    In plain English:
-    - If an IAM policy says "Action": "*" or "iam:*", it means "do anything".
-    - That's usually NOT what you want and is almost always over-privileged.
-    """
-    findings: List[Finding] = []
-
-    for action in actions:
-        # Exact wildcard: "*"
-        if action == "*":
-            findings.append(
-                Finding(
-                    rule_id="R01_WILDCARD_ACTION",
-                    severity="critical",
-                    message='Policy allows all actions: "Action": "*"',
-                    location=location,
-                )
-            )
-            continue
-
-        # Service-wide wildcard: "iam:*", "s3:*", etc.
-        if action.endswith(":*"):
-            service = _service_prefix(action)
-            severity = "high" if service in HIGH_RISK_SERVICES else "medium"
-            findings.append(
-                Finding(
-                    rule_id="R01_WILDCARD_ACTION",
-                    severity=severity,
-                    message=f'Policy allows all actions for service "{service}:*"',
-                    location=location,
-                )
-            )
-
-    return findings
-
-
-def rule_wildcard_resource(resources: Iterable[str], location: str) -> List[Finding]:
-    """
-    R02: Flag wildcard resources.
-
-    In plain English:
-    - "Resource": "*" means "this permission applies to every resource".
-    - That can be okay for some read-only policies, but in general it's risky,
-      especially when combined with write or admin actions.
-    """
-    findings: List[Finding] = []
-
-    for res in resources:
-        if res == "*" or res.strip() == "*":
-            findings.append(
-                Finding(
-                    rule_id="R02_WILDCARD_RESOURCE",
-                    severity="high",
-                    message='Policy applies to all resources: "Resource": "*"',
-                    location=location,
-                )
-            )
-
-    return findings
-
-
-def rule_high_risk_service_wildcard(actions: Iterable[str], location: str) -> List[Finding]:
-    """
-    R03: High-risk service wildcards.
-
-    In plain English:
-    - This is a more focused version of the wildcard rule.
-    - If we see "iam:*", "kms:*", "sts:*", etc., we call that out separately because
-      those services control identity, keys, or cross-account access.
-    """
-    findings: List[Finding] = []
-
-    for action in actions:
-        if not action.endswith(":*"):
-            continue
-        service = _service_prefix(action)
-        if service in HIGH_RISK_SERVICES:
-            findings.append(
-                Finding(
-                    rule_id="R03_HIGH_RISK_WILDCARD",
-                    severity="critical",
-                    message=f'High-risk wildcard detected: "{action}"',
-                    location=location,
-                )
-            )
-
-    return findings
-
-
-def rule_privilege_escalation_patterns(actions: Iterable[str], location: str) -> List[Finding]:
-    """
-    R04: Look for simple privilege escalation patterns.
-
-    In plain English:
-    - Some combinations of actions are known to be dangerous together.
-    - Example: if a user can both PassRole and RunInstances, they may be able
-      to attach a more privileged role to a new instance and "become" admin.
-
-    This is not a complete list, but it shows the idea.
-    """
-    actions_set = {a.lower() for a in actions}
-    findings: List[Finding] = []
-
-    has_passrole = PASSROLE_ACTION.lower() in actions_set
-    has_assumerole = ASSUME_ROLE_ACTION.lower() in actions_set
-    has_ec2_run = EC2_RUN_INSTANCES.lower() in actions_set
-    has_lambda_create = LAMBDA_CREATE_FUNCTION.lower() in actions_set
-    has_lambda_update = LAMBDA_UPDATE_FUNCTION.lower() in actions_set
-
-    # PassRole + EC2:RunInstances
-    if has_passrole and has_ec2_run:
-        findings.append(
-            Finding(
-                rule_id="R04_PRIV_ESC_PASSROLE_EC2",
-                severity="high",
-                message=(
-                    "Policy allows iam:PassRole and ec2:RunInstances. "
-                    "This combination can enable privilege escalation by launching "
-                    "instances with more privileged roles."
-                ),
-                location=location,
-            )
-        )
-
-    # PassRole + Lambda function management
-    if has_passrole and (has_lambda_create or has_lambda_update):
-        findings.append(
-            Finding(
-                rule_id="R04_PRIV_ESC_PASSROLE_LAMBDA",
-                severity="high",
-                message=(
-                    "Policy allows iam:PassRole and Lambda function management. "
-                    "This combination can enable privilege escalation by attaching "
-                    "privileged roles to Lambda functions."
-                ),
-                location=location,
-            )
-        )
-
-    # sts:AssumeRole by itself is not automatically bad, but we mark it for review.
-    if has_assumerole:
-        findings.append(
-            Finding(
-                rule_id="R04_ASSUME_ROLE_REVIEW",
-                severity="medium",
-                message=(
-                    "Policy allows sts:AssumeRole. Risk depends on which roles "
-                    "are assumable and their privileges."
-                ),
-                location=location,
-            )
-        )
-
-    return findings
-
-
-def rule_admin_like_actions(actions: Iterable[str], location: str) -> List[Finding]:
-    """
-    R05: Generic "looks like admin" rule.
-
-    In plain English:
-    - We look for patterns that usually appear in Administrator-style policies,
-      such as 'AdministratorAccess', 'PowerUser', or 'FullAccess' in action names.
-    - This is a heuristic, not a perfect check.
-    """
-    findings: List[Finding] = []
-    keywords = ("AdministratorAccess", "FullAccess", "PowerUser")
-
-    for action in actions:
-        if any(kw.lower() in action.lower() for kw in keywords):
-            findings.append(
-                Finding(
-                    rule_id="R05_ADMIN_LIKE_ACTION",
-                    severity="high",
-                    message=f'Action "{action}" looks like an admin or full-access permission.',
-                    location=location,
-                )
-            )
-
-    return findings
-
-
-# -----------------------------
-# Top-level API
-# -----------------------------
-
-
-def evaluate_statement(statement: Dict[str, Any], index: int) -> List[Finding]:
-    """
-    Run all rules against a single IAM statement.
-
-    In plain English:
-    - Take one JSON statement from the policy.
-    - Extract actions and resources.
-    - Run each rule.
-    - Return a list of findings for that statement.
-    """
-    location = f"Statement[{index}]"
-    actions = _extract_actions(statement)
-    resources = _extract_resources(statement)
-
-    findings: List[Finding] = []
-    findings.extend(rule_wildcard_action(actions, location))
-    findings.extend(rule_wildcard_resource(resources, location))
-    findings.extend(rule_high_risk_service_wildcard(actions, location))
-    findings.extend(rule_privilege_escalation_patterns(actions, location))
-    findings.extend(rule_admin_like_actions(actions, location))
-
-    return findings
-
-
-def evaluate_policy(policy: Dict[str, Any]) -> List[Finding]:
-    """
-    Run all rules against an entire IAM policy document.
-
-    In plain English:
-    - AWS policies have a top-level "Statement" key which can be:
-        * a single object, or
-        * a list of objects.
-    - We normalize that to a list and run evaluate_statement() on each one.
-    """
-    raw_statements = policy.get("Statement", [])
-    statements: List[Dict[str, Any]]
-
-    if isinstance(raw_statements, dict):
-        # Single statement case
-        statements = [raw_statements]
+    # Map the numeric score into a risk level.
+    if score == 0:
+        level = "none"
+    elif score <= 3:
+        level = "low"
+    elif score <= 7:
+        level = "medium"
+    elif score <= 12:
+        level = "high"
     else:
-        statements = list(raw_statements)
+        level = "critical"
 
-    all_findings: List[Finding] = []
-    for idx, stmt in enumerate(statements):
-        all_findings.extend(evaluate_statement(stmt, idx))
+    return score, level
 
-    return all_findings
 
+# -----------------------------
+# Feature extraction
+# -----------------------------
+
+
+def _build_features(findings: List[Finding], num_statements: int) -> Dict[str, Any]:
+    """
+    Build a small numeric feature vector from the findings.
+
+    In plain English:
+    - We count how many findings we have at each severity.
+    - We set flags for specific rule types (wildcards, priv-esc, etc.).
+    - This can be used later by a machine learning model or for reporting.
+    """
+    features: Dict[str, Any] = {
+        "num_statements": num_statements,
+        "num_findings": len(findings),
+        "num_low": 0,
+        "num_medium": 0,
+        "num_high": 0,
+        "num_critical": 0,
+        # Flags for specific categories of rules.
+        "has_wildcard_action": 0,
+        "has_wildcard_resource": 0,
+        "has_high_risk_wildcard": 0,
+        "has_priv_esc_pattern": 0,
+        "has_admin_like_action": 0,
+    }
+
+    for f in findings:
+        sev = f.severity.lower()
+        if sev in ("low", "medium", "high", "critical"):
+            key = f"num_{sev}"
+            features[key] += 1
+
+        # Use rule_id prefixes to set category flags.
+        if f.rule_id.startswith("R01_WILDCARD_ACTION"):
+            features["has_wildcard_action"] = 1
+        elif f.rule_id.startswith("R02_WILDCARD_RESOURCE"):
+            features["has_wildcard_resource"] = 1
+        elif f.rule_id.startswith("R03_HIGH_RISK_WILDCARD"):
+            features["has_high_risk_wildcard"] = 1
+        elif f.rule_id.startswith("R04_PRIV_ESC_") or f.rule_id.startswith("R04_ASSUME_ROLE"):
+            features["has_priv_esc_pattern"] = 1
+        elif f.rule_id.startswith("R05_ADMIN_LIKE_ACTION"):
+            features["has_admin_like_action"] = 1
+
+    return features
+
+
+# -----------------------------
+# Public analyzer API
+# -----------------------------
+
+
+def analyze_policy(policy: Dict[str, Any], include_features: bool = True) -> Dict[str, Any]:
+    """
+    Analyze a single IAM policy document.
+
+    Steps in plain English:
+    1. Run the rule engine against the policy.
+    2. Calculate a numeric risk score and risk level.
+    3. Build a simplified list of findings that can be returned as JSON.
+    4. Optionally build a features dict for ML or further analysis.
+
+    Returns a JSON-serializable dict, for example:
+
+    {
+        "risk_level": "high",
+        "risk_score": 11,
+        "num_statements": 2,
+        "findings": [
+            {
+                "rule_id": "R01_WILDCARD_ACTION",
+                "severity": "critical",
+                "message": "Policy allows all actions: \"Action\": \"*\"",
+                "location": "Statement[0]"
+            },
+            ...
+        ],
+        "features": {
+            "num_statements": 2,
+            "num_findings": 4,
+            "num_low": 0,
+            "num_medium": 1,
+            "num_high": 1,
+            "num_critical": 2,
+            "has_wildcard_action": 1,
+            ...
+        }
+    }
+    """
+    # Run the rules over the policy and collect all findings.
+    findings: List[Finding] = evaluate_policy(policy)
+
+    # Count how many statements we have for context.
+    raw_statements = policy.get("Statement", [])
+    if isinstance(raw_statements, dict):
+        num_statements = 1
+    else:
+        num_statements = len(raw_statements)
+
+    # Score findings and get overall risk level.
+    risk_score, risk_level = _score_findings(findings)
+
+    # Convert Finding dataclasses to plain dicts so they can be serialized to JSON.
+    findings_payload = [asdict(f) for f in findings]
+
+    result: Dict[str, Any] = {
+        "risk_level": risk_level,
+        "risk_score": risk_score,
+        "num_statements": num_statements,
+        "num_findings": len(findings),
+        "findings": findings_payload,
+    }
+
+    if include_features:
+        result["features"] = _build_features(findings, num_statements)
+
+    return result
