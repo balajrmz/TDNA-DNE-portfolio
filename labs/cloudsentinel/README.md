@@ -1,22 +1,8 @@
-CloudSentinel — AI-Powered Cloud IAM & Policy Analyzer
+# CloudSentinel — AI-Powered Cloud IAM & Policy Analyzer
 
-CloudSentinel is a hybrid security analysis engine that inspects AWS IAM policies and cloud configuration JSON to detect:
+CloudSentinel is a hybrid security analysis engine that inspects AWS IAM policies and cloud configuration JSON to detect over-permissive access, privilege escalation paths, wildcard abuses, and ML-predicted risk levels. It combines deterministic rule-based detection with a machine learning classifier, similar to real CSPM platforms like Wiz, Lacework, and Panther. CloudSentinel is part of my Offensive Security Engineering Portfolio.
 
-Over-permissive access
-
-Privilege escalation paths
-
-Dangerous action combinations
-
-Wildcard abuses
-
-ML-predicted risk levels
-
-It combines deterministic rule-based detection with a machine learning classifier, similar to real CSPM platforms like Wiz, Lacework, and Panther.
-
-CloudSentinel is part of my Offensive Security Engineering Portfolio.
-
-Project Structure
+## Project Structure
 cloudsentinel/
 │
 ├── cloudsentinel/
@@ -39,54 +25,42 @@ cloudsentinel/
 ├── README.md
 └── requirements.txt
 
-Installation
-1. Clone the repository
+## Installation
+
+1. Clone the repository:
 git clone https://github.com/YOUR-USERNAME/pentest-portfolio.git
 cd labs/cloudsentinel
 
-2. Create a virtual environment
+2. Create a virtual environment:
 python -m venv .venv
 
-3. Activate it
-
-Windows PowerShell:
-
+3. Activate it (Windows PowerShell):
 .venv\Scripts\Activate.ps1
 
-4. Install dependencies
+4. Install dependencies:
 pip install -r requirements.txt
 
-Training the ML Model (Optional)
+## Training the ML Model (Optional)
 python -m cloudsentinel.pipeline
-
-
 This creates:
+- model.joblib
+- processed feature data
+- synthetic training report
 
-model.joblib
-
-Processed feature data
-
-Synthetic training report
-
-Running the API
+## Running the API
 uvicorn cloudsentinel.api:app --reload
 
-
 Open Swagger UI:
-
 http://127.0.0.1:8000/docs
 
-Endpoints
-GET /health
+## Endpoints
 
+### GET /health
 Response:
-
 { "status": "ok" }
 
-POST /analyze
-
+### POST /analyze
 Example input:
-
 {
   "policy": {
     "Version": "2012-10-17",
@@ -100,9 +74,7 @@ Example input:
   }
 }
 
-
 Example output:
-
 {
   "rule_based": {
     "risk_level": "medium",
@@ -132,71 +104,45 @@ Example output:
   }
 }
 
-How CloudSentinel Works
-Rule Engine
+## How CloudSentinel Works
 
-Detects:
+Rule Engine:
+- Detects wildcard resources (*)
+- Detects dangerous action combinations
+- Detects privilege escalation paths
+- Detects known misconfigurations
 
-Wildcard resources (*)
+ML Engine:
+- Uses synthetic IAM datasets
+- Trains a RandomForest classifier
+- Predicts risk categories (critical / medium / none)
 
-Dangerous action combinations
+This combines rule-based and ML detection into one engine.
 
-Privilege escalation paths
+## Why This Project Matters
 
-Known misconfigurations
-
-ML Engine
-
-Uses synthetic IAM datasets to train a RandomForest classifier that predicts:
-
-critical
-
-medium
-
-none
-
-It combines traditional rule analysis with data-driven ML predictions.
-
-Why This Project Matters
-
-Demonstrates skills in:
-
-Python automation
-
-FastAPI backend development
-
-Cloud IAM security
-
-ML model development
-
-Rule-based detection logic
-
-Testing (pytest style)
-
-Real-world security tool design
+Demonstrates:
+- Python automation
+- FastAPI backend development
+- Cloud IAM security
+- ML pipeline development
+- Real-world rule-based detection
+- Testing (pytest-style)
+- Practical security tool design
 
 Useful for:
+- Cloud Security
+- SecOps
+- Threat Detection
+- AppSec
+- DevSecOps
+- Offensive Security Engineering
 
-Cloud Security
+## Future Enhancements
+- Auto-remediation suggestions
+- Multi-statement correlation
+- Expanded ML feature set
+- Docker support
+- Risk visualization dashboard
 
-SecOps
-
-Threat Detection
-
-AppSec
-
-Offensive Security Engineering
-
-DevSecOps
-
-Future Enhancements
-
-Remediation recommendations
-
-Multi-statement correlation
-
-Extended ML features
-
-Docker support
-
-Threat heatmap dashboard
+CloudSentinel is fully implemented and functional.
