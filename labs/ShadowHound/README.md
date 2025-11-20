@@ -18,17 +18,18 @@ The project demonstrates end-to-end offensive data engineering, threat analytics
 ## Repository Structure
 ```
 shadowhound/
-  data/
-    raw/               
-    processed/         
-  shadowhound/
-    synthetic.py       
-    features.py        
-    ml.py              
-    api.py             
-    config.py          
-    graph.py           
-  README.md
+ ├── data/
+ │    ├── raw/                # synthetic raw edges (BloodHound-like)
+ │    └── processed/          # features.csv (ML matrix)
+ ├── shadowhound/
+ │    ├── synthetic.py        # synthetic AD graph generator
+ │    ├── features.py         # graph processing + feature extraction
+ │    ├── ml.py               # model training pipeline
+ │    ├── api.py              # FastAPI inference service
+ │    ├── graph.py            # graph utilities (load, build, analyze)
+ │    ├── config.py           # file paths + constants
+ └── README.md
+
 ```
 ---------------------------------------------------------------------
 
