@@ -16,7 +16,7 @@ The project demonstrates end-to-end offensive data engineering, threat analytics
 ---------------------------------------------------------------------
 
 ## Repository Structure
-
+```
 shadowhound/
   data/
     raw/               Synthetic BloodHound-style edges
@@ -29,7 +29,7 @@ shadowhound/
     config.py          Paths and constants
     graph.py           Utilities for graph loading and analysis
   README.md
-
+```
 ---------------------------------------------------------------------
 
 ## Features
@@ -70,9 +70,9 @@ shadowhound/
 ---------------------------------------------------------------------
 
 ## Installation
-
+```
 pip install -r requirements.txt
-
+```
 Dependencies:
 pandas
 networkx
@@ -86,41 +86,45 @@ uvicorn
 ## Usage
 
 ### 1. Generate Synthetic AD Edges
-
+```
 python -m shadowhound.synthetic
-
+```
 Outputs:
+```
 data/raw/ad_edges.json
-
+```
 ### 2. Generate Feature Matrix
-
+```
 python -m shadowhound.features
-
+```
 Outputs:
+```
 data/processed/features.csv
-
+```
 ### 3. Train ML Model
-
+```
 python -m shadowhound.ml
-
+```
 Outputs:
+```
 model.joblib
 report.json
 feature_columns.json
-
+```
 ### 4. Start the API
-
+```
 uvicorn shadowhound.api:app --reload
-
+```
 Open Swagger docs:
+```
 http://127.0.0.1:8000/docs
-
+```
 ---------------------------------------------------------------------
 
 ## Example API Prediction Request (POST /predict)
 
 Input example:
-
+```
 {
   "degree": 12,
   "num_admin_edges": 3,
@@ -132,9 +136,9 @@ Input example:
   "is_group": 0,
   "is_computer": 0
 }
-
+```
 Example response:
-
+```
 {
   "input": { ... },
   "prediction": {
@@ -155,15 +159,7 @@ Example response:
     ]
   }
 }
-
----------------------------------------------------------------------
-
-## Interview Explanation
-
-Use this exact script in interviews:
-
-“ShadowHound is a machine learning pipeline I built to detect risky identities inside Active Directory environments. It generates synthetic BloodHound-style graph data, extracts graph-based behavioral features such as admin-edge count, reachability to critical targets, and group membership patterns, and trains a RandomForest model to classify nodes as benign or attacker-like. I wrapped the model in a FastAPI service so it can score identities in real time. This project demonstrates full-stack capability in data engineering, feature modeling, machine learning, evaluation, and deployment — the same workflow used in enterprise TDNA and threat analytics teams.”
-
+```
 ---------------------------------------------------------------------
 
 ## Author
