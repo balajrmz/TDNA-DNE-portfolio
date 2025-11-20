@@ -19,15 +19,15 @@ The project demonstrates end-to-end offensive data engineering, threat analytics
 ```
 shadowhound/
   data/
-    raw/               Synthetic BloodHound-style edges
-    processed/         features.csv for ML
+    raw/               
+    processed/         
   shadowhound/
-    synthetic.py       Synthetic graph generator
-    features.py        Feature extraction pipeline
-    ml.py              Model training pipeline
-    api.py             FastAPI inference server
-    config.py          Paths and constants
-    graph.py           Utilities for graph loading and analysis
+    synthetic.py       
+    features.py        
+    ml.py              
+    api.py             
+    config.py          
+    graph.py           
   README.md
 ```
 ---------------------------------------------------------------------
