@@ -1,0 +1,21 @@
+[
+  "avg_packet_size",
+  "bytes_per_sec",
+  "dst_high_port",
+  "dst_is_dns",
+  "dst_is_rdp",
+  "dst_is_smb",
+  "dst_is_ssh",
+  "dst_is_web",
+  "dst_port",
+  "duration",
+  "is_long_flow",
+  "is_short_flow",
+  "is_tcp",
+  "is_udp",
+  "packet_count",
+  "pkts_per_sec",
+  "src_high_port",
+  "src_port",
+  "total_bytes"
+]

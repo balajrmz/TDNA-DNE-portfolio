@@ -1,0 +1,801 @@
+pid,ppid,name,path,user,company,signed,num_modules,num_unsigned_modules,num_rwx_regions,avg_entropy,has_network_connection,num_connections,listening_ports,high_entropy_strings,cpu_usage,memory_usage_mb,label
+1147,360,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,48,1,0,5.46,True,8,0,2,2.67,160.5,benign
+1180,336,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,23,2,0,5.3,True,7,0,3,4.8,116.8,benign
+1219,771,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,52,1,0,5.16,True,8,1,1,6.41,109.1,benign
+1695,690,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,20,8,7,8.22,False,0,2,50,64.06,187.4,ransomware_like
+1514,233,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,18,0,1,5.62,False,0,2,3,2.56,131.4,benign
+1067,419,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,34,3,1,5.66,False,0,0,0,5.19,151.3,benign
+1578,855,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,33,2,0,5.15,False,0,0,2,6.44,199.6,benign
+1170,390,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,76,0,1,5.32,False,0,1,2,5.69,110.7,benign
+1492,948,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,29,1,1,5.45,True,2,0,3,6.04,215.7,benign
+1047,710,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,53,1,1,5.67,False,0,2,0,2.46,177.5,benign
+1120,207,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,66,2,1,4.67,False,0,0,2,6.46,70.2,benign
+1462,693,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,64,3,0,6.17,True,3,0,0,1.96,136.0,benign
+1496,436,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,51,0,1,5.52,True,4,0,1,3.77,109.2,benign
+1071,407,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,45,0,0,5.04,True,2,0,1,4.88,102.5,benign
+1136,204,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,15,2,0,5.86,False,0,0,0,3.5,83.5,benign
+1407,429,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,56,3,1,5.68,True,1,2,0,3.85,184.6,benign
+1624,808,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,16,12,1,7.02,True,32,0,37,6.43,90.0,infostealer_like
+1247,344,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,35,2,0,5.25,False,0,0,1,5.2,155.7,benign
+1623,244,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,12,12,4,6.21,True,49,1,38,10.01,21.6,infostealer_like
+1259,942,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,48,1,1,5.56,True,1,1,3,1.19,86.7,benign
+1771,365,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,14,5,3,6.42,True,8,0,57,13.36,67.3,injected_loader
+1003,671,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,31,2,1,4.95,False,0,0,0,6.85,108.8,benign
+1442,624,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,18,3,0,4.83,True,9,0,1,0.6,135.6,benign
+1326,576,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,42,2,1,4.16,True,10,0,0,1.63,68.2,benign
+1263,236,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,70,0,0,5.75,False,0,2,1,1.59,139.5,benign
+1181,950,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,17,3,0,5.78,False,0,0,0,4.32,73.5,benign
+1376,675,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,21,1,1,5.16,False,0,2,0,4.06,131.8,benign
+1478,337,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,64,0,0,5.78,True,6,1,0,5.14,56.4,benign
+1447,254,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,12,1,1,5.82,False,0,1,3,3.45,91.4,benign
+1056,453,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,48,2,1,5.89,False,0,1,2,5.96,77.4,benign
+1340,420,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,46,0,0,6.4,True,4,1,1,4.47,0.6,benign
+1357,373,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,48,2,1,5.18,True,7,0,0,2.77,88.1,benign
+1077,975,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,48,1,1,5.93,True,8,2,1,1.23,124.3,benign
+1307,989,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,73,3,0,5.7,False,0,2,0,5.65,169.0,benign
+1799,833,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,13,6,2,5.7,True,13,1,43,2.45,59.6,injected_loader
+1558,246,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,32,0,0,6.06,True,6,0,1,4.26,143.2,benign
+1488,722,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,73,2,0,5.89,False,0,1,3,6.4,168.4,benign
+1089,287,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,37,3,1,5.71,False,0,2,3,3.06,107.6,benign
+1397,223,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,73,3,1,4.96,True,7,2,0,1.49,103.4,benign
+1539,793,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,10,3,0,5.19,True,1,1,2,4.18,161.1,benign
+1013,363,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,52,3,0,5.69,False,0,2,3,6.53,83.9,benign
+1741,819,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,5,11,6,7.24,True,12,0,86,37.29,204.1,ransomware_like
+1413,407,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,11,2,0,5.23,True,9,1,2,4.19,89.3,benign
+1011,849,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,54,3,0,5.11,True,10,2,2,4.94,119.7,benign
+1069,404,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,76,2,0,5.85,True,8,2,2,6.69,174.7,benign
+1490,864,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,26,3,1,5.31,False,0,0,3,5.66,162.3,benign
+1585,879,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,72,1,0,5.34,False,0,0,1,4.36,183.6,benign
+1748,354,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,16,6,4,6.73,True,6,1,47,17.49,19.8,injected_loader
+1034,306,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,46,0,1,5.29,True,5,0,2,4.33,156.0,benign
+1342,327,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,76,0,1,5.3,True,7,2,2,6.43,110.6,benign
+1762,792,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,14,5,4,7.2,True,9,1,22,3.0,140.0,injected_loader
+1399,349,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,66,3,0,5.76,True,7,2,2,3.06,129.9,benign
+1281,233,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,16,1,0,5.54,False,0,0,3,2.46,233.3,benign
+1126,507,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,43,3,0,5.74,True,3,0,1,0.82,121.1,benign
+1191,808,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,63,3,1,6.06,False,0,0,2,2.63,97.8,benign
+1780,742,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,5,6,2,7.03,True,15,1,27,14.43,9.9,injected_loader
+1379,870,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,15,0,0,6.06,False,0,0,2,4.9,71.2,benign
+1773,816,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,5,5,3,5.42,True,7,1,23,16.37,171.0,injected_loader
+1248,990,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,65,3,0,5.96,False,0,0,2,6.18,145.0,benign
+1628,827,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,15,6,4,7.47,True,41,1,40,7.35,66.5,infostealer_like
+1366,559,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,69,2,0,5.65,True,3,0,3,5.87,160.1,benign
+1277,732,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,68,1,1,6.04,False,0,1,0,2.11,150.5,benign
+1176,703,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,53,1,0,5.55,True,10,2,3,3.14,132.0,benign
+1531,888,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,47,1,0,5.02,True,7,2,0,0.7,122.8,benign
+1187,544,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,59,2,1,5.02,False,0,2,0,2.84,124.8,benign
+1223,583,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,12,3,1,5.91,False,0,0,0,3.43,112.2,benign
+1371,909,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,15,3,1,5.61,False,0,0,3,7.91,154.7,benign
+1312,301,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,18,0,1,5.07,True,3,2,2,4.05,114.3,benign
+1204,993,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,50,3,0,6.26,False,0,0,0,3.15,133.8,benign
+1574,865,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,43,3,0,5.26,True,10,2,2,5.32,155.1,benign
+1025,260,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,39,3,1,5.51,False,0,1,3,5.55,85.1,benign
+1317,564,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,16,1,1,6.16,False,0,0,3,3.68,63.5,benign
+1732,499,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,5,8,3,7.86,False,0,2,35,39.24,323.7,ransomware_like
+1374,309,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,66,1,1,5.6,False,0,1,1,4.15,135.1,benign
+1697,882,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,9,15,7,7.55,True,7,2,45,9.65,101.5,ransomware_like
+1752,382,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,10,9,2,6.39,True,10,0,51,14.54,97.8,injected_loader
+1345,881,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,19,1,1,5.83,False,0,1,3,1.02,140.5,benign
+1434,681,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,72,1,1,5.04,False,0,2,3,3.66,35.0,benign
+1033,713,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,65,0,1,5.08,False,0,2,2,2.45,115.1,benign
+1198,922,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,30,2,0,5.83,False,0,2,3,2.54,111.4,benign
+1030,974,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,17,0,0,5.27,False,0,1,3,3.26,150.6,benign
+1575,281,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,34,3,1,5.01,True,1,2,1,7.36,145.4,benign
+1065,831,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,53,0,0,4.54,True,4,0,3,3.12,168.9,benign
+1387,880,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,62,1,1,5.53,True,10,0,0,5.25,194.3,benign
+1611,329,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,9,12,3,7.37,True,38,0,23,6.23,9.3,infostealer_like
+1409,589,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,23,3,0,5.64,False,0,0,2,1.62,60.2,benign
+1720,619,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,6,10,5,7.59,False,0,2,39,48.54,297.7,ransomware_like
+1540,261,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,48,2,1,5.79,True,6,0,3,3.15,107.8,benign
+1002,717,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,61,3,1,5.28,False,0,1,0,4.67,182.0,benign
+1775,341,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,11,9,4,6.61,True,5,0,50,11.58,121.3,injected_loader
+1273,521,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,79,2,0,5.19,True,1,2,0,5.19,69.9,benign
+1352,692,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,40,2,1,5.9,True,7,0,1,3.17,117.6,benign
+1581,799,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,49,3,0,5.28,True,10,2,2,5.06,145.7,benign
+1418,873,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,38,1,1,5.08,False,0,1,2,2.41,81.5,benign
+1226,807,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,17,0,0,5.52,False,0,2,1,4.55,89.1,benign
+1718,800,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,24,14,8,7.12,True,18,2,37,21.88,176.2,ransomware_like
+1012,934,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,34,1,1,5.65,True,6,2,2,6.24,119.7,benign
+1384,425,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,59,0,0,5.84,True,2,2,1,4.86,144.2,benign
+1009,523,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,34,3,1,4.4,False,0,2,1,3.29,120.3,benign
+1046,748,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,14,2,0,5.52,False,0,1,3,3.02,79.3,benign
+1406,604,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,68,2,0,5.87,True,0,1,1,6.58,12.7,benign
+1095,943,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,39,2,0,5.27,True,6,2,0,5.79,68.7,benign
+1647,643,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,13,12,3,6.5,True,49,1,13,15.09,81.3,infostealer_like
+1754,702,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,10,3,3,6.27,True,13,1,50,12.55,211.5,injected_loader
+1040,367,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,70,2,0,5.93,False,0,1,3,7.01,155.6,benign
+1481,855,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,34,0,0,5.75,True,10,0,0,4.38,151.5,benign
+1588,411,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,20,3,1,5.93,True,6,0,0,8.47,151.4,benign
+1213,306,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,33,0,1,5.44,True,2,0,0,1.26,116.0,benign
+1175,732,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,71,3,0,6.11,True,2,1,1,4.14,104.8,benign
+1705,454,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,12,13,4,6.92,True,19,2,33,30.13,290.5,ransomware_like
+1711,784,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,24,13,5,7.59,True,13,0,73,57.18,290.1,ransomware_like
+1790,985,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,17,9,5,6.15,True,7,1,18,12.83,73.0,injected_loader
+1715,930,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,10,14,4,7.93,True,24,0,31,36.38,157.1,ransomware_like
+1724,819,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,21,12,7,7.36,True,22,0,76,43.24,329.5,ransomware_like
+1106,464,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,19,0,1,5.95,False,0,1,2,3.3,74.7,benign
+1140,790,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,56,1,1,5.56,False,0,0,3,5.36,135.3,benign
+1115,888,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,65,3,1,5.38,True,2,0,2,0.11,113.3,benign
+1459,707,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,59,2,0,4.92,True,4,0,1,3.33,60.6,benign
+1768,204,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,13,4,5,6.25,True,10,0,51,15.97,49.6,injected_loader
+1302,910,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,43,2,0,4.59,False,0,0,2,6.58,165.4,benign
+1764,542,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,14,3,3,6.31,True,13,0,41,8.88,150.6,injected_loader
+1032,275,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,34,0,0,4.99,True,9,0,1,4.66,98.3,benign
+1217,914,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,53,2,0,4.76,False,0,1,0,2.88,36.4,benign
+1166,277,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,79,1,0,6.16,False,0,2,0,5.29,133.5,benign
+1369,824,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,50,2,0,6.21,False,0,0,3,5.69,112.7,benign
+1657,957,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,9,9,3,7.06,True,36,1,13,11.83,89.3,infostealer_like
+1710,897,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,25,13,5,7.0,True,25,1,68,40.47,325.2,ransomware_like
+1017,550,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,45,3,1,4.98,False,0,0,3,0.34,77.4,benign
+1683,281,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,17,8,3,7.52,True,12,1,70,17.08,136.3,ransomware_like
+1028,260,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,80,0,1,5.39,False,0,2,2,3.83,111.2,benign
+1678,291,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,29,10,1,6.91,True,25,1,36,5.64,131.4,infostealer_like
+1174,910,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,42,0,0,5.67,True,3,2,1,1.86,158.3,benign
+1692,829,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,16,7,5,7.71,True,14,2,55,41.7,275.3,ransomware_like
+1512,924,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,76,0,0,5.56,False,0,0,3,5.32,146.8,benign
+1075,668,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,65,2,1,5.79,False,0,2,1,2.81,181.0,benign
+1535,830,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,76,1,1,5.15,False,0,1,3,5.28,158.2,benign
+1380,360,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,74,0,1,4.53,False,0,1,2,4.27,61.6,benign
+1596,243,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,77,1,1,5.51,True,6,2,3,2.9,142.2,benign
+1458,219,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,54,2,1,5.95,False,0,1,0,4.21,101.0,benign
+1618,906,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,8,6,2,6.97,True,45,0,19,7.86,93.2,infostealer_like
+1758,573,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,13,2,3,6.86,True,14,0,20,21.41,108.3,injected_loader
+1719,455,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,5,8,8,7.56,True,17,2,32,47.95,290.9,ransomware_like
+1704,755,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,21,9,5,7.61,True,8,2,83,53.5,328.9,ransomware_like
+1687,977,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,12,8,4,7.69,True,19,2,92,57.32,142.0,ransomware_like
+1446,299,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,41,3,1,4.99,False,0,1,3,0.95,141.2,benign
+1202,210,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,20,0,0,5.56,True,2,2,2,1.3,130.5,benign
+1105,694,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,13,3,1,4.98,False,0,2,0,5.51,125.2,benign
+1315,879,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,29,0,0,4.95,False,0,0,1,4.89,135.0,benign
+1123,717,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,72,1,0,5.42,True,2,2,0,0.82,94.5,benign
+1099,284,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,75,0,1,5.5,False,0,2,3,2.92,139.7,benign
+1121,443,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,53,1,1,5.57,False,0,2,2,5.09,86.8,benign
+1594,508,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,23,0,0,6.13,True,0,1,2,4.91,117.5,benign
+1124,867,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,23,1,1,5.5,False,0,2,2,2.12,130.5,benign
+1676,498,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,16,4,3,7.13,True,57,1,40,11.23,30.8,infostealer_like
+1569,689,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,42,1,0,5.47,True,8,0,3,2.91,151.9,benign
+1545,999,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,52,0,1,5.2,False,0,1,2,2.2,157.8,benign
+1351,360,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,26,3,0,5.47,False,0,1,2,3.11,141.0,benign
+1148,370,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,78,1,1,5.3,False,0,2,3,6.5,131.7,benign
+1173,610,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,15,1,1,5.63,True,2,0,2,4.77,117.1,benign
+1766,606,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,9,4,3,6.14,True,10,0,28,14.0,174.4,injected_loader
+1310,244,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,66,2,1,4.77,True,1,1,3,2.54,122.7,benign
+1554,392,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,59,0,0,5.21,True,10,0,3,6.94,61.8,benign
+1518,934,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,22,1,0,5.8,True,5,2,1,5.72,153.2,benign
+1107,844,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,15,3,0,6.0,False,0,0,1,5.98,78.3,benign
+1505,968,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,11,3,0,5.74,True,6,1,1,5.62,57.0,benign
+1744,565,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,16,5,5,7.02,True,9,0,42,16.76,17.4,injected_loader
+1020,216,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,28,3,0,5.73,False,0,2,3,4.61,80.0,benign
+1035,798,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,52,1,0,6.0,False,0,0,0,6.31,93.0,benign
+1225,480,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,34,0,1,5.71,True,2,2,3,5.81,77.9,benign
+1602,710,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,29,12,3,7.21,True,20,0,32,8.95,92.6,infostealer_like
+1587,787,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,78,0,1,5.43,False,0,0,0,4.79,143.2,benign
+1507,298,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,49,0,0,5.21,True,0,1,2,0.76,145.6,benign
+1094,645,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,54,3,1,4.82,True,5,0,0,6.67,75.7,benign
+1670,642,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,21,9,4,6.16,True,38,1,39,10.24,64.5,infostealer_like
+1593,660,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,54,0,1,5.23,False,0,1,2,1.65,108.3,benign
+1499,395,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,73,3,0,5.31,True,4,2,1,5.49,122.8,benign
+1644,506,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,26,12,3,7.21,True,19,1,34,9.68,67.3,infostealer_like
+1408,396,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,72,1,0,5.53,True,4,1,2,4.25,94.5,benign
+1636,760,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,5,10,4,6.76,True,50,0,25,2.11,103.0,infostealer_like
+1283,340,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,10,3,1,5.9,True,0,0,2,4.51,79.7,benign
+1104,762,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,41,2,1,5.44,True,0,1,2,2.7,150.8,benign
+1152,942,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,19,0,0,5.28,False,0,1,0,9.44,52.4,benign
+1541,997,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,63,1,1,5.79,True,8,1,0,4.04,124.1,benign
+1116,812,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,57,2,0,5.82,True,5,0,2,2.59,112.1,benign
+1209,752,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,10,1,1,5.35,False,0,2,0,1.57,111.1,benign
+1721,472,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,16,13,4,7.52,True,8,0,83,30.87,264.6,ransomware_like
+1461,497,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,43,1,1,6.06,True,2,0,2,4.32,97.1,benign
+1638,853,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,17,4,3,6.65,True,52,1,36,12.53,93.4,infostealer_like
+1454,298,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,64,1,0,5.33,True,4,1,1,1.02,88.3,benign
+1239,683,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,54,3,0,5.92,True,7,1,0,1.37,101.0,benign
+1401,615,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,53,0,0,5.39,True,4,0,1,9.71,126.0,benign
+1127,457,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,29,1,1,5.45,True,10,2,0,2.04,196.7,benign
+1726,752,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,10,15,4,6.98,False,0,0,92,60.53,217.0,ransomware_like
+1112,530,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,43,2,1,6.17,True,0,0,1,5.8,124.4,benign
+1134,528,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,20,2,0,4.95,False,0,2,0,0.6,55.2,benign
+1449,246,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,79,0,0,5.61,False,0,0,2,3.03,80.9,benign
+1431,755,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,49,0,0,5.4,True,3,0,3,3.62,106.3,benign
+1451,879,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,15,2,0,6.02,True,7,2,3,4.04,44.8,benign
+1489,222,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,42,0,0,5.72,False,0,0,1,7.27,80.0,benign
+1381,530,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,20,1,0,6.96,True,5,0,0,3.71,131.4,benign
+1547,998,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,27,1,0,5.68,True,1,0,2,2.91,118.6,benign
+1062,886,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,69,3,0,5.43,False,0,2,3,3.77,40.5,benign
+1537,275,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,47,1,0,5.34,False,0,1,0,7.37,117.5,benign
+1211,740,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,26,0,0,5.9,True,3,1,1,5.86,131.4,benign
+1661,550,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,10,5,1,6.16,True,50,1,12,9.61,97.7,infostealer_like
+1564,468,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,28,2,1,5.32,False,0,0,0,2.12,147.8,benign
+1171,574,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,30,1,0,5.32,True,7,0,1,1.22,149.6,benign
+1133,481,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,48,3,0,5.77,True,3,0,3,3.25,152.2,benign
+1713,932,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,16,13,3,7.66,True,22,2,47,39.43,115.2,ransomware_like
+1218,500,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,47,3,1,5.76,True,7,0,0,4.09,158.9,benign
+1128,807,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,20,2,0,5.86,False,0,2,3,3.54,142.8,benign
+1420,973,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,33,3,0,6.14,False,0,0,3,5.48,154.0,benign
+1119,625,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,65,1,1,5.78,False,0,1,0,4.23,87.6,benign
+1452,829,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,48,3,1,5.05,True,4,0,1,6.24,68.6,benign
+1468,853,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,13,2,0,5.16,True,5,1,0,0.28,152.7,benign
+1430,650,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,71,1,1,5.81,False,0,1,2,4.15,139.7,benign
+1059,462,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,32,0,0,5.98,True,4,1,3,4.92,75.2,benign
+1781,634,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,13,8,4,6.37,True,9,1,31,17.85,92.1,injected_loader
+1688,716,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,18,11,8,7.27,True,16,1,37,4.45,274.6,ransomware_like
+1102,507,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,65,2,1,5.71,True,0,0,1,0.44,108.4,benign
+1256,624,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,68,3,0,5.74,True,7,2,1,3.59,110.7,benign
+1386,291,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,19,0,1,5.21,False,0,2,1,2.81,47.8,benign
+1450,642,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,16,3,1,5.55,False,0,1,1,0.93,82.2,benign
+1494,832,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,75,3,0,5.86,True,10,2,1,5.23,131.4,benign
+1244,964,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,15,2,0,5.31,True,0,0,3,2.37,105.5,benign
+1188,534,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,16,1,1,6.16,False,0,2,0,3.85,124.1,benign
+1586,391,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,54,3,0,6.37,True,6,2,3,0.94,124.4,benign
+1486,508,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,69,2,0,5.8,False,0,1,1,3.82,130.6,benign
+1631,211,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,30,12,2,6.56,True,49,1,40,7.85,89.2,infostealer_like
+1503,906,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,42,3,0,5.07,False,0,1,2,3.67,145.4,benign
+1731,299,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,7,6,7,7.54,True,20,2,60,35.62,363.3,ransomware_like
+1783,601,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,8,2,6,7.39,True,6,1,16,22.4,111.9,injected_loader
+1362,584,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,35,0,1,5.24,True,7,0,3,1.05,42.5,benign
+1479,344,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,46,1,0,5.42,True,4,2,2,6.2,78.5,benign
+1018,400,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,24,1,1,5.49,True,3,1,2,6.93,155.1,benign
+1200,705,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,32,1,0,5.42,True,3,0,3,7.09,182.3,benign
+1377,426,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,56,2,1,5.28,False,0,1,0,1.4,147.9,benign
+1103,427,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,41,3,0,5.65,True,2,2,2,5.93,102.0,benign
+1178,551,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,18,2,0,5.54,False,0,0,0,6.57,84.2,benign
+1053,994,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,21,3,1,5.84,False,0,1,0,5.83,91.5,benign
+1292,619,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,18,2,1,5.09,True,2,0,3,5.58,134.7,benign
+1522,996,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,44,0,0,5.08,False,0,2,0,2.3,142.7,benign
+1212,738,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,18,2,1,5.28,False,0,2,2,2.6,59.0,benign
+1686,597,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,10,8,6,7.6,True,17,0,40,51.91,319.8,ransomware_like
+1045,531,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,15,2,1,4.63,True,1,2,2,4.85,125.9,benign
+1083,375,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,37,1,0,5.26,False,0,2,2,0.94,77.8,benign
+1627,458,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,5,7,3,7.45,True,37,0,38,8.41,99.7,infostealer_like
+1349,798,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,52,1,1,5.3,True,9,0,3,3.47,161.5,benign
+1015,514,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,50,3,1,5.6,True,4,1,3,6.39,78.1,benign
+1070,520,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,68,2,0,5.65,True,1,0,0,4.72,146.7,benign
+1482,871,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,24,1,0,5.12,False,0,2,1,6.78,108.0,benign
+1172,273,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,57,0,1,5.14,True,1,2,0,4.9,87.0,benign
+1517,265,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,10,0,0,5.48,False,0,2,0,3.05,185.1,benign
+1159,971,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,48,0,0,5.78,True,3,1,1,4.0,90.5,benign
+1096,333,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,50,0,0,4.74,True,3,2,3,0.43,108.7,benign
+1044,930,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,77,0,0,5.31,True,8,1,2,0.52,119.9,benign
+1137,708,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,46,2,0,5.34,True,2,0,0,2.1,160.3,benign
+1641,969,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,10,4,4,6.54,True,45,0,30,3.84,123.7,infostealer_like
+1412,540,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,14,1,1,5.88,True,10,2,2,4.91,88.5,benign
+1457,701,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,56,3,1,5.8,False,0,0,2,1.29,97.1,benign
+1526,594,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,15,1,1,5.37,False,0,0,3,5.86,114.0,benign
+1760,331,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,10,5,2,6.87,True,13,1,54,18.65,120.9,injected_loader
+1080,409,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,48,3,1,5.75,False,0,0,2,3.57,98.8,benign
+1348,633,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,76,1,0,5.58,False,0,1,2,7.85,139.8,benign
+1078,847,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,40,2,1,5.61,True,0,1,3,0.73,159.8,benign
+1207,362,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,25,3,0,5.69,True,5,2,3,4.02,106.5,benign
+1249,248,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,42,2,0,5.8,False,0,1,1,7.14,113.1,benign
+1316,938,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,28,2,1,5.16,True,3,2,3,2.57,190.2,benign
+1111,634,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,59,0,1,5.42,False,0,2,3,3.16,110.8,benign
+1110,677,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,78,3,0,5.6,False,0,2,0,0.7,88.0,benign
+1168,963,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,73,2,1,5.69,False,0,1,1,3.65,131.4,benign
+1472,891,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,10,0,1,6.04,False,0,0,3,1.3,99.8,benign
+1295,432,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,50,2,0,5.77,True,4,0,0,6.51,72.5,benign
+1038,799,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,57,0,0,5.86,True,3,2,3,4.29,102.8,benign
+1690,406,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,21,9,8,7.66,False,0,1,56,27.76,396.7,ransomware_like
+1786,576,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,13,2,3,6.55,True,6,0,44,7.84,76.2,injected_loader
+1474,616,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,13,2,1,5.73,True,2,2,2,3.61,125.8,benign
+1142,330,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,63,2,1,5.76,False,0,0,0,1.12,116.7,benign
+1029,359,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,63,2,1,4.63,True,10,1,0,5.81,150.0,benign
+1475,440,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,54,2,0,5.09,False,0,1,2,3.28,131.3,benign
+1270,743,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,30,1,1,5.41,True,9,1,2,4.62,91.5,benign
+1455,682,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,66,2,0,5.11,False,0,1,1,5.3,165.6,benign
+1041,462,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,23,1,0,5.54,False,0,0,1,3.44,138.8,benign
+1466,798,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,12,1,1,5.35,False,0,0,2,4.95,94.8,benign
+1502,251,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,22,0,1,5.37,True,7,1,0,4.57,132.6,benign
+1667,813,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,18,8,3,6.69,True,45,1,40,5.74,120.0,infostealer_like
+1613,479,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,7,7,2,7.65,True,40,0,16,4.24,76.0,infostealer_like
+1323,705,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,56,2,0,5.18,True,7,1,1,4.16,72.2,benign
+1612,251,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,30,5,1,7.06,True,59,0,28,1.58,54.3,infostealer_like
+1350,740,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,13,3,1,5.4,True,7,2,3,0.2,132.2,benign
+1267,814,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,42,3,0,6.18,True,3,0,1,2.58,146.9,benign
+1616,731,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,24,3,4,6.55,True,48,0,25,9.08,125.2,infostealer_like
+1234,300,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,73,0,0,5.98,True,1,1,0,5.41,135.5,benign
+1006,212,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,52,3,0,5.89,True,8,2,2,1.57,66.8,benign
+1437,294,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,50,3,1,5.06,True,4,1,0,2.96,66.4,benign
+1557,899,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,29,2,0,5.24,True,6,2,1,3.37,111.0,benign
+1414,964,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,38,2,1,5.91,False,0,2,0,5.65,97.2,benign
+1224,839,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,63,2,1,5.85,True,5,0,3,3.3,97.6,benign
+1324,879,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,25,3,1,4.5,True,7,1,2,5.25,136.4,benign
+1642,580,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,26,11,4,6.5,True,36,1,38,8.48,54.6,infostealer_like
+1567,339,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,44,1,1,5.5,False,0,1,2,4.9,178.8,benign
+1608,349,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,14,10,4,6.61,True,37,0,20,1.53,137.5,infostealer_like
+1405,324,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,20,3,1,5.28,False,0,2,1,3.49,107.1,benign
+1398,966,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,64,3,1,5.29,True,3,2,3,5.05,112.9,benign
+1344,587,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,40,3,0,5.79,True,1,0,2,3.33,109.6,benign
+1470,718,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,14,2,1,5.81,True,9,0,0,3.15,111.1,benign
+1016,851,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,28,2,0,5.56,True,1,1,0,0.54,114.8,benign
+1341,350,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,38,2,1,5.56,False,0,0,3,4.68,111.0,benign
+1576,310,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,12,1,1,5.24,True,3,2,3,1.53,108.3,benign
+1680,426,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,15,13,5,6.88,False,0,0,46,32.05,332.6,ransomware_like
+1050,467,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,26,2,1,5.52,False,0,1,0,2.77,148.0,benign
+1637,741,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,29,3,3,6.58,True,46,1,23,6.71,106.4,infostealer_like
+1286,849,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,12,3,0,5.47,True,7,1,2,2.53,150.6,benign
+1654,804,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,18,3,4,6.78,True,51,1,18,1.17,53.6,infostealer_like
+1320,624,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,76,2,1,5.82,False,0,2,2,3.79,157.8,benign
+1734,922,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,5,13,8,7.55,True,10,2,96,68.44,291.4,ransomware_like
+1090,532,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,51,2,0,5.33,True,3,2,0,1.19,88.1,benign
+1081,847,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,51,0,0,5.04,True,1,1,0,1.34,154.7,benign
+1138,446,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,23,3,0,5.0,False,0,0,1,4.45,40.6,benign
+1491,237,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,74,2,1,5.23,True,5,2,2,4.54,84.0,benign
+1534,498,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,14,0,0,5.84,True,1,2,0,1.57,59.4,benign
+1311,830,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,64,2,0,5.52,True,7,2,0,3.55,142.8,benign
+1338,990,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,74,1,1,5.82,True,6,1,1,4.95,208.3,benign
+1139,631,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,58,3,0,4.91,True,2,1,0,4.99,195.1,benign
+1759,645,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,16,2,5,5.82,False,0,1,47,10.69,72.9,injected_loader
+1396,996,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,74,1,0,5.55,False,0,0,2,3.81,129.2,benign
+1464,523,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,80,1,0,5.58,False,0,1,2,6.64,80.0,benign
+1561,690,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,49,1,0,5.71,False,0,0,1,5.97,137.1,benign
+1153,531,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,54,3,1,4.72,False,0,0,3,5.29,107.0,benign
+1621,357,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,16,12,4,6.38,True,20,0,11,5.09,75.0,infostealer_like
+1182,678,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,17,0,1,5.31,False,0,0,1,2.34,62.3,benign
+1250,262,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,62,2,1,5.19,True,5,2,0,3.34,190.6,benign
+1653,437,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,9,4,4,6.28,True,20,0,36,4.17,67.4,infostealer_like
+1192,345,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,22,0,1,5.5,True,7,0,3,1.68,80.6,benign
+1291,715,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,65,2,0,5.7,False,0,1,2,4.1,114.4,benign
+1422,806,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,44,0,0,5.62,True,10,1,0,1.88,98.7,benign
+1306,376,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,24,2,1,4.81,True,6,0,2,7.78,118.8,benign
+1383,575,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,51,1,0,5.19,False,0,2,3,7.28,96.1,benign
+1183,437,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,13,0,1,5.43,False,0,2,0,3.49,148.7,benign
+1595,809,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,42,0,1,4.7,True,9,0,1,2.02,109.5,benign
+1599,537,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,11,1,1,4.93,True,0,2,1,0.44,203.2,benign
+1622,766,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,21,9,4,6.36,True,51,0,39,11.33,98.9,infostealer_like
+1487,453,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,50,3,1,5.02,True,0,1,3,0.65,161.2,benign
+1666,381,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,13,6,2,6.31,True,43,0,40,7.17,99.1,infostealer_like
+1193,676,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,54,3,0,6.19,True,1,1,3,1.39,175.3,benign
+1445,979,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,59,3,1,4.88,False,0,1,2,3.02,159.1,benign
+1709,285,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,23,5,7,7.4,True,12,2,55,51.9,279.3,ransomware_like
+1255,987,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,22,2,1,4.89,True,1,0,2,3.5,150.0,benign
+1643,591,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,26,11,1,6.76,True,35,1,17,8.4,53.8,infostealer_like
+1309,284,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,55,2,1,4.84,True,9,0,1,6.04,113.0,benign
+1353,636,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,31,0,0,4.7,True,7,1,0,3.33,181.1,benign
+1544,355,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,67,0,1,5.76,False,0,0,0,2.17,11.1,benign
+1039,367,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,35,2,1,5.52,True,1,1,1,1.68,114.2,benign
+1629,757,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,7,8,4,7.2,True,21,1,20,0.84,88.4,infostealer_like
+1742,880,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,21,11,8,7.31,True,10,0,68,45.09,148.2,ransomware_like
+1238,923,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,31,0,1,5.13,False,0,2,1,0.12,86.9,benign
+1746,620,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,18,9,4,6.2,True,6,0,43,5.88,83.3,injected_loader
+1284,557,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,77,3,0,5.72,True,3,0,3,7.09,49.0,benign
+1619,570,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,8,12,3,7.02,True,26,1,33,3.64,98.0,infostealer_like
+1063,851,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,33,3,1,5.5,True,2,1,2,4.14,50.0,benign
+1392,775,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,23,3,0,5.76,True,3,2,3,3.54,157.7,benign
+1087,932,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,54,3,0,5.57,True,4,0,3,6.42,202.1,benign
+1787,931,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,13,8,2,6.44,True,5,0,15,11.93,168.5,injected_loader
+1658,695,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,5,7,2,6.81,True,53,0,17,4.01,92.4,infostealer_like
+1057,931,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,14,3,0,5.72,True,6,0,3,5.69,156.0,benign
+1553,435,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,70,2,0,5.5,True,1,2,1,3.67,63.8,benign
+1144,487,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,22,0,0,4.92,True,1,0,3,5.77,82.3,benign
+1354,829,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,48,2,1,6.17,False,0,2,1,7.87,130.3,benign
+1179,314,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,54,2,1,5.41,True,4,2,1,1.31,119.7,benign
+1523,452,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,53,0,1,5.75,False,0,1,0,4.07,100.2,benign
+1601,787,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,29,12,1,6.35,True,31,1,35,1.74,82.2,infostealer_like
+1425,674,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,11,2,1,5.34,False,0,1,2,3.56,140.6,benign
+1325,388,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,65,2,0,5.66,True,6,0,0,7.85,132.8,benign
+1532,993,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,51,0,0,4.9,False,0,1,1,5.81,109.9,benign
+1672,533,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,7,12,3,7.25,True,54,1,15,6.4,79.7,infostealer_like
+1465,859,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,47,1,1,5.52,True,2,1,1,5.73,94.1,benign
+1652,558,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,9,11,3,6.87,True,19,0,14,11.43,115.4,infostealer_like
+1360,211,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,59,1,0,5.75,True,7,2,0,4.33,153.7,benign
+1696,788,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,25,6,6,7.39,False,0,0,90,50.83,273.9,ransomware_like
+1155,906,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,79,0,0,5.14,False,0,2,1,2.9,83.0,benign
+1662,348,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,16,9,2,6.12,True,57,0,26,4.02,81.7,infostealer_like
+1633,206,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,6,4,3,6.49,True,43,1,14,11.76,136.3,infostealer_like
+1287,987,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,24,0,1,4.97,False,0,1,0,0.32,174.5,benign
+1086,960,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,70,2,1,5.23,True,7,1,3,8.13,147.0,benign
+1186,521,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,63,0,1,5.81,True,7,0,2,5.73,129.3,benign
+1389,714,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,29,3,0,5.52,True,9,2,0,6.24,84.8,benign
+1549,468,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,68,3,0,5.15,True,3,1,1,3.58,159.3,benign
+1635,273,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,15,5,4,6.34,True,43,1,34,9.93,54.9,infostealer_like
+1261,925,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,75,2,1,6.61,True,7,1,1,2.58,113.3,benign
+1162,530,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,21,1,0,5.9,False,0,2,0,2.54,117.5,benign
+1589,672,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,26,3,0,5.23,True,6,1,2,3.32,73.3,benign
+1258,871,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,47,0,1,6.0,True,3,2,2,0.95,137.4,benign
+1546,869,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,50,3,0,4.97,False,0,2,0,3.74,130.8,benign
+1552,731,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,62,0,0,5.19,True,0,2,2,2.32,97.3,benign
+1260,421,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,65,0,1,5.41,False,0,0,2,0.7,143.5,benign
+1665,352,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,22,11,3,6.36,True,28,0,17,7.95,64.8,infostealer_like
+1264,303,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,64,0,0,5.97,True,3,2,1,0.59,118.4,benign
+1559,442,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,24,0,0,6.32,False,0,2,0,2.9,52.1,benign
+1228,356,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,52,1,0,5.64,True,0,1,3,5.46,164.8,benign
+1042,244,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,17,1,1,5.45,True,3,2,0,7.62,111.5,benign
+1149,920,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,11,1,1,6.32,True,5,2,0,5.69,118.5,benign
+1197,769,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,67,1,1,5.48,False,0,2,0,6.41,112.5,benign
+1651,985,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,8,7,2,7.37,True,52,1,24,5.4,88.4,infostealer_like
+1632,510,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,20,9,4,6.85,True,60,1,16,6.98,83.7,infostealer_like
+1515,581,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,75,0,0,5.91,True,5,2,3,3.25,148.0,benign
+1055,952,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,15,0,1,6.17,False,0,2,2,4.86,137.1,benign
+1026,962,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,19,0,0,5.57,False,0,2,1,5.27,163.3,benign
+1275,594,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,47,2,0,5.56,False,0,0,1,4.42,128.4,benign
+1788,332,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,12,7,2,6.25,True,10,0,55,12.02,102.5,injected_loader
+1694,552,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,20,12,6,6.85,False,0,1,91,33.9,66.7,ransomware_like
+1330,966,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,38,3,1,5.77,True,0,2,1,3.97,164.4,benign
+1367,587,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,27,0,1,5.5,True,9,0,3,2.46,153.5,benign
+1716,339,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,20,5,5,7.33,True,17,1,32,32.95,206.9,ransomware_like
+1729,799,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,9,11,3,7.84,True,8,1,64,8.29,217.7,ransomware_like
+1285,339,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,18,2,1,5.62,False,0,0,3,2.78,126.5,benign
+1054,304,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,40,1,0,5.56,False,0,2,0,6.32,100.1,benign
+1433,422,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,44,3,1,5.42,True,9,2,3,7.63,110.0,benign
+1231,206,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,38,3,0,5.27,True,2,1,0,2.94,136.9,benign
+1156,982,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,60,1,0,5.31,True,7,2,2,1.97,132.4,benign
+1671,719,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,16,8,3,7.29,True,23,1,37,13.33,62.7,infostealer_like
+1712,554,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,16,12,8,7.1,True,8,2,31,44.14,361.2,ransomware_like
+1714,552,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,19,11,6,7.91,True,6,1,100,47.2,182.6,ransomware_like
+1551,644,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,54,0,1,5.59,True,3,2,3,4.28,77.1,benign
+1797,398,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,20,3,2,6.67,True,9,1,22,11.61,30.9,injected_loader
+1610,919,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,14,11,1,7.43,True,56,1,14,6.14,63.3,infostealer_like
+1723,306,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,18,14,3,7.08,True,25,0,36,41.0,277.1,ransomware_like
+1565,283,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,76,3,1,5.89,True,5,1,0,5.55,138.8,benign
+1282,632,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,60,1,0,5.91,False,0,0,0,2.72,74.1,benign
+1784,882,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,20,6,6,6.32,False,0,0,56,21.81,27.2,injected_loader
+1184,638,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,20,2,1,4.87,True,6,0,2,2.21,160.2,benign
+1365,424,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,14,3,0,6.0,True,2,2,2,6.79,163.8,benign
+1663,771,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,9,3,1,6.47,True,37,0,21,15.61,86.1,infostealer_like
+1215,741,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,18,0,0,5.58,True,5,0,3,2.87,160.1,benign
+1318,902,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,46,0,0,4.98,True,8,0,1,4.44,159.0,benign
+1730,841,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,10,9,4,7.31,True,10,2,41,29.77,249.5,ransomware_like
+1280,694,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,47,1,1,5.26,True,10,0,1,7.07,104.4,benign
+1402,546,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,39,1,1,5.13,False,0,1,0,5.85,91.5,benign
+1749,950,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,3,2,6,6.53,True,5,0,60,10.37,86.7,injected_loader
+1640,670,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,23,10,4,7.21,True,50,0,16,9.12,71.9,infostealer_like
+1314,862,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,39,2,0,5.9,False,0,1,3,4.4,179.0,benign
+1143,275,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,35,0,0,5.19,True,4,0,3,4.71,142.3,benign
+1566,334,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,65,2,0,5.21,True,2,1,1,0.59,134.1,benign
+1343,337,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,32,1,0,4.97,False,0,2,0,3.68,143.0,benign
+1036,611,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,60,0,1,5.85,True,10,0,3,0.4,132.6,benign
+1542,799,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,64,1,0,5.44,True,5,2,3,5.58,60.3,benign
+1410,497,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,72,1,1,4.76,True,6,2,3,3.33,182.9,benign
+1525,689,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,26,2,1,5.57,True,5,2,2,6.88,114.7,benign
+1052,870,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,74,3,1,5.32,False,0,2,0,1.27,69.1,benign
+1251,351,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,60,0,1,5.57,True,9,2,2,3.9,105.9,benign
+1163,324,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,44,2,1,4.72,False,0,2,3,1.81,137.4,benign
+1591,502,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,63,0,0,5.96,True,3,2,2,7.34,144.2,benign
+1043,948,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,64,3,1,5.46,True,2,2,2,5.12,72.8,benign
+1485,760,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,22,1,1,5.64,True,2,2,3,2.26,148.5,benign
+1356,709,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,23,2,0,5.74,True,7,0,1,3.92,136.9,benign
+1538,613,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,27,1,0,5.86,False,0,2,2,6.38,180.0,benign
+1604,913,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,18,10,1,7.3,True,32,1,37,9.21,83.1,infostealer_like
+1235,903,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,51,0,1,5.19,False,0,0,2,4.58,188.0,benign
+1740,450,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,22,6,8,7.6,True,13,0,67,34.38,265.2,ransomware_like
+1424,477,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,23,1,0,6.28,True,0,2,2,3.05,179.0,benign
+1677,866,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,24,9,4,6.66,True,40,1,27,8.39,61.6,infostealer_like
+1615,327,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,8,3,4,7.5,True,54,1,22,11.67,84.4,infostealer_like
+1074,320,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,77,2,0,5.58,True,8,1,3,6.5,161.7,benign
+1456,596,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,56,2,0,6.34,True,1,2,2,4.69,157.6,benign
+1241,644,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,69,1,1,5.97,False,0,0,0,3.2,143.3,benign
+1160,555,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,13,3,1,5.48,True,0,0,1,5.08,95.5,benign
+1051,302,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,33,1,1,5.89,False,0,0,0,2.74,86.5,benign
+1506,824,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,37,2,0,5.05,False,0,1,0,6.69,96.9,benign
+1048,650,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,34,3,1,6.57,True,8,1,3,4.79,139.1,benign
+1795,512,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,15,3,6,6.63,True,4,0,30,7.48,112.9,injected_loader
+1463,849,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,37,1,0,4.86,False,0,0,0,1.35,197.0,benign
+1296,673,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,10,0,0,6.13,False,0,2,2,3.26,180.7,benign
+1681,649,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,7,9,8,7.33,True,23,0,38,46.94,209.8,ransomware_like
+1304,602,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,13,3,1,5.41,True,2,2,0,4.02,144.1,benign
+1388,808,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,31,1,1,5.06,False,0,1,1,4.28,118.0,benign
+1572,761,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,43,3,0,5.7,True,0,2,3,5.72,77.1,benign
+1097,315,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,38,1,1,5.32,False,0,1,1,6.3,80.8,benign
+1373,857,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,80,0,0,4.99,False,0,1,2,0.76,154.8,benign
+1563,203,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,66,0,1,5.66,True,0,0,3,2.68,77.5,benign
+1266,325,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,76,0,0,5.24,True,10,0,1,6.22,147.2,benign
+1021,668,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,32,1,0,4.52,True,3,2,0,4.5,150.5,benign
+1533,382,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,39,2,0,6.18,True,5,0,3,4.55,133.3,benign
+1609,330,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,9,8,1,6.96,True,33,1,17,7.33,29.7,infostealer_like
+1495,963,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,23,3,0,5.95,False,0,2,2,4.95,88.3,benign
+1656,303,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,29,10,1,6.31,True,59,0,13,6.06,42.9,infostealer_like
+1668,478,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,5,4,3,6.66,True,33,1,26,5.06,73.1,infostealer_like
+1747,368,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,7,8,6,6.57,False,0,0,32,12.99,79.3,injected_loader
+1141,734,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,61,0,0,6.26,False,0,1,0,2.98,123.4,benign
+1415,390,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,53,1,1,5.57,True,4,2,0,4.64,44.6,benign
+1403,680,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,73,2,1,5.83,True,4,0,0,5.49,160.6,benign
+1737,833,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,15,9,6,7.29,True,14,1,70,36.94,269.9,ransomware_like
+1722,736,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,20,13,6,7.56,False,0,1,64,45.12,264.7,ransomware_like
+1145,218,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,11,2,1,5.35,False,0,2,2,5.66,73.4,benign
+1300,285,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,13,0,0,5.16,False,0,1,2,4.44,175.9,benign
+1254,249,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,52,1,0,5.34,False,0,2,1,9.38,87.1,benign
+1101,438,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,13,3,0,5.34,True,4,0,1,3.08,44.8,benign
+1058,982,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,39,0,0,5.18,True,9,2,2,4.97,105.7,benign
+1024,360,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,23,0,0,4.72,True,6,2,1,1.41,77.1,benign
+1776,671,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,8,3,6,6.3,True,10,1,28,9.52,69.7,injected_loader
+1600,440,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,13,3,4,6.62,True,53,1,18,6.29,48.6,infostealer_like
+1164,485,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,43,2,0,5.16,False,0,1,1,4.56,74.0,benign
+1536,696,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,33,0,0,5.8,True,4,2,2,5.44,138.5,benign
+1004,853,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,15,0,1,5.28,False,0,2,0,6.37,187.9,benign
+1777,592,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,19,9,3,6.81,True,15,0,33,10.21,96.6,injected_loader
+1743,961,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,14,14,5,7.62,False,0,0,99,45.69,270.7,ransomware_like
+1757,646,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,15,5,3,7.41,True,13,0,57,6.85,68.0,injected_loader
+1765,781,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,6,4,4,6.53,True,15,0,53,8.56,142.4,injected_loader
+1288,258,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,51,0,1,5.02,True,6,0,3,4.17,141.3,benign
+1693,685,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,11,5,8,7.63,True,10,1,100,34.01,225.8,ransomware_like
+1513,914,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,70,2,1,5.8,True,0,2,2,3.95,71.1,benign
+1154,705,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,48,0,0,5.23,True,6,1,1,5.33,121.7,benign
+1685,921,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,24,10,5,7.51,False,0,1,32,64.32,270.8,ransomware_like
+1597,928,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,15,1,1,5.37,False,0,0,1,1.56,99.6,benign
+1279,291,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,56,1,1,5.92,False,0,2,1,5.09,187.6,benign
+1751,709,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,8,2,5,6.8,True,10,0,51,26.09,87.3,injected_loader
+1336,598,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,69,1,0,5.19,False,0,2,0,3.8,152.9,benign
+1113,528,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,38,0,0,5.34,True,1,2,0,4.02,162.8,benign
+1504,578,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,51,2,0,5.22,True,9,2,3,0.81,129.9,benign
+1008,225,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,72,2,1,6.01,True,2,0,1,4.24,125.9,benign
+1272,909,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,29,3,1,5.78,True,6,2,0,1.42,115.1,benign
+1484,935,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,29,0,0,4.86,False,0,1,0,2.92,99.8,benign
+1480,389,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,20,1,0,4.9,False,0,1,3,3.55,154.4,benign
+1125,632,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,55,1,0,5.27,False,0,1,0,3.81,75.0,benign
+1421,851,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,29,3,1,5.65,True,7,1,2,5.94,219.8,benign
+1216,705,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,25,2,1,6.13,True,8,1,1,2.98,83.7,benign
+1146,922,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,43,1,0,5.25,True,0,0,3,2.35,91.4,benign
+1079,437,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,52,3,1,4.96,True,3,1,2,3.31,182.4,benign
+1298,651,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,64,0,0,5.17,True,0,1,2,1.79,162.5,benign
+1568,522,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,33,1,1,5.03,True,3,2,2,1.7,56.0,benign
+1322,213,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,67,0,0,5.49,True,3,0,1,3.7,82.4,benign
+1372,467,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,42,1,0,5.56,False,0,1,0,6.73,145.5,benign
+1185,389,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,50,1,1,5.59,False,0,1,2,4.93,89.8,benign
+1789,914,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,11,3,4,6.67,True,4,0,15,10.89,88.9,injected_loader
+1118,385,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,45,1,1,5.63,True,2,1,1,4.54,79.5,benign
+1625,601,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,29,9,2,7.06,True,52,0,10,14.89,70.7,infostealer_like
+1382,988,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,47,2,0,4.92,False,0,0,1,3.95,161.3,benign
+1419,726,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,44,1,0,5.69,True,2,2,2,4.39,140.2,benign
+1483,530,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,19,1,0,5.68,True,2,1,3,0.88,146.6,benign
+1745,491,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,16,5,2,6.03,True,13,1,52,25.08,115.2,injected_loader
+1201,838,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,18,1,1,5.91,True,4,1,0,5.35,100.8,benign
+1555,728,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,36,2,1,5.28,True,3,1,2,1.83,42.6,benign
+1355,250,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,47,1,1,5.63,False,0,2,1,2.46,166.0,benign
+1305,574,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,80,1,0,5.06,False,0,2,0,1.99,81.6,benign
+1423,226,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,53,0,0,5.45,True,8,0,0,5.5,166.7,benign
+1319,617,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,35,3,1,4.85,True,0,1,1,3.55,69.5,benign
+1109,908,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,66,3,0,5.2,True,1,0,3,6.12,170.8,benign
+1527,794,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,17,2,1,5.49,True,9,0,3,5.98,191.2,benign
+1214,399,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,20,3,1,5.07,True,6,2,1,0.85,120.0,benign
+1227,363,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,80,3,0,5.48,True,3,1,2,4.44,110.6,benign
+1313,923,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,52,1,0,5.81,True,5,1,0,2.59,93.7,benign
+1698,923,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,11,10,6,7.38,False,0,1,91,34.65,236.3,ransomware_like
+1598,467,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,27,1,1,5.39,False,0,2,1,6.49,139.7,benign
+1220,309,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,46,1,0,5.82,False,0,1,1,3.21,96.1,benign
+1755,530,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,15,7,5,6.39,False,0,1,38,7.09,23.0,injected_loader
+1359,430,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,32,3,1,5.45,True,3,0,0,2.16,109.4,benign
+1792,765,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,4,8,4,6.86,False,0,0,52,19.32,133.6,injected_loader
+1785,850,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,12,6,5,6.78,True,8,0,31,2.05,172.7,injected_loader
+1014,362,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,51,0,0,5.09,True,3,2,3,5.14,145.7,benign
+1428,566,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,55,1,1,5.98,False,0,1,2,3.56,157.6,benign
+1579,691,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,61,2,0,5.56,False,0,0,2,1.67,138.7,benign
+1477,662,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,51,0,0,5.74,False,0,0,0,2.11,80.2,benign
+1088,550,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,54,0,0,5.97,True,1,2,0,3.4,181.8,benign
+1327,372,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,60,1,0,5.71,False,0,0,0,4.36,77.6,benign
+1329,997,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,47,3,0,5.14,False,0,1,3,2.41,64.6,benign
+1274,349,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,46,0,0,5.64,False,0,1,3,4.08,173.3,benign
+1331,769,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,48,2,1,5.57,False,0,1,2,0.83,186.2,benign
+1592,946,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,18,0,0,5.72,True,8,1,2,3.04,97.1,benign
+1297,575,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,10,3,1,4.87,True,8,2,3,3.4,110.0,benign
+1439,828,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,79,0,1,5.39,False,0,2,2,2.6,104.7,benign
+1509,605,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,80,3,1,5.45,True,8,0,3,6.18,140.0,benign
+1417,622,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,62,2,0,5.72,True,4,2,2,0.9,169.7,benign
+1085,606,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,68,2,1,5.17,True,4,2,1,6.84,99.2,benign
+1794,455,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,16,8,6,5.5,True,5,0,46,7.46,19.1,injected_loader
+1308,841,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,70,2,0,5.56,True,6,1,0,7.65,120.9,benign
+1135,649,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,61,2,0,5.52,True,1,0,3,0.59,112.5,benign
+1205,897,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,23,2,0,5.9,True,6,1,0,5.3,171.8,benign
+1548,710,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,31,2,1,5.28,True,2,0,2,1.36,122.8,benign
+1368,891,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,76,1,1,5.84,False,0,0,3,5.72,191.3,benign
+1560,621,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,49,0,0,5.89,False,0,2,1,6.03,181.3,benign
+1117,868,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,68,3,0,5.05,True,3,0,2,5.54,85.9,benign
+1427,322,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,24,1,0,5.23,True,3,0,3,0.73,149.9,benign
+1001,913,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,56,0,1,4.8,False,0,1,0,4.41,39.5,benign
+1571,791,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,16,3,0,5.19,False,0,1,0,2.61,50.4,benign
+1299,554,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,29,3,0,5.04,False,0,2,2,5.03,88.4,benign
+1756,345,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,11,8,5,6.43,True,15,0,49,22.4,93.2,injected_loader
+1543,327,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,80,0,1,5.87,True,4,0,2,1.34,136.0,benign
+1364,678,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,11,3,0,5.75,False,0,0,2,1.25,141.0,benign
+1240,591,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,47,2,0,4.84,False,0,0,3,2.65,34.7,benign
+1441,605,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,41,1,0,5.72,True,1,1,2,3.62,164.2,benign
+1278,718,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,76,3,1,5.75,True,8,2,2,4.93,189.3,benign
+1639,799,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,20,3,3,6.63,True,24,0,26,11.13,38.5,infostealer_like
+1580,695,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,38,0,0,5.43,True,5,1,3,5.6,4.1,benign
+1068,217,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,39,0,1,5.77,True,7,2,0,4.96,153.6,benign
+1165,885,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,23,1,1,4.82,False,0,1,0,4.78,124.6,benign
+1271,866,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,62,3,1,5.5,False,0,0,3,4.95,214.4,benign
+1161,233,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,65,3,1,6.35,False,0,0,2,4.43,103.1,benign
+1614,740,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,16,7,1,6.95,True,44,0,34,12.08,109.9,infostealer_like
+1453,535,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,21,3,0,4.99,True,5,0,1,3.09,113.3,benign
+1738,537,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,13,12,8,7.62,True,12,1,72,63.46,221.7,ransomware_like
+1416,816,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,79,1,0,4.74,True,9,2,0,5.2,78.6,benign
+1194,783,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,58,2,0,5.49,True,10,0,3,7.69,91.1,benign
+1444,586,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,56,2,1,5.49,True,8,1,0,7.47,68.8,benign
+1436,695,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,53,2,1,5.47,True,4,0,3,1.94,116.2,benign
+1229,464,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,32,0,1,5.74,False,0,2,0,0.7,208.5,benign
+1027,569,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,58,0,0,5.39,False,0,2,1,7.11,85.7,benign
+1385,718,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,71,1,1,5.44,True,2,0,1,4.03,142.8,benign
+1206,488,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,38,1,0,5.27,True,2,1,0,4.59,98.7,benign
+1669,355,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,9,7,3,6.23,True,57,0,40,13.8,36.3,infostealer_like
+1728,595,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,21,13,8,7.53,True,7,0,45,53.34,162.8,ransomware_like
+1725,388,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,7,12,6,7.45,False,0,2,100,48.93,239.7,ransomware_like
+1796,624,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,14,9,6,6.92,True,13,0,29,6.32,129.8,injected_loader
+1098,854,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,51,0,0,4.93,False,0,1,3,2.49,175.0,benign
+1037,938,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,20,2,1,5.38,True,3,0,3,5.85,85.4,benign
+1467,680,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,10,3,0,5.43,True,9,0,2,3.52,147.0,benign
+1253,785,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,40,0,0,5.31,True,0,1,2,4.11,79.0,benign
+1689,333,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,13,12,6,7.55,True,22,2,55,60.44,169.9,ransomware_like
+1358,305,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,66,3,0,4.88,True,10,2,1,3.04,193.6,benign
+1699,959,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,7,11,7,6.87,False,0,2,64,41.81,169.9,ransomware_like
+1019,483,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,23,1,0,5.77,False,0,1,2,5.39,109.9,benign
+1157,356,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,19,3,1,5.53,True,5,2,2,2.1,188.9,benign
+1328,931,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,55,0,0,5.46,False,0,2,2,0.06,79.1,benign
+1700,652,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,10,14,6,7.72,True,8,0,95,32.64,169.0,ransomware_like
+1570,953,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,69,0,1,5.93,True,6,2,0,4.24,94.4,benign
+1208,906,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,18,0,0,4.75,False,0,0,3,9.35,97.5,benign
+1222,852,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,36,2,0,5.03,True,9,0,1,5.64,82.5,benign
+1269,427,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,36,1,1,5.42,True,5,1,1,4.29,128.0,benign
+1257,456,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,50,2,0,5.74,False,0,2,3,4.95,83.8,benign
+1242,946,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,65,1,0,4.75,False,0,1,0,2.92,179.8,benign
+1130,234,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,15,1,1,6.13,True,0,2,3,5.67,110.0,benign
+1100,771,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,62,2,0,5.17,False,0,0,2,4.44,98.9,benign
+1606,514,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,5,7,2,6.66,True,56,0,27,7.37,87.9,infostealer_like
+1236,496,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,60,2,1,5.48,False,0,1,0,5.81,127.5,benign
+1233,691,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,56,0,1,6.01,True,0,2,2,3.94,140.6,benign
+1701,540,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,11,11,5,8.07,True,15,1,84,58.72,255.6,ransomware_like
+1262,513,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,11,1,0,5.46,True,9,0,0,2.96,150.7,benign
+1556,287,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,43,2,1,5.92,True,6,0,3,4.91,139.0,benign
+1150,475,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,10,0,0,5.75,True,5,1,2,6.1,136.2,benign
+1620,812,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,19,6,1,6.8,True,44,1,23,17.42,54.3,infostealer_like
+1675,832,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,24,6,4,6.65,True,48,0,35,12.92,85.7,infostealer_like
+1682,894,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,22,7,3,8.12,True,10,0,31,19.96,257.4,ransomware_like
+1375,745,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,13,3,1,5.38,True,8,2,3,7.04,139.2,benign
+1516,995,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,72,0,1,5.09,True,4,2,2,1.39,115.8,benign
+1519,951,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,41,3,0,5.75,False,0,0,2,4.09,75.6,benign
+1577,248,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,80,2,0,5.31,True,8,1,1,3.52,106.0,benign
+1190,273,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,24,0,0,5.58,True,7,2,2,2.78,134.9,benign
+1706,319,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,24,14,7,7.5,False,0,0,95,52.65,238.1,ransomware_like
+1363,384,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,37,0,1,5.48,True,1,2,0,4.42,122.2,benign
+1703,954,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,20,9,3,7.62,False,0,0,64,52.32,97.9,ransomware_like
+1290,309,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,19,2,0,5.26,False,0,0,0,3.49,143.5,benign
+1005,891,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,35,1,0,4.82,True,7,2,2,2.6,143.3,benign
+1091,201,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,22,2,0,5.15,True,4,2,2,8.22,162.8,benign
+1772,665,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,13,8,5,7.31,True,8,0,17,19.68,111.0,injected_loader
+1293,270,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,63,3,0,5.81,True,0,2,2,6.04,136.1,benign
+1684,634,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,14,14,6,7.61,False,0,0,34,49.63,190.8,ransomware_like
+1122,705,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,57,2,1,5.69,True,10,1,2,2.82,135.9,benign
+1245,666,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,47,2,1,5.91,False,0,2,3,4.35,125.5,benign
+1590,322,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,55,0,1,5.9,False,0,2,0,3.43,167.8,benign
+1524,901,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,61,0,0,6.1,True,6,0,3,4.35,127.0,benign
+1562,819,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,63,3,0,6.04,True,2,0,2,1.6,92.3,benign
+1221,717,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,38,3,1,5.07,True,4,2,3,7.07,141.4,benign
+1031,838,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,60,3,0,5.06,True,10,0,1,5.47,118.7,benign
+1230,483,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,69,2,1,6.17,True,0,0,3,1.56,125.0,benign
+1177,976,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,78,0,1,5.46,True,10,2,3,4.69,140.4,benign
+1582,696,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,36,1,0,5.87,True,4,2,3,4.48,138.2,benign
+1361,350,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,32,3,1,6.02,True,8,0,3,4.39,82.5,benign
+1132,388,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,74,1,0,5.75,True,5,1,0,3.07,97.3,benign
+1066,424,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,23,3,1,5.65,True,0,2,0,1.24,92.9,benign
+1471,220,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,37,3,1,5.52,False,0,2,2,2.34,94.6,benign
+1448,941,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,19,0,0,6.29,True,5,1,2,3.94,153.1,benign
+1529,546,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,56,0,0,5.59,True,2,0,0,2.58,104.4,benign
+1660,881,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,23,7,2,7.09,True,37,0,16,9.33,64.0,infostealer_like
+1169,393,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,59,2,0,6.38,True,3,1,0,2.34,134.5,benign
+1510,655,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,64,1,1,6.07,True,1,2,0,3.74,165.2,benign
+1158,409,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,64,1,1,4.99,True,0,0,0,1.2,108.6,benign
+1335,861,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,40,1,0,5.58,False,0,1,3,5.3,151.5,benign
+1395,638,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,17,2,1,6.39,False,0,1,2,2.31,111.0,benign
+1443,320,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,76,0,0,5.57,True,7,2,2,7.07,157.1,benign
+1769,343,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,10,4,2,7.57,True,8,1,44,9.85,45.2,injected_loader
+1010,637,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,15,3,1,6.09,False,0,0,0,2.08,173.2,benign
+1607,247,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,18,3,4,6.41,True,52,0,12,9.17,130.1,infostealer_like
+1391,748,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,72,0,1,5.89,False,0,2,3,2.5,85.6,benign
+1246,508,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,11,1,1,5.5,True,0,1,3,3.7,117.3,benign
+1289,391,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,49,3,0,5.35,False,0,1,3,2.57,115.9,benign
+1717,299,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,21,11,6,7.3,False,0,0,83,42.37,332.1,ransomware_like
+1393,401,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,35,3,0,5.67,True,9,0,2,2.02,116.8,benign
+1476,612,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,23,0,1,4.8,True,3,1,1,0.39,121.1,benign
+1252,688,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,64,3,1,5.23,True,4,0,1,1.52,130.5,benign
+1243,676,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,49,3,0,5.47,True,8,2,3,1.93,78.7,benign
+1733,886,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,25,12,7,7.92,False,0,0,58,24.45,106.6,ransomware_like
+1294,404,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,41,3,0,5.02,True,5,2,1,0.47,117.6,benign
+1321,751,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,16,2,1,5.96,False,0,0,3,5.67,74.9,benign
+1702,822,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,19,9,4,7.13,True,6,1,100,34.7,213.3,ransomware_like
+1007,418,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,33,1,0,5.5,False,0,2,3,1.37,104.8,benign
+1460,407,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,45,0,1,5.94,False,0,2,1,6.15,82.7,benign
+1000,832,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,56,1,1,5.22,True,5,1,3,3.02,107.1,benign
+1655,677,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,27,4,1,7.13,True,27,1,14,10.66,81.0,infostealer_like
+1493,424,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,73,0,1,6.05,False,0,1,0,4.88,98.1,benign
+1268,415,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,13,2,1,5.48,False,0,1,1,6.87,105.9,benign
+1753,927,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,18,7,5,6.5,True,13,0,38,21.38,142.8,injected_loader
+1411,331,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,23,2,1,5.17,False,0,0,0,3.8,139.9,benign
+1347,951,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,68,3,0,5.64,True,3,2,1,3.43,180.9,benign
+1400,843,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,72,0,1,5.78,True,1,2,2,3.95,203.1,benign
+1378,544,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,68,0,0,5.75,True,2,0,2,4.43,76.1,benign
+1770,867,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,14,6,6,5.93,True,8,0,55,7.55,84.3,injected_loader
+1763,384,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,11,8,3,6.31,True,3,1,48,15.08,54.0,injected_loader
+1394,778,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,66,1,1,5.95,True,2,1,3,2.08,131.3,benign
+1237,298,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,50,3,1,5.58,True,10,2,3,5.44,139.1,benign
+1650,819,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,11,12,4,6.63,True,49,0,27,10.23,103.8,infostealer_like
+1646,247,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,19,6,1,6.06,True,56,1,17,7.7,82.4,infostealer_like
+1339,939,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,55,1,0,4.98,True,9,1,2,8.83,109.5,benign
+1626,668,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,9,9,4,7.09,True,28,0,16,4.95,87.6,infostealer_like
+1782,887,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,19,8,4,6.31,True,5,1,47,16.78,92.7,injected_loader
+1114,376,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,58,2,1,4.86,True,1,2,1,5.31,131.6,benign
+1645,352,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,26,7,2,6.3,True,32,1,28,11.86,112.7,infostealer_like
+1210,844,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,25,0,1,5.84,False,0,1,1,3.65,44.0,benign
+1500,647,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,41,2,1,4.5,True,5,0,0,3.14,111.6,benign
+1528,519,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,35,3,0,5.51,False,0,2,2,11.58,105.3,benign
+1064,605,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,69,3,1,5.72,True,5,2,0,4.55,188.8,benign
+1691,444,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,6,10,4,7.47,False,0,1,31,48.43,277.1,ransomware_like
+1108,883,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,24,1,1,5.67,True,4,1,1,4.13,92.0,benign
+1550,421,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,77,1,0,5.46,True,8,0,1,6.05,116.2,benign
+1469,740,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,68,3,1,6.24,True,7,2,0,5.91,84.4,benign
+1630,703,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,26,6,4,7.07,True,45,0,39,5.15,40.3,infostealer_like
+1276,437,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,73,1,0,5.98,True,1,1,3,4.68,155.7,benign
+1061,717,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,43,3,1,6.27,False,0,0,0,5.08,148.9,benign
+1199,837,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,20,1,0,5.75,False,0,2,3,6.2,84.0,benign
+1508,701,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,18,1,0,5.6,True,0,2,1,4.76,129.2,benign
+1432,800,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,54,0,0,5.63,True,9,0,3,6.07,198.4,benign
+1736,275,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,15,14,6,7.05,False,0,1,32,49.59,206.3,ransomware_like
+1511,698,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,14,1,0,5.14,True,2,0,2,1.37,119.1,benign
+1791,660,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,5,3,2,6.81,True,11,0,50,6.1,3.8,injected_loader
+1073,639,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,65,1,1,5.8,True,4,2,3,5.04,137.1,benign
+1049,776,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,26,3,1,5.83,False,0,0,0,2.99,125.8,benign
+1429,237,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,31,1,0,5.72,True,9,0,2,4.84,106.1,benign
+1673,223,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,18,4,4,6.94,True,21,0,37,13.36,80.5,infostealer_like
+1498,310,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,40,3,0,5.7,True,4,2,2,5.41,173.7,benign
+1440,317,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,40,0,1,6.21,False,0,2,1,3.58,148.2,benign
+1301,324,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,38,2,1,5.71,True,7,1,2,3.88,99.2,benign
+1076,726,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,57,0,1,5.99,True,1,1,1,6.12,99.3,benign
+1333,372,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,58,0,1,5.23,False,0,0,3,8.23,95.7,benign
+1092,841,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,75,3,0,6.06,True,4,0,1,5.14,131.0,benign
+1497,469,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,61,3,1,4.85,False,0,0,2,3.04,114.2,benign
+1521,475,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,44,1,0,5.85,False,0,2,0,4.49,113.3,benign
+1798,726,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,17,4,3,6.34,True,14,1,18,15.42,108.9,injected_loader
+1739,688,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,16,6,3,7.46,True,21,1,85,66.4,228.2,ransomware_like
+1303,938,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,64,0,0,5.68,False,0,1,2,1.12,95.8,benign
+1648,944,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,5,10,1,6.76,True,26,1,29,8.69,112.5,infostealer_like
+1605,853,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,28,6,2,6.71,True,45,0,22,6.89,93.2,infostealer_like
+1131,498,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,79,1,1,5.44,True,5,0,3,4.15,155.1,benign
+1334,670,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,77,2,0,5.43,False,0,2,1,5.91,134.0,benign
+1767,909,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,3,7,2,6.41,True,3,1,50,14.21,152.5,injected_loader
+1761,611,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,15,5,2,6.33,True,11,1,23,10.83,113.5,injected_loader
+1426,743,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,76,3,0,5.33,True,6,2,2,0.35,93.2,benign
+1674,567,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,23,12,2,6.4,True,39,0,24,5.1,120.7,infostealer_like
+1778,514,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,3,8,6,6.57,True,13,1,34,8.1,29.1,injected_loader
+1707,288,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,5,11,5,7.08,True,16,2,81,35.97,226.7,ransomware_like
+1530,514,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,77,2,0,4.98,True,0,0,3,4.46,108.2,benign
+1501,240,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,21,1,1,4.89,False,0,2,0,4.55,96.9,benign
+1779,500,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,15,2,4,5.75,True,9,1,18,8.28,151.0,injected_loader
+1196,789,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,28,2,0,5.77,False,0,1,2,5.11,95.2,benign
+1332,331,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,13,3,0,5.8,True,10,0,1,3.48,104.1,benign
+1735,707,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,25,8,3,7.69,True,8,0,73,33.46,339.4,ransomware_like
+1708,886,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,20,6,5,7.36,True,14,0,44,43.91,224.4,ransomware_like
+1649,634,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,29,11,1,6.44,True,57,0,10,8.59,98.1,infostealer_like
+1634,642,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,8,9,1,6.9,True,18,0,26,21.42,97.8,infostealer_like
+1583,580,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,75,1,0,4.93,True,10,1,2,2.48,123.1,benign
+1573,572,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,23,2,0,5.75,True,3,0,1,4.66,57.6,benign
+1584,951,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,36,0,1,5.24,False,0,1,3,4.1,62.8,benign
+1520,551,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,22,3,0,5.82,False,0,2,2,4.57,95.1,benign
+1404,655,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,22,3,1,5.82,True,2,2,0,3.96,83.2,benign
+1195,807,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,17,0,1,5.21,False,0,2,3,0.05,136.5,benign
+1435,950,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,28,3,1,5.92,True,2,2,3,4.33,121.7,benign
+1603,348,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,26,9,1,6.58,True,23,1,21,1.39,114.9,infostealer_like
+1337,665,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,52,0,1,5.01,True,0,2,1,5.95,136.2,benign
+1750,570,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,14,5,2,6.62,False,0,1,51,2.09,176.3,injected_loader
+1659,341,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,16,8,3,6.37,True,27,0,14,4.09,74.9,infostealer_like
+1727,703,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,19,10,6,7.58,True,16,0,60,70.08,393.4,ransomware_like
+1060,228,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,38,3,1,5.63,True,0,0,1,2.63,168.3,benign
+1203,365,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,19,3,0,5.41,True,1,1,0,6.61,98.7,benign
+1617,547,svchost.exe,C:\Users\User\AppData\Roaming\svchost.exe,NT AUTHORITY\USER,Unknown,False,21,5,2,6.96,True,56,0,18,10.98,55.3,infostealer_like
+1370,925,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,25,0,0,5.65,False,0,0,0,5.59,54.5,benign
+1022,927,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,69,3,1,4.87,False,0,0,3,4.4,123.4,benign
+1774,222,payload.exe,C:\ProgramData\payload.exe,NT AUTHORITY\USER,Unknown,False,18,2,3,6.29,True,3,1,35,10.58,157.2,injected_loader
+1093,982,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,78,2,0,5.42,False,0,0,3,3.28,125.1,benign
+1129,309,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,60,0,1,5.13,False,0,0,3,5.46,154.5,benign
+1664,374,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,29,11,4,6.88,True,35,1,30,5.1,80.4,infostealer_like
+1023,561,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,31,0,0,5.76,False,0,2,1,2.42,150.8,benign
+1793,595,update.exe,C:\Users\User\AppData\Roaming\Update\update.exe,NT AUTHORITY\USER,Unknown,False,15,7,3,6.52,True,5,0,17,21.22,115.6,injected_loader
+1438,977,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,72,1,1,5.36,True,1,0,2,5.47,134.5,benign
+1390,752,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,10,1,1,5.83,True,2,0,0,3.79,152.5,benign
+1265,693,explorer.exe,C:\Windows\explorer.exe,NT AUTHORITY\USER,Microsoft,True,69,2,0,5.83,True,1,0,2,6.31,35.6,benign
+1072,571,Teams.exe,C:\Users\User\AppData\Local\Microsoft\Teams\current\Teams.exe,NT AUTHORITY\USER,Microsoft,True,19,1,1,5.31,False,0,1,2,4.06,87.2,benign
+1084,391,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,72,2,0,5.99,False,0,0,2,6.99,163.8,benign
+1082,843,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,21,1,1,5.54,True,8,1,3,2.87,141.8,benign
+1346,531,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,61,3,0,5.2,True,9,1,0,1.71,121.8,benign
+1679,351,chrome.exe,C:\Users\User\AppData\Local\Temp\chrome.exe,NT AUTHORITY\USER,Unknown,False,12,3,4,6.75,True,48,1,10,6.19,96.6,infostealer_like
+1473,420,lsass.exe,C:\Windows\System32\lsass.exe,NT AUTHORITY\SYSTEM,Microsoft,True,48,0,1,5.42,False,0,0,2,3.01,153.3,benign
+1167,960,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,21,3,1,5.66,False,0,1,0,4.18,63.8,benign
+1232,972,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,33,2,1,5.25,False,0,1,1,3.52,166.3,benign
+1189,898,chrome.exe,C:\Program Files\Google\Chrome\Application\chrome.exe,NT AUTHORITY\USER,Google LLC,True,50,1,1,5.29,False,0,2,1,1.38,139.1,benign
+1151,660,svchost.exe,C:\Windows\System32\svchost.exe,NT AUTHORITY\SYSTEM,Microsoft,True,52,2,1,5.51,True,9,2,1,3.76,98.8,benign

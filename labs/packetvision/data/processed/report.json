@@ -1,0 +1,59 @@
+{
+  "metrics": {
+    "accuracy": 1.0,
+    "num_train_samples": 2550,
+    "num_val_samples": 850,
+    "classes": [
+      "benign",
+      "bruteforce",
+      "dns_tunnel",
+      "port_scan"
+    ],
+    "classification_report": {
+      "benign": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 500.0
+      },
+      "bruteforce": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 100.0
+      },
+      "dns_tunnel": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 100.0
+      },
+      "port_scan": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 150.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 850.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 850.0
+      }
+    }
+  },
+  "num_samples": 3400,
+  "labels_distribution": {
+    "benign": 2000,
+    "port_scan": 600,
+    "bruteforce": 400,
+    "dns_tunnel": 400
+  }
+}

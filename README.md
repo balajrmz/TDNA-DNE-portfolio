@@ -149,17 +149,4 @@ pentest-portfolio/
 
 - GitHub: https://github.com/balajimz  
 - LinkedIn: www.linkedin.com/in/jan-zabala-5aaa59380 
-- Email:   
-
----
-
-If you'd like, I can also create:
-
-- A visual **portfolio banner** for the top of this README  
-- Badges (Python, FastAPI, ML, Cybersecurity)  
-- Navigation buttons  
-- A better ASCII or PNG architecture diagram  
-- A pinned repositories section  
-
-Just say:  
-**“BackDoor, let’s polish the portfolio.”**
+- Email:
