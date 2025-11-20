@@ -18,6 +18,7 @@ This project demonstrates real Threat Detection Engineering capabilities used ac
 ---
 
 ## 📁 Project Structure
+```
 zerotrace/  
 ├── api.py  
 ├── synthetic.py  
@@ -33,7 +34,7 @@ zerotrace/
 ├── model.joblib  
 ├── feature_columns.json  
 └── report.json  
-
+```
 ---
 
 ## 🧠 How ZeroTrace Works
