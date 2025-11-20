@@ -1,0 +1,89 @@
+{
+  "n_samples": 800,
+  "n_features": 12,
+  "classes": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "classification_report": {
+    "0": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 120.0
+    },
+    "1": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 16.0
+    },
+    "2": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 13.0
+    },
+    "3": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 11.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 160.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 160.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      120,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      16,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      13,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      11
+    ]
+  ],
+  "feature_importances": {
+    "pid": 0.29614023477635526,
+    "ppid": 0.0022018754062333953,
+    "num_modules": 0.031980966060888794,
+    "num_unsigned_modules": 0.03551321797149265,
+    "num_rwx_regions": 0.057539857343629694,
+    "avg_entropy": 0.07295471606639013,
+    "has_network_connection": 0.00035608273975812495,
+    "num_connections": 0.14717535863231426,
+    "listening_ports": 0.004961999087010244,
+    "high_entropy_strings": 0.14264796991646683,
+    "cpu_usage": 0.13308876606067443,
+    "memory_usage_mb": 0.07543895593878627
+  }
+}

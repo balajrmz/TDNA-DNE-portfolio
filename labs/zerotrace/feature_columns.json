@@ -1,0 +1,14 @@
+[
+  "pid",
+  "ppid",
+  "num_modules",
+  "num_unsigned_modules",
+  "num_rwx_regions",
+  "avg_entropy",
+  "has_network_connection",
+  "num_connections",
+  "listening_ports",
+  "high_entropy_strings",
+  "cpu_usage",
+  "memory_usage_mb"
+]

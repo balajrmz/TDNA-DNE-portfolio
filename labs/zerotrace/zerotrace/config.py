@@ -1,9 +1,3 @@
-"""
-ZeroTrace Configuration
-
-Defines paths and constants used across the ZeroTrace memory forensics project.
-"""
-
 from pathlib import Path
 
 # Root directory = labs/zerotrace/
@@ -14,15 +8,16 @@ DATA_DIR = ROOT / "data"
 RAW_DIR = DATA_DIR / "raw"
 PROCESSED_DIR = DATA_DIR / "processed"
 
-# Where snapshots are stored
+# Files we write/read
 SNAPSHOT_PATH = RAW_DIR / "memory_snapshots.csv"
-
-# ML artifacts
+FEATURES_PATH = PROCESSED_DIR / "features.csv"   # new
+FEATURES_CSV_PATH = FEATURES_PATH                # <- add this alias
 MODEL_PATH = ROOT / "model.joblib"
 FEATURE_COLUMNS_PATH = ROOT / "feature_columns.json"
 REPORT_PATH = ROOT / "report.json"
 
-# Features used by the model
+
+# Feature columns the model will use
 FEATURE_COLUMNS = [
     "pid",
     "ppid",
@@ -38,7 +33,6 @@ FEATURE_COLUMNS = [
     "memory_usage_mb",
 ]
 
-# Default model classes
 MODEL_CLASSES = [
     "benign",
     "infostealer_like",
@@ -46,6 +40,5 @@ MODEL_CLASSES = [
     "injected_loader",
 ]
 
-# Synthetic generation settings
-NUM_PROCESSES = 800  # synthetic amount
+NUM_PROCESSES = 800
 SEED = 1337

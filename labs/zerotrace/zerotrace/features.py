@@ -1,100 +1,126 @@
 """
-features.py
-ZeroTrace – Feature extraction from synthetic (or real) memory snapshots.
+Feature extraction pipeline for ZeroTrace.
 
-This module converts raw memory snapshot CSVs into ML-ready features.
+This script:
+- Loads the synthetic process snapshot (raw memory/process info)
+- Extracts numeric features the ML model will train on
+- Normalizes the `label` column to integers (0..N-1) based on MODEL_CLASSES
+- Saves the final feature matrix to CSV
 """
 
-from __future__ import annotations
 import pandas as pd
-import numpy as np
 from pathlib import Path
-from zerotrace.config import SNAPSHOT_PATH, FEATURES_PATH
 
+from .config import (
+    SNAPSHOT_PATH,
+    FEATURES_PATH,
+    FEATURE_COLUMNS,
+    MODEL_CLASSES,
+)
 
-def load_snapshot(path: str | Path | None = None) -> pd.DataFrame:
+# -------------------------------------------------------
+# 1. Load raw snapshot (memory/process info)
+# -------------------------------------------------------
+
+def load_snapshot() -> pd.DataFrame:
     """
-    Load a raw memory snapshot CSV.
+    Load the synthetic snapshot CSV produced by zerotrace.synthetic.
+    Ensures the 'label' column exists.
     """
-    if path is None:
-        path = SNAPSHOT_PATH
-    return pd.read_csv(path)
+    if not Path(SNAPSHOT_PATH).exists():
+        raise FileNotFoundError(f"Snapshot file not found at: {SNAPSHOT_PATH}")
+
+    df = pd.read_csv(SNAPSHOT_PATH)
+
+    if "label" not in df.columns:
+        raise ValueError(
+            "Snapshot is missing the 'label' column.\n"
+            "Make sure synthetic.py assigns 'label' (or family) to each process."
+        )
+
+    return df
 
 
-def compute_entropy(values: pd.Series) -> float:
-    """
-    Shannon entropy of a numerical distribution.
-    """
-    counts = values.value_counts(normalize=True)
-    return float(-np.sum(counts * np.log2(counts + 1e-9)))
-
+# -------------------------------------------------------
+# 2. Extract only the ML feature columns
+# -------------------------------------------------------
 
 def extract_features(df: pd.DataFrame) -> pd.DataFrame:
     """
-    Converts a memory snapshot dataframe into a ML feature row.
+    Extract numeric features from the raw snapshot.
+    FEATURE_COLUMNS is defined in config.py.
+
+    Also:
+    - Converts the label column to integer class IDs based on MODEL_CLASSES.
     """
-    features = {}
 
-    # === 1. Basic Metrics ===
-    features["num_records"] = len(df)
-    features["unique_processes"] = df["process_id"].nunique()
-    features["unique_threads"] = df["thread_id"].nunique()
+    # --- check feature columns ---
+    missing = [col for col in FEATURE_COLUMNS if col not in df.columns]
+    if missing:
+        raise ValueError(f"Missing required feature columns: {missing}")
 
-    # === 2. Memory Behavior Stats ===
-    features["avg_mem_access"] = df["mem_access"].mean()
-    features["std_mem_access"] = df["mem_access"].std()
-    features["max_mem_access"] = df["mem_access"].max()
+    # Main numeric feature matrix
+    features_df = df[FEATURE_COLUMNS].copy()
 
-    # === 3. Kernel Call Patterns ===
-    features["avg_kernel_calls"] = df["kernel_calls"].mean()
-    features["suspicious_kernel_ops"] = (df["kernel_calls"] > 50).sum()
+    # --- normalize label column ---
+    raw_labels = df["label"]
 
-    # === 4. Entropy-Based Anomaly Detection ===
-    features["mem_entropy"] = compute_entropy(df["mem_access"])
-    features["kernel_entropy"] = compute_entropy(df["kernel_calls"])
+    # If labels are strings like "benign", map them to integers via MODEL_CLASSES
+    if raw_labels.dtype == object:
+        family_to_label = {name: idx for idx, name in enumerate(MODEL_CLASSES)}
+        labels = raw_labels.map(family_to_label)
 
-    # === 5. Derived Features ===
-    features["access_variation"] = (
-        df["mem_access"].rolling(5).std().fillna(0).mean()
-    )
+        if labels.isna().any():
+            bad_values = raw_labels[labels.isna()].unique()
+            raise ValueError(
+                f"Found unknown label values {bad_values}. "
+                f"Expected one of: {list(family_to_label.keys())}"
+            )
+    else:
+        # Already numeric – just ensure they're integers
+        labels = raw_labels.astype(int)
 
-    features["rapid_thread_spikes"] = (
-        df["thread_id"].diff().abs().fillna(0) > 10
-    ).sum()
+    features_df["label"] = labels.values
 
-    features["high_priv_mem_access"] = (
-        df["privilege_level"] * df["mem_access"]
-    ).mean()
-
-    return pd.DataFrame([features])
+    return features_df
 
 
-def save_features(
-    features_df: pd.DataFrame,
-    path: str | Path | None = None
-) -> str:
+# -------------------------------------------------------
+# 3. Save final feature matrix
+# -------------------------------------------------------
+
+def save_features(df: pd.DataFrame, path: str = FEATURES_PATH) -> str:
     """
-    Save extracted feature dataframe to CSV.
+    Save the feature matrix (plus label) to disk.
     """
-    if path is None:
-        path = FEATURES_PATH
+    out_path = Path(path)
 
-    out = Path(path)
-    out.parent.mkdir(parents=True, exist_ok=True)
+    # Ensure parent directory exists
+    out_path.parent.mkdir(parents=True, exist_ok=True)
 
-    features_df.to_csv(out, index=False)
-    return str(out)
+    df.to_csv(out_path, index=False)
+    return str(out_path)
 
 
-def run_feature_pipeline() -> str:
+# -------------------------------------------------------
+# 4. Combined pipeline (CLI entrypoint)
+# -------------------------------------------------------
+
+def run_feature_pipeline() -> None:
     """
-    Full load → extract → save pipeline.
+    High-level entrypoint. Creates the feature CSV ready for ML training.
     """
+    print("[ZeroTrace] Loading snapshot...")
     df = load_snapshot()
-    feat = extract_features(df)
-    output_path = save_features(feat)
-    print(f"[ZeroTrace] Saved extracted features to: {output_path}")
-    return output_path
+
+    print("[ZeroTrace] Extracting features...")
+    features_df = extract_features(df)
+
+    print(f"[ZeroTrace] Feature matrix shape: {features_df.shape}")
+
+    out = save_features(features_df)
+
+    print(f"[ZeroTrace] Saved features to: {out}")
 
 
 if __name__ == "__main__":
