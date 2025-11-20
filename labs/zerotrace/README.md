@@ -18,6 +18,7 @@ This project demonstrates real Threat Detection Engineering capabilities used ac
 ---
 
 ## 📁 Project Structure
+```
 zerotrace/  
 ├── api.py  
 ├── synthetic.py  
@@ -33,7 +34,7 @@ zerotrace/
 ├── model.joblib  
 ├── feature_columns.json  
 └── report.json  
-
+```
 ---
 
 ## 🧠 How ZeroTrace Works
@@ -42,8 +43,9 @@ zerotrace/
 Creates thousands of labeled process snapshots with behavioral attributes.
 
 Run:
+```
 python -m zerotrace.synthetic
-
+```
 Outputs: data/raw/memory_snapshots.csv
 
 ---
@@ -52,8 +54,9 @@ Outputs: data/raw/memory_snapshots.csv
 Converts raw process telemetry into numerical ML-ready features.
 
 Run:
+```
 python -m zerotrace.features
-
+```
 Outputs: data/processed/features.csv  
 Also saves: feature_columns.json
 
@@ -68,8 +71,9 @@ Trains a RandomForest classifier across four behavioral classes:
 - injected_loader  
 
 Run:
+```
 python -m zerotrace.ml
-
+```
 Artifacts produced:  
 • model.joblib  
 • feature_columns.json  
@@ -79,15 +83,17 @@ Artifacts produced:
 
 ### 4. Run the ZeroTrace API (FastAPI)
 Start real-time behavioral detection service:
-
+```
 uvicorn zerotrace.api:app --reload
-
+```
 Interactive docs:
+```
 http://127.0.0.1:8000/docs
-
+```
 ---
 
 ## 🔍 Example Prediction Request
+```
 POST /predict
 {
   "pid": 1234,
@@ -118,17 +124,20 @@ POST /predict
     }
   }
 }
-
+```
 ---
 
 ## 📦 Install & Run
+```
 pip install -r requirements.txt
-
+```
 Pipeline:
+```
 python -m zerotrace.synthetic
 python -m zerotrace.features
 python -m zerotrace.ml
 uvicorn zerotrace.api:app --reload
+```
 
 ---
 
