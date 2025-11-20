@@ -83,12 +83,13 @@ Artifacts produced:
 
 ### 4. Run the ZeroTrace API (FastAPI)
 Start real-time behavioral detection service:
-
+```
 uvicorn zerotrace.api:app --reload
-
+```
 Interactive docs:
+```
 http://127.0.0.1:8000/docs
-
+```
 ---
 
 ## 🔍 Example Prediction Request
