@@ -1,163 +1,153 @@
-# ZeroTrace — AI-Powered Process Behavior Classifier
+# 🕶️ ZeroTrace — Offensive Stealth & Telemetry Evasion Lab
 
-ZeroTrace is a lightweight, end-to-end behavioral malware detection engine. It extracts behavioral features from process telemetry, trains an ML classifier, and exposes real-time predictions through a FastAPI inference server.
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Telemetry](https://img.shields.io/badge/Telemetry-Logging_Analysis-lightgrey)
+![Detection Evasion](https://img.shields.io/badge/Evasion-Stealth-red)
+![Offensive Security](https://img.shields.io/badge/OffSec-Red_Team-darkred)
+![Automation](https://img.shields.io/badge/Automation-Workflows-green)
 
-This project demonstrates real Threat Detection Engineering capabilities used across TDNA teams, Red Teams, EDR development, and Security Data Science functions.
+**Status:** Completed
+**Category:** Detection Evasion | Logging Gaps | Offensive Security Engineering
 
----
+ZeroTrace is an offensive research lab focused on **stealth**, **logging gaps**, and **telemetry evasion techniques**. It serves as a controlled environment for studying how adversaries bypass visibility, reduce their footprint, and operate in low-noise scenarios. This lab is a foundation for offensive R&D, detection bypass analysis, and future ML-based stealth pattern modeling.
 
-## 🚀 Features
-• Synthetic process telemetry generation  
-• Feature extraction pipeline (entropy, memory, networking, CPU, module metadata)  
-• RandomForest multi-class behavioral classifier  
-• Complete offline training pipeline with saved artifacts  
-• FastAPI real-time scoring endpoint  
-• JSON prediction output with class probabilities  
-• Fully modular ML + rules architecture  
+This project demonstrates:
 
----
-
-## 📁 Project Structure
-```
-zerotrace/  
-├── api.py  
-├── synthetic.py  
-├── features.py  
-├── ml.py  
-├── rules.py  
-├── config.py  
-│  
-├── data/  
-│   ├── raw/  
-│   └── processed/  
-│  
-├── model.joblib  
-├── feature_columns.json  
-└── report.json  
-```
----
-
-## 🧠 How ZeroTrace Works
-
-### 1. Generate Synthetic Telemetry
-Creates thousands of labeled process snapshots with behavioral attributes.
-
-Run:
-```
-python -m zerotrace.synthetic
-```
-Outputs: data/raw/memory_snapshots.csv
+* Logging/telemetry gap identification
+* Offensive visibility reduction techniques
+* Event pipeline analysis and bypass scenarios
+* Automated parsing of logs to detect blind spots
+* Foundations for AI-assisted stealth classification models
 
 ---
 
-### 2. Extract ML Features
-Converts raw process telemetry into numerical ML-ready features.
+## 🚀 Key Capabilities
 
-Run:
-```
-python -m zerotrace.features
-```
-Outputs: data/processed/features.csv  
-Also saves: feature_columns.json
+* Analyzes log sources to identify missing or incomplete telemetry
+* Maps attacker actions to detection opportunities and blind spots
+* Simulates low-noise attacker behaviors
+* Extracts structured features from logs for anomaly or stealth modeling
+* Supports Python-based extensible plugin architecture
 
 ---
 
-### 3. Train the Behavioral ML Model
-Trains a RandomForest classifier across four behavioral classes:
+## 🧠 Technical Highlights
 
-- benign  
-- infostealer_like  
-- ransomware_like  
-- injected_loader  
-
-Run:
-```
-python -m zerotrace.ml
-```
-Artifacts produced:  
-• model.joblib  
-• feature_columns.json  
-• report.json  
+* Designed for future ML-driven stealth detection and evasion research
+* Modular log-parsing utilities for structured extraction
+* Detection gap taxonomy for red-team simulation workflows
+* Enables rapid prototyping of stealth concepts
 
 ---
 
-### 4. Run the ZeroTrace API (FastAPI)
-Start real-time behavioral detection service:
+## 📁 Repository Structure
+
 ```
-uvicorn zerotrace.api:app --reload
+zerotrace/
+│
+├── data/
+│   ├── logs/             # sample event logs, telemetry sources
+│   ├── processed/        # extracted features, summaries
+│
+├── zerotrace/
+│   ├── parser.py         # log parsing and normalization
+│   ├── analyzer.py       # detection gap + stealth techniques analysis
+│   ├── features.py       # structured feature extraction
+│   ├── utils.py          # helpers + shared functions
+│   └── config.py         # constants + paths
+│
+└── README.md
 ```
-Interactive docs:
-```
-http://127.0.0.1:8000/docs
-```
+
 ---
 
-## 🔍 Example Prediction Request
-```
-POST /predict
-{
-  "pid": 1234,
-  "ppid": 421,
-  "num_modules": 150,
-  "num_unsigned_modules": 3,
-  "num_rx_regions": 2,
-  "num_tx_regions": 6,
-  "avg_entropy": 5.7,
-  "has_network_connection": 1,
-  "num_connections": 5,
-  "listening_ports": 1,
-  "high_entropy_strings": 40,
-  "cpu_usage_pct": 12.5,
-  "memory_usage_mb": 220
-}
+## ⚙️ Installation
 
-### Example Response
-{
-  "prediction": {
-    "class_label": "benign",
-    "confidence": 0.50,
-    "probs": {
-      "benign": 0.50,
-      "infostealer_like": 0.18,
-      "ransomware_like": 0.13,
-      "injected_loader": 0.07
-    }
-  }
-}
-```
----
-
-## 📦 Install & Run
 ```
 pip install -r requirements.txt
 ```
-Pipeline:
+
+**Dependencies:**
+
+* pandas
+* numpy
+* json
+* datetime
+
+---
+
+## 🧪 How to Use
+
+### **1. Parse Logs**
+
 ```
-python -m zerotrace.synthetic
-python -m zerotrace.features
-python -m zerotrace.ml
-uvicorn zerotrace.api:app --reload
+python -m zerotrace.parser ./data/logs/
+```
+
+Output:
+
+```
+data/processed/parsed_logs.json
+```
+
+### **2. Extract Features**
+
+```
+python -m zerotrace.features ./data/processed/parsed_logs.json
+```
+
+Output:
+
+```
+data/processed/features.csv
+```
+
+### **3. Analyze Telemetry Gaps**
+
+```
+python -m zerotrace.analyzer ./data/processed/features.csv
+```
+
+Example output:
+
+```
+{
+  "missing_events": [...],
+  "incomplete_coverage": [...],
+  "stealth_opportunities": [...],
+  "critical_blindspots": [...]
+}
 ```
 
 ---
 
-## 🔮 Future Enhancements
-• SHAP explainability  
-• Model comparison (RF, XGBoost, LightGBM)  
-• Per-process anomaly detection baseline  
-• Streamlit detection dashboard  
-• Docker + Kubernetes deployment  
-• Rule-based correlation engine  
+## 🔮 Example Output Summary
+
+```json
+{
+  "log_source": "windows_event_log",
+  "missing_events": ["4688", "4624"],
+  "coverage": "partial",
+  "stealth_findings": [
+    "High stealth opportunity: no parent process auditing",
+    "Blind spot detected: PowerShell script block logging disabled"
+  ],
+  "risk_score": 91
+}
+```
 
 ---
 
-## 📜 License
-MIT License
+## 🗺️ Architecture Overview
+
+* Raw Logs → Normalization → Feature Extraction → Stealth/Gaps Analysis
+* Provides attacker-mapped visibility analysis for red teams
+* Forms groundwork for ML-driven stealth classification
 
 ---
 
-## ✨ Author
-**Jan Zabala**  
-Offensive Security Engineer  
-Project: **ZeroTrace**  
-Part of the **Offensive Security Engineering Portfolio**
+## 👤 Author
+
+**Jan Zabala**
+AI-Driven Offensive Security Engineer
+Offensive Security Engineering Portfolio (2025)
