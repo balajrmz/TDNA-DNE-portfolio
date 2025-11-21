@@ -1,246 +1,143 @@
-# PacketVision  
-### AI-Powered PCAP Traffic Classifier, Threat Detector, and Rule Engine  
-**Version:** 1.0.0  
+# 📡 PacketVision — Network Packet Analysis & Offensive Visibility Lab
 
-PacketVision is a hybrid AI + signature-based network traffic analysis engine.  
-It ingests PCAP files, extracts flow-level features, applies machine-learning classification, and layers rule-based detections on top for transparent, explainable threat analysis.
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Packet Analysis](https://img.shields.io/badge/Network-PCAP_Analysis-lightgrey)
+![Data Engineering](https://img.shields.io/badge/Data-Engineering-orange)
+![Offensive Security](https://img.shields.io/badge/OffSec-Red_Team-red)
+![Automation](https://img.shields.io/badge/Automation-Scripting-green)
 
-This project demonstrates modern security engineering patterns used at FAANG-scale companies:
-- Behavioral ML detection
-- Rule-driven risk scoring
-- Feature engineering pipelines
-- REST APIs for automated analysis
-- Synthetic PCAP generation for reproducible testing
+**Status:** Completed
+**Category:** Network Visibility | Packet Analysis | Offensive Security Engineering
 
----
+PacketVision is a focused research lab for exploring offensive use cases in packet capture analysis. It serves as a foundation for understanding how attackers observe, classify, and exploit network behavior. This lab is designed to help model visibility gaps, extract actionable packet insights, and prototype AI-assisted packet classification workflows.
 
-## 🚀 Features
+This project demonstrates:
 
-### **1. PCAP Upload & Automated Analysis**
-Upload a `.pcap` file through the FastAPI UI. PacketVision will:
-- Convert packets into flows  
-- Extract ML-ready feature vectors  
-- Run both **ML classifier** and **rule engine**  
-- Produce a full detection report  
+* Foundational offensive packet inspection
+* Data extraction and transformation from PCAPs
+* Structured feature engineering for network flows
+* Early concepts for ML-driven packet anomaly detection
+* Automation-driven parsing and reporting
 
 ---
 
-### **2. Machine-Learning Detection**
-PacketVision uses a trained Random Forest model to classify each flow as:
-- `port_scan`
-- `benign`
+## 🚀 Key Capabilities
 
-The model outputs:
-- Predicted label  
-- Confidence probabilities  
-- Flow-level summaries  
-
-This demonstrates applied ML workflow:  
-feature extraction → model training → model evaluation → serving a live model via API.
+* Parses packet captures (PCAP files)
+* Extracts protocol metadata and flow summaries
+* Identifies suspicious or abnormal traffic patterns
+* Generates structured CSV/JSON output for analysis or ML ingestion
+* Supports plugin-style packet feature modules
+* Serves as a visibility lab for future AI enhancements
 
 ---
 
-### **3. Rule-Based Threat Engine**
-Custom detection rules identify activity patterns difficult for ML models to detect alone.
+## 🧠 Technical Highlights
 
-Current rules include:
-
-#### **WR01_EXCESSIVE_FANOUT**  
-Detects high-fanout scanning behavior.  
-Triggers when a single source IP targets > 50 distinct destination ports.
-
-#### **WR02_BRUTEFORCE_LIKE**  
-Detects brute-force or authentication-spray signaling by monitoring access to admin ports:
-`22, 3389, 445, 139`
-
-#### **WR03_INTERNAL_RESOURCES**  
-Flags traffic destined for internal/private IP ranges.
-
-Rule outputs include:
-- Rule ID  
-- Severity  
-- Human-readable explanation  
-- Affected flows  
+* Uses Python packet libraries for low-level inspection
+* Normalized feature extraction for packet → flow summarization
+* Modular architecture for adding protocol-specific detectors
+* Ideal pre-processing layer for future ML models
 
 ---
 
-### **4. Synthetic PCAP Generation**
-PacketVision includes a built-in traffic generator that produces realistic PCAPs for testing:
-- Randomized scanning  
-- Benign browsing burst patterns  
-- Admin/privileged port access  
-- Mixed hybrid traffic  
-- Replayable with deterministic seeds
-
-All synthetic traffic is exported as a real `.pcap` file using Scapy.
-
----
-
-### **5. FastAPI Web Interface**
-Once PacketVision is running, documentation and testing UI appear automatically:
-
-👉 **http://127.0.0.1:8000/docs**
-
-Endpoints:
-- `GET /health` — Healthcheck  
-- `POST /analyze-pcap` — Upload & analyze a pcap file  
-
----
-
-## 📁 Project Structure
+## 📁 Repository Structure
 
 ```
 packetvision/
 │
-├── api.py                  # FastAPI app & endpoints
-├── analyzer.py             # PCAP parser, flow builder, feature extractor
-├── features.py             # Feature engineering (packets, timing, fanout, burstiness)
-├── ml.py                   # ML training & inference logic
-├── rules.py                # Rule definitions & evaluation engine
-├── pipeline.py             # End-to-end ML training pipeline
-│
 ├── data/
-│   ├── raw/                # Raw PCAP files
-│   └── processed/          # Feature CSVs & processed flows
+│   ├── pcaps/           # sample PCAP files for testing
+│   ├── output/          # extracted features & flow metadata
 │
-├── feature_columns.json    # Saved model feature order
-├── model.joblib            # Trained ML model
-├── report.json             # Training report
+├── packetvision/
+│   ├── parser.py        # core PCAP parsing logic
+│   ├── features.py      # feature extraction utilities
+│   ├── utils.py         # helpers, loaders, and filters
+│   ├── pipeline.py      # run-all workflow for parsing → features
+│   └── config.py        # file paths & constants
 │
-└── tests/
-    └── test_parser.py      # Test for packet -> flow parsing
+└── README.md
 ```
 
 ---
 
 ## ⚙️ Installation
 
-### **1. Clone the Repository**
-```bash
-git clone https://github.com//pentest-portfolio.git
-cd pentest-portfolio/labs/packetvision
 ```
-
-### **2. Create a Virtual Environment**
-```bash
-python -m venv .venv
-.\venv\Scripts\activate
-```
-
-### **3. Install Requirements**
-```bash
 pip install -r requirements.txt
 ```
 
+**Dependencies:**
+
+* scapy or pyshark (depending on your implementation)
+* pandas
+* numpy
+* json
+
 ---
 
-## 🧠 Training a New ML Model (Optional)
+## 🧪 How to Use
 
-Run the training pipeline:
+### **1. Parse a PCAP File**
 
-```bash
-python -m packetvision.pipeline
+```
+python -m packetvision.parser ./data/pcaps/sample.pcap
 ```
 
-This will:
-- Generate synthetic training data  
-- Build flow-level feature vectors  
-- Train the Random Forest model  
-- Save:
-  - `model.joblib`
-  - `feature_columns.json`
-  - `report.json`
+Output:
 
----
-
-## 🖥️ Running the API Server
-
-Start FastAPI + Uvicorn:
-
-```bash
-uvicorn packetvision.api:app --reload
+```
+data/output/parsed_sample.json
 ```
 
-Open the interactive docs:
+### **2. Extract Features**
 
-👉 **http://127.0.0.1:8000/docs**
+```
+python -m packetvision.features ./data/output/parsed_sample.json
+```
+
+Output:
+
+```
+data/output/flows.csv
+```
+
+### **3. Run the Full Pipeline**
+
+```
+python -m packetvision.pipeline ./data/pcaps/sample.pcap
+```
+
+This produces structured flow summaries ready for manual or ML analysis.
 
 ---
 
-## 🧪 Example Analysis Output
+## 🔮 Example Output Summary
 
-### **Bruteforce-Like Activity Detected**
 ```json
 {
-  "rule_based": {
-    "risk_level": "high",
-    "findings": [
-      {
-        "rule_id": "WR02_BRUTEFORCE_LIKE",
-        "severity": "high",
-        "message": "Observed 41 flow(s) targeting admin ports [22, 3389, 445, 139]. Possible brute-force/spray.",
-        "flows_affected": 41
-      }
-    ]
-  }
-}
-```
-
-### **ML Port Scan Detection**
-```json
-{
-  "ml_based": {
-    "label_counts": {
-      "port_scan": 200
-    },
-    "per_flow": [
-      {
-        "predicted_label": "port_scan",
-        "probabilities": {
-          "port_scan": 0.79,
-          "benign": 0.21
-        }
-      }
-    ]
-  }
+  "flow_id": "192.168.1.10-443-192.168.1.50-51523",
+  "protocol": "TLS",
+  "packet_count": 32,
+  "byte_count": 40241,
+  "duration_ms": 812,
+  "suspicious_flags": []
 }
 ```
 
 ---
 
-## 🎯 Talking Points for Interviews
+## 🗺️ Architecture Overview
 
-You can describe PacketVision as:
-
-> “A full-stack AI-driven network traffic analysis system. It includes PCAP parsing, feature extraction, ML classification, a rule engine, synthetic data generation, and a FastAPI inference service. I built the entire detection pipeline end-to-end.”
-
-Or:
-
-> “This project demonstrates both my offensive security knowledge and my machine-learning engineering background. It shows that I can design behavioral detections, engineer features, train models, and deploy them behind a modern API.”
-
-Or:
-
-> “The project uses principles used at FAANG-scale security teams: hybrid ML + rules, reproducible pipelines, deterministic synthetic datasets, and clean REST interfaces.”
-
----
-
-## 📌 Future Enhancements (Planned)
-
-- Flow visualization dashboard (heatmaps, timelines)
-- Additional ML classes (DoS, SSH brute-force, beaconing)
-- Packet-level LLM embeddings (advanced option)
-- Multi-PCAP batch analysis
-- Exportable PDF security reports
-
----
-
-## 📜 License
-MIT License. Free to use, modify, and showcase in your portfolio.
+* PCAP → Raw Packet Metadata → Features/Flows → CSV/JSON Output
+* Supports reconnaissance training, traffic validation, and future ML modeling
+* Forms a foundation for AI-assisted network anomaly detection (e.g., SentinelFlow)
 
 ---
 
 ## 👤 Author
-**Jan**  
-Offensive Security + AI/ML Security Engineer  
-This project is part of the larger **Pentest Portfolio** initiative.
 
+**Jan Zabala**
+AI-Driven Offensive Security Engineer
+Offensive Security Engineering Portfolio (2025)
