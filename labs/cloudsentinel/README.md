@@ -1,159 +1,153 @@
-# CloudSentinel — AI-Powered Cloud IAM & Policy Analyzer
+# ☁️ CloudSentinel — Cloud IAM Misconfiguration Analysis Lab
 
-CloudSentinel is a hybrid security analysis engine that inspects AWS IAM policies and cloud configuration JSON to detect over-permissive access, privilege escalation paths, wildcard abuses, and ML-predicted risk levels. It combines deterministic rule-based detection with a machine learning classifier, similar to real CSPM platforms like Wiz, Lacework, and Panther. CloudSentinel is part of my Offensive Security Engineering Portfolio.
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Cloud Security](https://img.shields.io/badge/Cloud-AWS/Azure-orange)
+![IAM](https://img.shields.io/badge/Identity-IAM-yellow)
+![Offensive Security](https://img.shields.io/badge/OffSec-Red_Team-red)
+![Automation](https://img.shields.io/badge/Automation-Security_Engineering-green)
 
-## Project Structure
+**Status:** Completed
+**Category:** Cloud Identity | IAM Misconfig Analysis | Offensive Security Engineering
+
+CloudSentinel is a cloud identity and IAM-focused research lab designed to explore, analyze, and model real-world misconfigurations in AWS and Azure identity environments. It provides a controlled testing ground for dangerous permission combinations, escalation paths, wildcard policies, privilege amplification, and identity abuse patterns.
+
+This project demonstrates:
+
+* Cloud identity threat modeling
+* Privilege escalation path discovery
+* IAM risk pattern analysis (PassRole, AssumeRole, wildcard actions)
+* Automated parsing and scoring of policy documents
+* Offensive identity engineering techniques for red-team and cloud abuse research
+
+---
+
+## 🚀 Key Capabilities
+
+* Analyzes IAM JSON policies for high-risk permissions
+* Identifies dangerous combinations (e.g., PassRole + EC2)
+* Flags wildcard permissions ("Action": "*" or overly broad resources)
+* Detects privilege escalation chains
+* Supports AWS and Azure policy styles
+* Produces structured risk scoring output
+
+---
+
+## 🧠 Technical Highlights
+
+* Normalization of IAM policy JSON into analyzable structures
+* Rule-based detection of misconfigurations
+* Early architecture designed for ML-driven scoring in future versions
+* Modular Python design for rapid expansion
+
+---
+
+## 📁 Repository Structure
+
 ```
 cloudsentinel/
 │
-├── cloudsentinel/
-│   ├── api.py
-│   ├── analyzer.py
-│   ├── config.py
-│   ├── ml.py
-│   ├── pipeline.py
-│   ├── rules.py
-│   └── __init__.py
-│
 ├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── model.joblib
+│   ├── samples/        # example AWS/Azure IAM policies
+│   └── output/         # generated analysis reports
 │
-├── tests/
-│   └── test_analyzer.py
+├── cloudsentinel/
+│   ├── analyzer.py     # core policy analysis engine
+│   ├── rules.py        # dangerous permission rules
+│   ├── utils.py        # loaders, normalizers, helpers
+│   ├── api.py          # FastAPI (optional future module)
+│   └── config.py       # paths + constants
 │
-├── README.md
-└── requirements.txt
+└── README.md
 ```
-## Installation
 
-1. Clone the repository:
-git clone https://github.com/balajrmz/pentest-portfolio.git
-```
-cd labs/cloudsentinel
-```
-2. Create a virtual environment:
-```
-python -m venv .venv
-```
-3. Activate it (Windows PowerShell):
-```
-.venv\Scripts\Activate.ps1
-```
-4. Install dependencies:
+---
+
+## ⚙️ Installation
+
 ```
 pip install -r requirements.txt
 ```
-## Training the ML Model (Optional)
-```
-python -m cloudsentinel.pipeline
-```
-This creates:
-- model.joblib
-- processed feature data
-- synthetic training report
 
-## Running the API
+**Dependencies:**
+
+* Python 3.10+
+* pandas
+* fastapi (optional)
+* uvicorn (optional)
+* jsonschema (optional)
+
+---
+
+## 🧪 How to Use
+
+### **1. Analyze a Policy**
+
+```
+python -m cloudsentinel.analyzer ./data/samples/policy.json
+```
+
+Output:
+
+```
+{
+  "policy_name": "policy.json",
+  "wildcard_actions": [...],
+  "dangerous_combinations": [...],
+  "risk_score": 72,
+  "critical_findings": [...]
+}
+```
+
+### **2. Analyze an Entire Directory**
+
+```
+python -m cloudsentinel.analyzer ./data/samples/
+```
+
+### **3. (Optional) Start the API**
+
 ```
 uvicorn cloudsentinel.api:app --reload
 ```
-Open Swagger UI:
+
+Swagger:
+
 ```
 http://127.0.0.1:8000/docs
 ```
-## Endpoints
 
-### GET /health
-Response:
-```
-{ "status": "ok" }
-```
-### POST /analyze
-```
-Example input:
-{
-  "policy": {
-    "Version": "2012-10-17",
-    "Statement": [
-      {
-        "Effect": "Allow",
-        "Action": ["iam:PassRole", "ec2:RunInstances"],
-        "Resource": "*"
-      }
-    ]
-  }
-}
+---
 
-Example output:
+## 🔮 Example Output Summary
+
+```json
 {
-  "rule_based": {
-    "risk_level": "medium",
-    "risk_score": 6,
-    "num_statements": 1,
-    "num_findings": 2,
-    "findings": [
-      {
-        "rule_id": "R02_WILDCARD_RESOURCE",
-        "severity": "high",
-        "message": "Policy applies to all resources: \"*\""
-      },
-      {
-        "rule_id": "R04_PRIV_ESC_PASSROLE_EC2",
-        "severity": "high",
-        "message": "iam:PassRole + ec2:RunInstances may enable privilege escalation."
-      }
+  "policy": "admin_escalation.json",
+  "findings": {
+    "wildcards": ["*"] ,
+    "dangerous_pairs": ["PassRole + RunInstances"],
+    "excessive_privileges": 5,
+    "recommendations": [
+      "Limit PassRole to specific roles",
+      "Restrict EC2 RunInstances to controlled resources"
     ]
   },
-  "ml_based": {
-    "risk_level": "medium",
-    "probabilities": {
-      "critical": 0.0,
-      "medium": 1.0,
-      "none": 0.0
-    }
-  }
+  "risk_score": 88
 }
 ```
-## How CloudSentinel Works
 
-Rule Engine:
-- Detects wildcard resources (*)
-- Detects dangerous action combinations
-- Detects privilege escalation paths
-- Detects known misconfigurations
+---
 
-ML Engine:
-- Uses synthetic IAM datasets
-- Trains a RandomForest classifier
-- Predicts risk categories (critical / medium / none)
+## 🗺️ Architecture Overview
 
-This combines rule-based and ML detection into one engine.
+* IAM Policy JSON → Normalization → Rule Engine → Risk Score
+* Designed to extend into ML-driven IAM risk prediction
+* Supports hybrid AWS/Azure identity research
 
-## Why This Project Matters
+---
 
-Demonstrates:
-- Python automation
-- FastAPI backend development
-- Cloud IAM security
-- ML pipeline development
-- Real-world rule-based detection
-- Testing (pytest-style)
-- Practical security tool design
+## 👤 Author
 
-Useful for:
-- Cloud Security
-- SecOps
-- Threat Detection
-- AppSec
-- DevSecOps
-- Offensive Security Engineering
-
-## Future Enhancements
-- Auto-remediation suggestions
-- Multi-statement correlation
-- Expanded ML feature set
-- Docker support
-- Risk visualization dashboard
-
-CloudSentinel is fully implemented and functional.
+**Jan Zabala**
+AI-Driven Offensive Security Engineer
+Offensive Security Engineering Portfolio (2025)
