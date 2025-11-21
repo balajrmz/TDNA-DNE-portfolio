@@ -1,0 +1,25 @@
+{
+  "feature_columns": [
+    "src_port",
+    "dst_port",
+    "duration",
+    "bytes_sent",
+    "bytes_received",
+    "packets",
+    "proto_tcp",
+    "proto_udp",
+    "kb_sent",
+    "kb_received",
+    "bytes_total",
+    "rate_packets",
+    "rate_bytes",
+    "src_port_privileged",
+    "dst_port_privileged"
+  ],
+  "label_decoder": {
+    "0": "benign",
+    "1": "brute_force",
+    "2": "c2_beacon",
+    "3": "port_scan"
+  }
+}
