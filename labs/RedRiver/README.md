@@ -102,7 +102,7 @@ redriver/
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/<yourusername>/pentest-portfolio.git
+git clone https://github.com/balajrmz/pentest-portfolio.git
 cd pentest-portfolio/labs/RedRiver
 python -m venv venv
 source venv/bin/activate
