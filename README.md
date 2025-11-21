@@ -1,81 +1,105 @@
-# 🛡️ Offensive Security Engineering Portfolio  
-**By Jan Zabala — Offensive Security | Cloud Security | AI Security**
+# 🛡️ Offensive Security Engineering Portfolio
 
-Welcome to my curated portfolio of hands-on security engineering projects.  
-This repository showcases practical, end-to-end work across:
+**By Jan Zabala — AI‑Driven Offensive Security | Red Team Engineering | Cloud Identity Threats**
 
-- Penetration Testing  
-- Cloud Security (AWS, Azure, Identity/IAM)  
-- Machine Learning for Security Detection  
-- Threat Hunting & SOC Engineering  
-- Security Automation & Tool Development  
-- Linux, Networking, and OSCP-level techniques  
+Welcome to my Offensive Security Engineering portfolio. This repository showcases the work I do at the intersection of:
 
-Each project is built to demonstrate real-world, applied skills — not academic examples.  
-Nearly every tool here is structured, documented, and designed like production code.
+* **Red Team Operations**
+* **Active Directory & Cloud Identity Attacks**
+* **AI/ML‑Driven Offensive Security**
+* **Automation, Tooling, and Attack Simulation**
+* **OSCP‑style methodologies**
+
+Everything here reflects **real-world offensive engineering**, built as tools, pipelines, and frameworks designed for reliability, reproducibility, and clarity.
 
 ---
 
 # 🚀 Featured Projects
 
-## 1. **SentinelFlow — AI-Driven Network Threat Classifier**
-📌 *Status: Complete*  
+## 1. **SentinelFlow — AI Network Threat Classifier**
+
 📁 `labs/sentinelflow/`
+📌 *Completed*
 
-An end-to-end ML pipeline that:
+An end‑to‑end ML detection pipeline featuring:
 
-- Generates synthetic network traffic  
-- Builds engineered ML features  
-- Trains a RandomForest classifier (normal vs scan vs DoS)  
-- Saves model artifacts + feature schema  
-- Serves real-time predictions via FastAPI  
+* Synthetic traffic generation
+* Feature engineering for flows
+* RandomForest threat classifier
+* Persisted schema to prevent drift
+* Real‑time API inference (FastAPI)
 
-**What it demonstrates:**
-
-- Security ML engineering  
-- Feature engineering for network flows  
-- Preventing schema drift with persisted feature columns  
-- Building inference microservices  
-
-**Tech:** Python, Pandas, Scikit-Learn, FastAPI, Uvicorn  
-➡️ Full details in: `labs/sentinelflow/README.md`
+**Tech:** Python, Pandas, Scikit‑Learn, FastAPI, Uvicorn
 
 ---
 
-## 2. **CloudSentinel — AWS IAM Misconfiguration & Risk Analyzer**
-📌 *Status: In Progress (Coming Next)*  
-📁 `labs/cloudsentinel/`
+## 2. **ShadowHound — AI‑Assisted AD Attack Path Analysis**
 
-A hybrid **rule-based + ML** engine that evaluates IAM policies for:
+📁 `labs/shadowhound/`
+📌 *Completed*
 
-- Privilege escalation paths  
-- Wildcards (`"Action": "*"` / `"Resource": "*"`)  
-- Dangerous combinations (e.g., PassRole + EC2)  
-- Overly broad role assumptions  
-- High-risk admin patterns  
+A BloodHound ingestion + AI analysis engine that:
 
-Outputs a structured risk score + explanations via a FastAPI API.
+* Parses & normalizes BloodHound JSON
+* Generates high-risk attack paths
+* Applies LLM logic for privilege escalation reasoning
+* Outputs structured recommendations
 
-**Tech:** Python, IAM Analysis, ML, FastAPI  
+**Tech:** Python, Neo4j JSON, Graph Analysis, LLM Inference
 
 ---
 
-# 🧪 Additional Labs (Coming Soon)
+## 3. **RedRiver — AI‑Driven Phishing & Payload Delivery Framework**
 
-These will be added daily to build out a ~12-project portfolio:
+📁 `labs/redriver/`
+📌 *In Development*
 
-- **RedTeamRecon** — Automated OSINT + Subdomain Hunter  
-- **MalScanAI** — Static Malware Classifier (byte-level ML)  
-- **LogShield** — SIEM Rule Generator & Log Parser  
-- **WebGuard** — ML Classifier for SQLi/XSS/LFI Detection  
-- **PKINIT Analyzer** — Detect AD PKINIT Misconfigurations  
-- **DockerSec Inspect** — Dockerfile Security Scanner  
-- **AnomalyHunter** — Isolation Forest & One-Class SVM  
-- **AttackGraph Generator** — Graph-based Attack Paths  
-- **Credential Auditor** — Password Entropy & Breach Checker  
-- **Offensive Tools Collection** — Red Team Utilities  
+A next‑gen phishing + payload delivery engine featuring:
 
-Each will be fully documented with READMEs and clean code.
+* AI‑generated phishing lures
+* Autonomous recon on targets
+* Payload templating modules
+* Behavioral analysis & chained attack logic
+
+**Tech:** Python, Prompt Engineering, Email Automation, LLMs
+
+---
+
+## 4. **AnomalyHunter — Isolation Forest & One‑Class SVM Detection Models**
+
+📁 `labs/anomalyhunter/`
+📌 *Completed*
+
+Unsupervised ML models for anomaly detection:
+
+* Isolation Forest (network outliers)
+* One‑Class SVM (behavior baselining)
+* Evaluation framework
+
+**Tech:** Python, Scikit-Learn, NumPy
+
+---
+
+# 🧪 Additional Projects Coming Soon
+
+* **MalScanAI** — Byte‑level malware classifier
+* **WebGuard** — ML‑based web exploit detection
+* **AttackGraph Generator** — Graph-based AD escalation mapping
+* **DockerSec Inspect** — Dockerfile vulnerability scanner
+* **CloudSentinel** — IAM misconfiguration analyzer
+* **Credential Auditor** — Entropy + breach correlation engine
+
+---
+
+# 🖥️ Hack The Box Writeups (Coming Soon)
+
+These links will be populated with full writeups including enumeration, exploitation, privilege escalation, and methodology.
+
+* **[Active — AD Enumeration & Kerberoasting](writeups/active.md)**
+* **[Reel — Macro Payload Delivery](writeups/reel.md)**
+* **[Archetype — Azure Hybrid Attack Path](writeups/archetype.md)**
+* **[Nineveh — Multi‑Service Recon & Chaining](writeups/nineveh.md)**
+* **[Celestial — Node.js Reverse Engineering](writeups/celestial.md)**
 
 ---
 
@@ -85,68 +109,79 @@ Each will be fully documented with READMEs and clean code.
 pentest-portfolio/
 │
 ├── labs/
-│   ├── sentinelflow/           # AI network detection pipeline
-│   ├── cloudsentinel/          # IAM risk analyzer (coming)
-│   └── ...                     # additional labs as added
+│   ├── sentinelflow/
+│   ├── shadowhound/
+│   ├── redriver/
+│   ├── anomalyhunter/
+│   └── ...
 │
-├── offensive-tools/            # custom red-team / pentest tools
-├── web-app-attacks/            # web exploit and payload labs
-└── README.md                   # <-- this file
+├── writeups/
+│   ├── active.md
+│   ├── reel.md
+│   ├── archetype.md
+│   ├── nineveh.md
+│   └── celestial.md
+│
+└── README.md
 ```
 
 ---
 
-# 🧰 Core Skills Demonstrated
+# 🔐 Core Competencies Demonstrated
 
-### 🔐 **Offensive Security**
-- Enumeration, exploitation, privilege escalation  
-- Custom tooling development  
-- Active Directory & Kerberos exploration  
-- OSCP-style methodologies  
+### **Offensive Security Engineering**
 
-### ☁️ **Cloud Security (AWS/Azure)**
-- IAM analysis & threat modeling  
-- Cloud logging & detection engineering  
-- Identity-based attack paths  
+* Enumeration, exploitation, privilege escalation
+* Active Directory attack paths & Kerberos abuse
+* Payload development & delivery
+* Automation-focused red team tooling
 
-### 🤖 **Machine Learning for Security**
-- Synthetic dataset generation  
-- Feature engineering for detection  
-- Supervised & unsupervised models  
-- API-based inference services  
+### **AI‑Driven Offensive Security**
 
-### 🛠️ **Engineering & Automation**
-- Python package design  
-- FastAPI microservices  
-- Virtual environments, linting, structured code  
-- Git/GitHub workflows  
+* AI‑assisted recon & attack surface mapping
+* LLM‑powered privilege escalation reasoning
+* Synthetic traffic generation & ML detection
+* Behavioral modeling & anomaly detection
+
+### **Cloud & Identity Security**
+
+* Azure & AWS IAM misconfig analysis
+* Hybrid AD/Azure attack paths
+* Cloud logging, detection engineering
+
+### **Engineering & Architecture**
+
+* FastAPI microservices
+* Python modules + structured code
+* Automated pipelines & modeling workflows
+* GitHub‑ready, production‑style tooling
 
 ---
 
-# 🎯 Roadmap
+# 🧭 Roadmap
 
-- Add 12+ professional-grade labs  
-- Create an “Offensive Security Engineering Handbook” PDF  
-- Add Docker images for all major ML or API projects  
-- Build a portfolio web page linking to each lab  
+* Add 12+ mature projects
+* Add Docker images for all ML/AI services
+* Convert projects into an "Offensive Security Engineering Handbook"
+* Publish a full portfolio website
+* Expand AI‑offensive engines for real‑time recon and exploit generation
 
 ---
 
 # 👤 About Me
 
-**Jan Zabala**  
-*Offensive Security Engineering | Cloud Security | AI/ML for Detection*  
+**Jan Zabala**
+*AI-Driven Offensive Security Engineer | OSCP Candidate | Cloud Identity & Red Team Automation*
 
-- OSCP (in progress), CEH  
-- Background in HUMINT / Special Operations  
-- Cybersecurity Bachelor’s Student  
-- Hands-on practitioner building real tools  
-- Passion for automation, AI, cloud identity, and red-team methodology  
+* Active CEH, OSCP in progress
+* Background in HUMINT / Special Operations
+* Cybersecurity Bachelor’s Student
+* Focused on AI‑accelerated offensive security analysis
 
 ---
 
 # 📫 Contact
 
-- GitHub: https://github.com/balajimz  
-- LinkedIn: www.linkedin.com/in/jan-zabala-5aaa59380 
-- Email:
+* GitHub: [https://github.com/balajimz](https://github.com/balajimz)
+* LinkedIn: [www.linkedin.com/in/jan-zabala-5aaa59380](http://www.linkedin.com/in/jan-zabala-5aaa59380)
+* Email:
