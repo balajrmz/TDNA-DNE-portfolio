@@ -1,131 +1,145 @@
-# ShadowHound
-ML-driven detection of high-risk identities and attack paths in Active Directory graphs.
-Part of the Offensive Security Engineering Portfolio — Developed by Jan Zabala.
+# 🐺 ShadowHound — AI-Assisted Active Directory Attack Path Analysis
 
-ShadowHound is an end-to-end machine learning pipeline that analyzes Active Directory graph data (BloodHound-style edges) and identifies high-risk identities, suspicious privilege relationships, and attacker-like behavior inside Windows domains.
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Machine Learning](https://img.shields.io/badge/ML-RandomForest-orange)
+![Graph Analysis](https://img.shields.io/badge/Graph-NetworkX-lightgrey)
+![FastAPI](https://img.shields.io/badge/API-FastAPI-green)
+![Offensive Security](https://img.shields.io/badge/OffSec-Red_Team-red)
 
-It includes:
-- Synthetic AD graph generator
-- Feature extraction engine for graph metrics
-- RandomForest classifier for behavior detection
-- FastAPI prediction microservice
-- CLI pipelines for synthetic → features → model → inference
+**Status:** Completed
+**Category:** Active Directory | Attack Path Analysis | AI-Driven Offensive Security
 
-The project demonstrates end-to-end offensive data engineering, threat analytics, and ML deployment.
+ShadowHound is an AI-assisted engine designed to identify high-risk identities, privilege relationships, and lateral movement paths inside Active Directory environments. It analyzes BloodHound-like graph data, extracts structural and behavioral features, trains an ML model, and serves real-time predictions through an API.
 
----------------------------------------------------------------------
+This project demonstrates:
 
-## Repository Structure
+* Offensive data engineering
+* Graph theory for red-team operations
+* Machine learning applied to domain privilege relationships
+* Automated reasoning around escalation paths
+* API-based inference for attacker simulation and detection
+
+---
+
+## 🚀 Key Capabilities
+
+* Parses and normalizes BloodHound-style AD graphs
+* Detects suspicious edges and privilege relationships
+* Computes graph metrics: degree, reachability, admin edges, shortest-path
+* Trains a RandomForest ML model for classification
+* Exposes predictions via FastAPI microservice
+* Full CLI pipeline: synthetic → features → ML → inference
+
+---
+
+## 🧠 Technical Highlights
+
+* **Graph-based feature engineering** using NetworkX
+* **RandomForest classifier** with persisted artifacts (model + schema)
+* **Synthetic graph generator** for red-team simulation
+* **FastAPI microservice** for real-time privilege-path scoring
+* Modular Python package with clean, extensible architecture
+
+---
+
+## 📁 Repository Structure
+
 ```
 shadowhound/
- ├── data/
- │    ├── raw/                # synthetic raw edges (BloodHound-like)
- │    └── processed/          # features.csv (ML matrix)
- ├── shadowhound/
- │    ├── synthetic.py        # synthetic AD graph generator
- │    ├── features.py         # graph processing + feature extraction
- │    ├── ml.py               # model training pipeline
- │    ├── api.py              # FastAPI inference service
- │    ├── graph.py            # graph utilities (load, build, analyze)
- │    ├── config.py           # file paths + constants
- └── README.md
-
+│
+├── data/
+│   ├── raw/                # synthetic AD edges (BloodHound-like)
+│   └── processed/          # engineered feature matrix
+│
+├── shadowhound/
+│   ├── synthetic.py        # synthetic graph generation
+│   ├── features.py         # graph metrics + feature engineering
+│   ├── ml.py               # model training pipeline
+│   ├── api.py              # FastAPI inference service
+│   ├── graph.py            # graph loading & utilities
+│   └── config.py           # file paths and constants
+│
+└── README.md
 ```
----------------------------------------------------------------------
 
-## Features
+---
 
-1. Synthetic AD Graph Generator
-   - Generates user, group, and computer nodes
-   - Adds edges such as member_of, admin_to, has_session, can_rdp
-   - Supports risk-injection for malicious behavior patterns
+## ⚙️ Installation
 
-2. Feature Extraction
-   - Node degree
-   - Number of admin edges
-   - Number of group edges
-   - Shortest-path to critical targets
-   - Reachability metrics
-   - Node-type one-hot encoding
-
-3. Machine Learning Model
-   - RandomForestClassifier
-   - Output:
-       model.joblib
-       report.json
-       feature_columns.json
-
-4. Prediction API
-   - FastAPI server
-   - /predict route accepts a feature vector and returns:
-       predicted class
-       probability distribution
-       metadata (feature list)
-
-5. CLI Pipelines
-   python -m shadowhound.synthetic
-   python -m shadowhound.features
-   python -m shadowhound.ml
-   uvicorn shadowhound.api:app --reload
-
----------------------------------------------------------------------
-
-## Installation
 ```
 pip install -r requirements.txt
 ```
-Dependencies:
-pandas
-networkx
-joblib
-scikit-learn
-fastapi
-uvicorn
 
----------------------------------------------------------------------
+**Dependencies:**
 
-## Usage
+* pandas
+* networkx
+* scikit-learn
+* joblib
+* fastapi
+* uvicorn
 
-### 1. Generate Synthetic AD Edges
+---
+
+## 🧪 How to Use
+
+### **1. Generate Synthetic AD Graph**
+
 ```
 python -m shadowhound.synthetic
 ```
-Outputs:
+
+Output:
+
 ```
 data/raw/ad_edges.json
 ```
-### 2. Generate Feature Matrix
+
+### **2. Generate Feature Matrix**
+
 ```
 python -m shadowhound.features
 ```
-Outputs:
+
+Output:
+
 ```
 data/processed/features.csv
 ```
-### 3. Train ML Model
+
+### **3. Train the ML Model**
+
 ```
 python -m shadowhound.ml
 ```
-Outputs:
+
+Artifacts:
+
 ```
 model.joblib
 report.json
 feature_columns.json
 ```
-### 4. Start the API
+
+### **4. Start the Prediction API**
+
 ```
 uvicorn shadowhound.api:app --reload
 ```
-Open Swagger docs:
+
+Swagger UI:
+
 ```
 http://127.0.0.1:8000/docs
 ```
----------------------------------------------------------------------
 
-## Example API Prediction Request (POST /predict)
+---
 
-Input example:
-```
+## 🔮 Example API Request (POST /predict)
+
+**Input**
+
+```json
 {
   "degree": 12,
   "num_admin_edges": 3,
@@ -138,19 +152,14 @@ Input example:
   "is_computer": 0
 }
 ```
-Example response:
-```
+
+**Response**
+
+```json
 {
-  "input": { ... },
   "prediction": {
     "class_label": "benign",
-    "confidence": 1.0,
-    "probs": {
-      "benign": 1.0,
-      "infostealer_like": 0.0,
-      "ransomware_like": 0.0,
-      "injected_loader": 0.0
-    }
+    "confidence": 1.0
   },
   "model_info": {
     "feature_columns_used": [
@@ -161,9 +170,19 @@ Example response:
   }
 }
 ```
----------------------------------------------------------------------
 
-## Author
-Jan Zabala
-Offensive Security Engineer
-2025 PenTest & Threat Analytics Portfolio
+---
+
+## 🗺️ Architecture Overview
+
+* **Synthetic Graph → Feature Extraction → ML Model → API Inference**
+* Identifies abnormal privilege paths or identity misconfigurations
+* Supports attacker-simulation and detection engineering
+
+---
+
+## 👤 Author
+
+**Jan Zabala**
+AI-Driven Offensive Security Engineer
+Offensive Security Engineering Portfolio (2025)
