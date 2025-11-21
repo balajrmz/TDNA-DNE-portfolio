@@ -21,19 +21,19 @@ Everything here reflects **real-world offensive engineering**, built as tools, p
 📁 `labs/sentinelflow/`
 📌 *Completed*
 
-An end‑to‑end ML detection pipeline featuring:
+An end-to-end ML detection pipeline featuring:
 
 * Synthetic traffic generation
 * Feature engineering for flows
 * RandomForest threat classifier
 * Persisted schema to prevent drift
-* Real‑time API inference (FastAPI)
+* Real-time API inference (FastAPI)
 
-**Tech:** Python, Pandas, Scikit‑Learn, FastAPI, Uvicorn
+**Tech:** Python, Pandas, Scikit-Learn, FastAPI, Uvicorn
 
 ---
 
-## 2. **ShadowHound — AI‑Assisted AD Attack Path Analysis**
+## 2. **ShadowHound — AI-Assisted AD Attack Path Analysis**
 
 📁 `labs/shadowhound/`
 📌 *Completed*
@@ -41,52 +41,67 @@ An end‑to‑end ML detection pipeline featuring:
 A BloodHound ingestion + AI analysis engine that:
 
 * Parses & normalizes BloodHound JSON
-* Generates high-risk attack paths
-* Applies LLM logic for privilege escalation reasoning
-* Outputs structured recommendations
+* Surfaces high-risk attack paths
+* Applies LLM-style reasoning for privilege escalation
+* Outputs structured recommendations for red-teamers or defenders
 
-**Tech:** Python, Neo4j JSON, Graph Analysis, LLM Inference
-
----
-
-## 3. **RedRiver — AI‑Driven Phishing & Payload Delivery Framework**
-
-📁 `labs/redriver/`
-📌 *In Development*
-
-A next‑gen phishing + payload delivery engine featuring:
-
-* AI‑generated phishing lures
-* Autonomous recon on targets
-* Payload templating modules
-* Behavioral analysis & chained attack logic
-
-**Tech:** Python, Prompt Engineering, Email Automation, LLMs
+**Tech:** Python, Graph Analysis, JSON Processing
 
 ---
 
-## 4. **AnomalyHunter — Isolation Forest & One‑Class SVM Detection Models**
+## 3. **CloudSentinel — Cloud IAM Misconfiguration Lab**
 
-📁 `labs/anomalyhunter/`
+📁 `labs/cloudsentinel/`
 📌 *Completed*
 
-Unsupervised ML models for anomaly detection:
+A lab focused on:
 
-* Isolation Forest (network outliers)
-* One‑Class SVM (behavior baselining)
-* Evaluation framework
+* Experimenting with IAM policies
+* Exploring common misconfiguration patterns
+* Laying the groundwork for automated risk scoring and analysis APIs
 
-**Tech:** Python, Scikit-Learn, NumPy
+**Tech:** Python, AWS/Azure IAM Concepts, JSON Policies
+
+---
+
+## 4. **PacketVision — Network Capture Exploration Lab**
+
+📁 `labs/packetvision/`
+📌 *Completed*
+
+A lab centered on offensive use-cases for packet inspection, where I:
+
+* Parse and inspect network captures
+* Explore visibility gaps and attacker tradecraft
+* Prototype ideas that may later feed into AI-assisted recon or detection bypass tooling
+
+**Tech:** Python, PCAP/Traffic Analysis
+
+---
+
+## 5. **ZeroTrace — Offensive Stealth & Telemetry Lab**
+
+📁 `labs/zerotrace/`
+📌 *Completed*
+
+An experimental space for:
+
+* Studying logging and telemetry gaps
+* Exploring stealth techniques and detection resistance
+* Prototyping concepts that inform how I design and test offensive tooling
+
+**Tech:** Python, Logging/Telemetry Concepts, Offensive R&D
 
 ---
 
 # 🧪 Additional Projects Coming Soon
 
-* **MalScanAI** — Byte‑level malware classifier
-* **WebGuard** — ML‑based web exploit detection
+* **RedRiver — AI-driven phishing & payload delivery framework (In Progress — folder scaffolding completed)**
+* **AnomalyHunter** — Isolation Forest & One-Class SVM anomaly detection suite
+* **MalScanAI** — Byte-level malware classifier
+* **WebGuard** — ML-based web exploit detection
 * **AttackGraph Generator** — Graph-based AD escalation mapping
 * **DockerSec Inspect** — Dockerfile vulnerability scanner
-* **CloudSentinel** — IAM misconfiguration analyzer
 * **Credential Auditor** — Entropy + breach correlation engine
 
 ---
@@ -111,8 +126,9 @@ pentest-portfolio/
 ├── labs/
 │   ├── sentinelflow/
 │   ├── shadowhound/
-│   ├── redriver/
-│   ├── anomalyhunter/
+│   ├── cloudsentinel/
+│   ├── packetvision/
+│   ├── zerotrace/
 │   └── ...
 │
 ├── writeups/
@@ -121,6 +137,13 @@ pentest-portfolio/
 │   ├── archetype.md
 │   ├── nineveh.md
 │   └── celestial.md
+│
+├── offensive-tools/
+├── active-directory-attacks/
+├── cloud-attacks/
+├── web-app-attacks/
+├── oscp-style/
+├── assets/
 │
 └── README.md
 ```
