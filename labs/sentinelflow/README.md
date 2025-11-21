@@ -1,229 +1,192 @@
-# 🚀 SentinelFlow  
-**AI-Driven Network Threat Detection Pipeline**  
-*(Synthetic Network Traffic → Feature Engineering → ML Model → FastAPI Inference API)*
+# 🌐 SentinelFlow — AI-Driven Network Threat Classifier
+
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Machine Learning](https://img.shields.io/badge/ML-RandomForest-orange)
+![Network Security](https://img.shields.io/badge/Security-Network_Threats-red)
+![FastAPI](https://img.shields.io/badge/API-FastAPI-green)
+![Automation](https://img.shields.io/badge/Automation-Pipeline-lightgrey)
+
+**Status:** Completed
+**Category:** Network Security | Threat Classification | AI-Driven Detection
+
+SentinelFlow is an end-to-end ML pipeline for classifying network traffic into behavioral categories such as **normal**, **port scan**, and **DoS-like** activity. It generates synthetic traffic, engineers robust flow-level features, trains a RandomForest classifier, and serves predictions via a FastAPI microservice.
+
+This project demonstrates:
+
+* Synthetic network traffic generation for security modeling
+* Feature engineering for flow-based detection
+* Supervised ML for network threat classification
+* Schema-stable model deployment (persisted feature columns)
+* API-based inference suitable for integration into larger monitoring stacks
 
 ---
 
-## 📌 Overview
+## 🚀 Key Capabilities
 
-**SentinelFlow** is an end-to-end, AI-powered cybersecurity lab project designed to simulate real SOC detection pipelines. It:
-
-1. Generates synthetic network traffic  
-2. Engineers ML features  
-3. Trains a RandomForest threat-detection model  
-4. Saves model + metrics for reproducibility  
-5. Serves real-time predictions through FastAPI  
-
-This mirrors how modern EDR/SIEM enrichment engines and ML-driven detections work inside enterprise environments.
+* Generates labeled synthetic network traffic
+* Builds flow-level features (e.g., packet counts, byte volumes, timing)
+* Trains a RandomForest classifier on engineered features
+* Persists feature column order to prevent schema drift at inference time
+* Exposes a FastAPI endpoint for real-time predictions
+* Provides a simple CLI pipeline from raw data → model → API
 
 ---
 
-## ✨ Key Features
+## 🧠 Technical Highlights
 
-### 🔹 Synthetic Network Traffic Generator
-Creates realistic flow-style events including:
-
-- Normal internal → external movement  
-- Port scans  
-- DoS-like “bursty” traffic  
-- TCP / UDP / ICMP  
-- Common port distribution: 22, 80, 443, 3306, 8080, etc.
-
-Enables safe experimentation without exposing private logs.
+* Synthetic data generator for controlled threat scenarios
+* Modular feature engineering layer with reproducible transforms
+* RandomForest model optimized for interpretability and robustness
+* FastAPI app wrapping model artifacts for production-style inference
+* Separation of concerns between data, model, and service layers
 
 ---
 
-### 🔹 Feature Engineering
-
-SentinelFlow produces consistent, ML-ready feature vectors using:
-
-- `bytes_in`, `bytes_out`, `packet_count`
-- Derived metrics (`byte_ratio`, burst patterns)
-- One-hot encoded:
-  - Protocol  
-  - Destination port
-
-These engineered features match the type of numeric embeddings used in cloud security ML pipelines.
-
----
-
-### 🔹 Model Training
-
-Uses `RandomForestClassifier` for stable, interpretable multi-class classification.
-
-Artifacts saved under `data/processed`:
-
-- `model.joblib` – serialized trained model  
-- `report.json` – metrics + diagnostics  
-- `feature_columns.json` – **persisted feature ordering**  
-
-Persisting the training-time feature order eliminates schema drift between training and inference.
-
----
-
-### 🔹 FastAPI Inference Service
-
-The API exposes:
-
-#### `GET /health`
-Simple health probe.
-
-#### `POST /predict`
-Example input:
-
-```json
-{
-  "bytes_in": 10000,
-  "bytes_out": 500,
-  "packet_count": 80,
-  "protocol": "TCP",
-  "dst_port": 22
-}
-```
-
-Example output:
-
-```json
-{
-  "prediction": "scan",
-  "confidence": 0.99
-}
-```
-
-Ideal for integration into SIEM alert enrichment or lab simulations.
-
----
-
-## 🏗️ Project Structure
+## 📁 Repository Structure
 
 ```
 sentinelflow/
 │
-├── api.py                  # FastAPI inference service
-├── config.py               # Paths & configuration
-├── features.py             # Feature engineering logic
-├── models.py               # Model constructor / baseline
-├── pipeline.py             # Training pipeline
-│
 ├── data/
-│   ├── raw/                # Synthetic generated CSVs
-│   └── processed/
-│       ├── model.joblib
-│       ├── report.json
-│       └── feature_columns.json
+│   ├── raw/                # synthetic or captured traffic (CSV/PCAP-derived)
+│   └── processed/          # feature matrices used for training
 │
-└── tests/
-    └── test_pipeline.py    # Future test suite
+├── sentinelflow/
+│   ├── generate_data.py    # synthetic traffic generator
+│   ├── features.py         # feature engineering logic
+│   ├── ml.py               # model training & evaluation pipeline
+│   ├── api.py              # FastAPI inference service
+│   ├── schema.py           # feature column persistence utilities
+│   └── config.py           # paths, constants, and settings
+│
+└── README.md
 ```
 
 ---
 
-## 🏃 How to Run
-
-### 1️⃣ Create a virtual environment
-
-```bash
-python -m venv .venv
-```
-
-Activate:
-
-**PowerShell**
-```bash
-. .venv\Scripts\Activate.ps1
-```
-
----
-
-### 2️⃣ Install dependencies
+## ⚙️ Installation
 
 ```bash
 pip install -r requirements.txt
 ```
 
+**Dependencies:**
+
+* Python 3.10+
+* pandas
+* numpy
+* scikit-learn
+* joblib
+* fastapi
+* uvicorn
+
 ---
 
-### 3️⃣ Train the model
+## 🧪 How to Use
+
+### **1. Generate Synthetic Network Data**
 
 ```bash
-python -m sentinelflow.pipeline
+python -m sentinelflow.generate_data
 ```
 
-This generates:
+Outputs (example):
 
-```
-data/processed/model.joblib
-data/processed/report.json
-data/processed/feature_columns.json
+```text
+data/raw/traffic.csv
 ```
 
----
+### **2. Build Feature Matrix**
 
-### 4️⃣ Start the API
+```bash
+python -m sentinelflow.features
+```
+
+Outputs:
+
+```text
+data/processed/features.csv
+```
+
+### **3. Train the ML Model**
+
+```bash
+python -m sentinelflow.ml
+```
+
+Artifacts:
+
+```text
+model.joblib
+metrics.json
+feature_columns.json
+```
+
+### **4. Start the Prediction API**
 
 ```bash
 uvicorn sentinelflow.api:app --reload
 ```
 
-Then open:
+Swagger UI:
 
-```
+```text
 http://127.0.0.1:8000/docs
 ```
 
-Use the built-in Swagger UI to send predictions.
-
 ---
 
-## 🧠 Engineering Decisions
+## 🔮 Example API Request (POST /predict)
 
-- **Feature mismatch protection**  
-  A common ML failure mode occurs when inference-time input columns don’t match training-time one-hot encodings.  
-  SentinelFlow solves this by saving the training-time feature column list to:  
-
-  ```
-  data/processed/feature_columns.json
-  ```
-
-  The inference pipeline **reindexes** incoming data to match this schema.
-
-- **Synthetic data for safe experimentation**  
-  Avoids sensitive log exposure while enabling repeatable lab experiments.
-
-- **Microservice architecture**  
-  FastAPI mirrors modern SOC/EDR inference microservices and is easy to deploy via Docker/Kubernetes.
-
----
-
-## 📈 Example `report.json`
+**Input**
 
 ```json
 {
-  "model": "RandomForestClassifier",
-  "samples": 5000,
-  "metrics": {
-    "accuracy": 0.94,
-    "precision": 0.93,
-    "recall": 0.92
+  "total_packets": 120,
+  "total_bytes": 8042,
+  "duration_ms": 450,
+  "src_port": 51532,
+  "dst_port": 80,
+  "packet_rate": 0.27,
+  "byte_rate": 17.87
+}
+```
+
+**Response**
+
+```json
+{
+  "prediction": {
+    "class_label": "scan",
+    "confidence": 0.91
+  },
+  "model_info": {
+    "feature_columns_used": [
+      "total_packets",
+      "total_bytes",
+      "duration_ms",
+      "src_port",
+      "dst_port",
+      "packet_rate",
+      "byte_rate"
+    ]
   }
 }
 ```
 
 ---
 
-## 🔮 Roadmap
+## 🗺️ Architecture Overview
 
-- [ ] Add additional attack patterns (SSH brute force, DNS tunneling)  
-- [ ] Add SHAP model explainability  
-- [ ] Add retraining scheduler  
-- [ ] Add Grafana dashboard for inference telemetry  
-- [ ] Build Docker container + optional Kubernetes manifest  
+* **Synthetic Traffic → Feature Engineering → ML Training → API Inference**
+* Designed as a blueprint for network detection pipelines
+* Easily extensible with new labels, models, and feature sets
+* Provides a foundation for more advanced anomaly detection labs (e.g., AnomalyHunter)
 
 ---
 
 ## 👤 Author
 
-**Jan Zabala**  
-Offensive Security • Cloud Security • AI  
-Part of the *pentest-portfolio* project.
-
+**Jan Zabala**
+AI-Driven Offensive Security Engineer
+Offensive Security Engineering Portfolio (2025)
