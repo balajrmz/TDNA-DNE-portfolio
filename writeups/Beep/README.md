@@ -184,24 +184,6 @@ ssh \
 
 ---
 
-## 9. Recommended Screenshots for GitHub
 
-Suggested screenshot files (place inside `/screenshots/`):
-
-- `nmap.png` — Port/service enumeration  
-- `web-root.png` — Elastix/FreePBX landing page  
-- `gobuster.png` — Discovered directories  
-- `lfi-amportal.png` — Output of `/etc/amportal.conf`  
-- `ssh-error.png` — Legacy KEX negotiation failure  
-- `ssh-root.png` — Successful SSH as root  
-- `flags.png` — user.txt & root.txt dumps  
-
-Embed example:
-
-```markdown
-![LFI exposing amportal.conf](screenshots/lfi-amportal.png)
-```
-
----
 
 > _Beep is a perfect OSCP-style machine that demonstrates how a single misconfiguration—LFI + credential reuse—can compromise an entire server._
