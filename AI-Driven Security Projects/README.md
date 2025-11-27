@@ -100,8 +100,5 @@ Planned upcoming AI tools include:
 - AI-based phishing simulation generator
 - Malware traffic fingerprinting
 - Graph neural network AD post-exploitation mapping
-# 🤝 Contact
-If you're a recruiter, hiring manager, or security professional interested in AI-driven security tooling, feel free to reach out.
-This portfolio reflects my evolving expertise in:
-### 🔥 AI + Cybersecurity + Offensive Engineering
+
 
