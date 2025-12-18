@@ -1,130 +1,134 @@
-# ☁️ CloudSentinel — Cloud IAM Misconfiguration Analysis Lab
+# CloudSentinel — Cloud Identity & IAM Misconfiguration Analysis
+**Tags:** TDNA, DNE, Cloud Identity, IAM, Privilege Escalation, Offensive Security, Azure, AWS
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![Cloud Security](https://img.shields.io/badge/Cloud-AWS/Azure-orange)
-![IAM](https://img.shields.io/badge/Identity-IAM-yellow)
-![Offensive Security](https://img.shields.io/badge/OffSec-Red_Team-red)
-![Automation](https://img.shields.io/badge/Automation-Security_Engineering-green)
-
-**Status:** Completed
-**Category:** Cloud Identity | IAM Misconfig Analysis | Offensive Security Engineering
-
-CloudSentinel is a cloud identity and IAM-focused research lab designed to explore, analyze, and model real-world misconfigurations in AWS and Azure identity environments. It provides a controlled testing ground for dangerous permission combinations, escalation paths, wildcard policies, privilege amplification, and identity abuse patterns.
-
-This project demonstrates:
-
-* Cloud identity threat modeling
-* Privilege escalation path discovery
-* IAM risk pattern analysis (PassRole, AssumeRole, wildcard actions)
-* Automated parsing and scoring of policy documents
-* Offensive identity engineering techniques for red-team and cloud abuse research
+Target-centric analysis of cloud identity boundaries and IAM misconfigurations to support Target Digital Network Analysis (TDNA) and Digital Network Exploitation (DNE).
 
 ---
 
-## 🚀 Key Capabilities
+## Overview
 
-* Analyzes IAM JSON policies for high-risk permissions
-* Identifies dangerous combinations (e.g., PassRole + EC2)
-* Flags wildcard permissions ("Action": "*" or overly broad resources)
-* Detects privilege escalation chains
-* Supports AWS and Azure policy styles
-* Produces structured risk scoring output
+CloudSentinel is a cloud identity–focused research lab designed to analyze, model, and reason about real-world IAM misconfigurations in AWS and Azure environments. The project provides a controlled environment for identifying dangerous permission combinations, privilege escalation paths, and identity abuse patterns that can enable unauthorized access without traditional exploitation.
 
----
+CloudSentinel supports TDNA and DNE workflows by treating cloud identity as a target surface, emphasizing how permissions, roles, and trust relationships can be chained into viable access paths.
 
-## 🧠 Technical Highlights
-
-* Normalization of IAM policy JSON into analyzable structures
-* Rule-based detection of misconfigurations
-* Early architecture designed for ML-driven scoring in future versions
-* Modular Python design for rapid expansion
+This project is part of the TDNA & DNE portfolio of Jan Zabala.
 
 ---
 
-## 📁 Repository Structure
+## Why This Matters for TDNA & DNE
+
+In cloud environments, identity is often the primary control plane. Misconfigured IAM policies can:
+
+- Enable privilege escalation without exploiting software vulnerabilities
+- Provide initial access through over-permissioned roles or users
+- Bridge access between cloud services and hybrid identity environments
+- Create stealthy persistence paths through role chaining
+
+CloudSentinel enables structured analysis of these identity-driven access vectors.
+
+---
+
+## Key Capabilities
+
+- Analysis of IAM JSON policies for high-risk permissions
+- Identification of dangerous permission combinations (e.g., PassRole + RunInstances)
+- Detection of wildcard actions and overly broad resource scopes
+- Discovery of privilege escalation and abuse chains
+- Support for AWS and Azure IAM policy structures
+- Structured risk scoring output for analysis and comparison
+
+---
+
+## Technical Highlights
+
+- Normalization of IAM policy documents into analyzable structures
+- Rule-based detection engine for known escalation patterns
+- Modular Python architecture for rapid expansion
+- Designed to support future ML-driven risk scoring
+
+---
+
+## Project Structure
 
 ```
-cloudsentinel/
-│
+ai-driven-security-projects/cloudsentinel/
 ├── data/
-│   ├── samples/        # example AWS/Azure IAM policies
-│   └── output/         # generated analysis reports
+│   ├── samples/          # example AWS / Azure IAM policies
+│   └── output/           # generated analysis reports
 │
 ├── cloudsentinel/
-│   ├── analyzer.py     # core policy analysis engine
-│   ├── rules.py        # dangerous permission rules
-│   ├── utils.py        # loaders, normalizers, helpers
-│   ├── api.py          # FastAPI (optional future module)
-│   └── config.py       # paths + constants
+│   ├── analyzer.py       # core policy analysis engine
+│   ├── rules.py          # dangerous permission rules
+│   ├── utils.py          # loaders and normalizers
+│   ├── api.py            # optional FastAPI service
+│   └── config.py         # constants and paths
 │
 └── README.md
 ```
 
 ---
 
-## ⚙️ Installation
+## Installation
 
-```
+```bash
+git clone https://github.com/balajimz/tdna-dne-portfolio.git
+cd tdna-dne-portfolio/ai-driven-security-projects/cloudsentinel
+
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-**Dependencies:**
-
-* Python 3.10+
-* pandas
-* fastapi (optional)
-* uvicorn (optional)
-* jsonschema (optional)
-
 ---
 
-## 🧪 How to Use
+## Usage
 
-### **1. Analyze a Policy**
+### Analyze a Single Policy
 
-```
+```bash
 python -m cloudsentinel.analyzer ./data/samples/policy.json
 ```
 
-Output:
+Example output:
 
-```
+```json
 {
   "policy_name": "policy.json",
-  "wildcard_actions": [...],
-  "dangerous_combinations": [...],
+  "wildcard_actions": ["*"],
+  "dangerous_combinations": ["PassRole + RunInstances"],
   "risk_score": 72,
-  "critical_findings": [...]
+  "critical_findings": []
 }
-```
-
-### **2. Analyze an Entire Directory**
-
-```
-python -m cloudsentinel.analyzer ./data/samples/
-```
-
-### **3. (Optional) Start the API**
-
-```
-uvicorn cloudsentinel.api:app --reload
-```
-
-Swagger:
-
-```
-http://127.0.0.1:8000/docs
 ```
 
 ---
 
-## 🔮 Example Output Summary
+### Analyze a Directory of Policies
+
+```bash
+python -m cloudsentinel.analyzer ./data/samples/
+```
+
+---
+
+### Optional API Mode
+
+```bash
+uvicorn cloudsentinel.api:app --reload
+```
+
+API documentation:
+http://127.0.0.1:8000/docs
+
+---
+
+## Example Output Summary
 
 ```json
 {
   "policy": "admin_escalation.json",
   "findings": {
-    "wildcards": ["*"] ,
+    "wildcards": ["*"],
     "dangerous_pairs": ["PassRole + RunInstances"],
     "excessive_privileges": 5,
     "recommendations": [
@@ -138,16 +142,32 @@ http://127.0.0.1:8000/docs
 
 ---
 
-## 🗺️ Architecture Overview
+## TDNA / DNE Use Cases
 
-* IAM Policy JSON → Normalization → Rule Engine → Risk Score
-* Designed to extend into ML-driven IAM risk prediction
-* Supports hybrid AWS/Azure identity research
+- Cloud identity attack-path analysis
+- Privilege escalation reasoning without exploits
+- Hybrid identity targeting and access modeling
+- Validation of cloud IAM detection assumptions
+- Training and experimentation in lab environments
 
 ---
 
-## 👤 Author
+## Notes
 
-**Jan Zabala**
-AI-Driven Offensive Security Engineer
-Offensive Security Engineering Portfolio (2025)
+- All policies are synthetic or publicly documented examples
+- No production or customer environments are used
+- Project is OPSEC-safe and designed for reproducible research
+
+---
+
+## License
+
+MIT License.
+
+---
+
+## Author
+
+Jan Zabala  
+Target Digital Network Analysis & Digital Network Exploitation  
+CEH | OSCP (in progress)

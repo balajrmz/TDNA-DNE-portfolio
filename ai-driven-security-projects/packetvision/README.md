@@ -1,60 +1,67 @@
-# 📡 PacketVision — Network Packet Analysis & Offensive Visibility Lab
+# PacketVision — Network Visibility & Packet Analysis Lab
+**Tags:** TDNA, DNE, Network Visibility, Packet Analysis, PCAP, Flow Analysis, Offensive Security, AI Security
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![Packet Analysis](https://img.shields.io/badge/Network-PCAP_Analysis-lightgrey)
-![Data Engineering](https://img.shields.io/badge/Data-Engineering-orange)
-![Offensive Security](https://img.shields.io/badge/OffSec-Red_Team-red)
-![Automation](https://img.shields.io/badge/Automation-Scripting-green)
-
-**Status:** Completed
-**Category:** Network Visibility | Packet Analysis | Offensive Security Engineering
-
-PacketVision is a focused research lab for exploring offensive use cases in packet capture analysis. It serves as a foundation for understanding how attackers observe, classify, and exploit network behavior. This lab is designed to help model visibility gaps, extract actionable packet insights, and prototype AI-assisted packet classification workflows.
-
-This project demonstrates:
-
-* Foundational offensive packet inspection
-* Data extraction and transformation from PCAPs
-* Structured feature engineering for network flows
-* Early concepts for ML-driven packet anomaly detection
-* Automation-driven parsing and reporting
+Target-centric exploration of packet-level visibility to support Target Digital Network Analysis (TDNA) and Digital Network Exploitation (DNE) workflows.
 
 ---
 
-## 🚀 Key Capabilities
+## Overview
 
-* Parses packet captures (PCAP files)
-* Extracts protocol metadata and flow summaries
-* Identifies suspicious or abnormal traffic patterns
-* Generates structured CSV/JSON output for analysis or ML ingestion
-* Supports plugin-style packet feature modules
-* Serves as a visibility lab for future AI enhancements
+PacketVision is a network visibility and packet analysis lab designed to explore how packet-level data can be leveraged for adversary-centric analysis. The project focuses on parsing packet captures (PCAPs), extracting protocol and flow-level metadata, and identifying patterns that are useful for understanding attacker tradecraft and network exposure.
 
----
+PacketVision supports TDNA and DNE workflows by treating network traffic as a target surface, enabling structured analysis of how communications appear on the wire and where visibility gaps may exist.
 
-## 🧠 Technical Highlights
-
-* Uses Python packet libraries for low-level inspection
-* Normalized feature extraction for packet → flow summarization
-* Modular architecture for adding protocol-specific detectors
-* Ideal pre-processing layer for future ML models
+This project is part of the TDNA & DNE portfolio of Jan Zabala.
 
 ---
 
-## 📁 Repository Structure
+## Why This Matters for TDNA & DNE
+
+Packet-level visibility is foundational for:
+
+- Characterizing network exposure and protocol usage
+- Understanding how attacker behaviors manifest in raw traffic
+- Identifying reconnaissance, scanning, and beaconing patterns
+- Supporting access-path reasoning through traffic analysis
+- Informing evasion and detection considerations
+
+PacketVision enables hands-on experimentation with these concepts in a controlled, lab-based environment.
+
+---
+
+## Key Capabilities
+
+- Parsing and inspection of PCAP files
+- Extraction of protocol metadata and flow summaries
+- Identification of anomalous or suspicious traffic patterns
+- Generation of structured CSV and JSON output for analysis or ML ingestion
+- Modular architecture for adding protocol- or behavior-specific parsers
+- Automation-friendly workflows for repeatable analysis
+
+---
+
+## Technical Highlights
+
+- Python-based packet inspection using common PCAP libraries
+- Normalized feature extraction from packets to flows
+- Clear separation of parsing, feature engineering, and reporting
+- Designed to integrate with ML-based network analysis pipelines
+
+---
+
+## Project Structure
 
 ```
-packetvision/
-│
+ai-driven-security-projects/packetvision/
 ├── data/
 │   ├── pcaps/           # sample PCAP files for testing
-│   ├── output/          # extracted features & flow metadata
+│   └── output/          # extracted features & flow metadata
 │
 ├── packetvision/
 │   ├── parser.py        # core PCAP parsing logic
 │   ├── features.py      # feature extraction utilities
 │   ├── utils.py         # helpers, loaders, and filters
-│   ├── pipeline.py      # run-all workflow for parsing → features
+│   ├── pipeline.py      # end-to-end parsing → feature workflow
 │   └── config.py        # file paths & constants
 │
 └── README.md
@@ -62,26 +69,24 @@ packetvision/
 
 ---
 
-## ⚙️ Installation
+## Installation
 
-```
+```bash
+git clone https://github.com/balajimz/tdna-dne-portfolio.git
+cd tdna-dne-portfolio/ai-driven-security-projects/packetvision
+
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-**Dependencies:**
-
-* scapy or pyshark (depending on your implementation)
-* pandas
-* numpy
-* json
-
 ---
 
-## 🧪 How to Use
+## Usage
 
-### **1. Parse a PCAP File**
+### Parse a PCAP File
 
-```
+```bash
 python -m packetvision.parser ./data/pcaps/sample.pcap
 ```
 
@@ -91,9 +96,11 @@ Output:
 data/output/parsed_sample.json
 ```
 
-### **2. Extract Features**
+---
 
-```
+### Extract Flow Features
+
+```bash
 python -m packetvision.features ./data/output/parsed_sample.json
 ```
 
@@ -103,17 +110,19 @@ Output:
 data/output/flows.csv
 ```
 
-### **3. Run the Full Pipeline**
+---
 
-```
+### Run the Full Pipeline
+
+```bash
 python -m packetvision.pipeline ./data/pcaps/sample.pcap
 ```
 
-This produces structured flow summaries ready for manual or ML analysis.
+This produces structured flow summaries suitable for manual analysis or ML-based modeling.
 
 ---
 
-## 🔮 Example Output Summary
+## Example Output Summary
 
 ```json
 {
@@ -128,16 +137,32 @@ This produces structured flow summaries ready for manual or ML analysis.
 
 ---
 
-## 🗺️ Architecture Overview
+## TDNA / DNE Use Cases
 
-* PCAP → Raw Packet Metadata → Features/Flows → CSV/JSON Output
-* Supports reconnaissance training, traffic validation, and future ML modeling
-* Forms a foundation for AI-assisted network anomaly detection (e.g., SentinelFlow)
+- Network exposure and protocol analysis
+- Support for reconnaissance and access-path reasoning
+- Validation of attacker tradecraft at the packet level
+- Pre-processing layer for ML-based traffic analysis (e.g., SentinelFlow)
+- Training and experimentation in lab environments
 
 ---
 
-## 👤 Author
+## Notes
 
-**Jan Zabala**
-AI-Driven Offensive Security Engineer
-Offensive Security Engineering Portfolio (2025)
+- All PCAPs are synthetic or publicly available examples
+- No production or customer traffic is used
+- Project is OPSEC-safe and designed for reproducible experimentation
+
+---
+
+## License
+
+MIT License.
+
+---
+
+## Author
+
+Jan Zabala  
+Target Digital Network Analysis & Digital Network Exploitation  
+CEH | OSCP (in progress)

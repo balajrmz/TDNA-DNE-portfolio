@@ -1,19 +1,22 @@
-🛡️ Target Digital Network Analysis & Digital Network Exploitation Portfolio
-By Jan Zabala — TDNA | DNE | AI-Assisted Target Analytics | Identity & Network Attack Paths
+# 🛡️ Target Digital Network Analysis & Digital Network Exploitation Portfolio
+**By Jan Zabala — TDNA | DNE | AI-Assisted Target Analytics | Identity & Network Attack Paths**
 
-Welcome to my Target Digital Network Analysis (TDNA) and Digital Network Exploitation (DNE) portfolio.  
-This repository showcases work focused on analyzing digital networks as adversary targets — identifying access vectors, attack paths, and exploitation opportunities across identity, applications, and infrastructure.
+Welcome to my **Target Digital Network Analysis (TDNA)** and **Digital Network Exploitation (DNE)** portfolio.
 
-My work sits at the intersection of:
+This repository showcases work focused on analyzing digital networks as **adversary targets** — identifying access vectors, attack paths, and exploitation opportunities across **identity, applications, and infrastructure**.
 
-• Target Digital Network Analysis (TDNA)  
-• Digital Network Exploitation (DNE)  
-• Identity-centric attack path analysis (AD, Cloud IAM)  
-• AI/ML-assisted target analytics  
-• Automation, tooling, and exploitation validation  
-• OSCP-style offensive tradecraft  
+All content is developed in **lab, synthetic, or public environments** and is designed for clarity, reproducibility, and operational realism.
 
-All content is developed in lab, synthetic, or public environments and is designed for clarity, reproducibility, and operational realism.
+---
+
+## 🔍 Areas of Focus
+
+- Target Digital Network Analysis (TDNA)  
+- Digital Network Exploitation (DNE)  
+- Identity-centric attack path analysis (Active Directory & Cloud IAM)  
+- AI / ML–assisted target analytics  
+- Automation and exploitation validation  
+- OSCP-style offensive tradecraft workflows  
 
 ---
 
@@ -21,136 +24,102 @@ All content is developed in lab, synthetic, or public environments and is design
 
 My work follows a **target-centric methodology**, rather than tool-driven exploitation:
 
-1. **Target Characterization**
-   - Network topology, identity boundaries, exposed services
-   - Trust relationships (Active Directory, cloud identity, applications)
+1. **Target Characterization**  
+   Network topology, identity boundaries, exposed services, and trust relationships.
 
-2. **Access Vector Identification**
-   - Authentication paths
-   - Misconfigurations
-   - Protocol weaknesses
-   - Application logic flaws
+2. **Access Vector Identification**  
+   Authentication paths, misconfigurations, protocol weaknesses, and application logic flaws.
 
-3. **Attack Path Analysis**
-   - Chaining access across systems, identities, and services
-   - Evaluating feasibility, impact, and persistence
+3. **Attack Path Analysis**  
+   Chaining access across identities, services, and systems to assess feasibility and impact.
 
-4. **Exploitation Validation (Lab / Synthetic)**
-   - Hands-on testing in controlled environments
-   - OSCP-style validation of theoretical access paths
+4. **Exploitation Validation (Lab / Synthetic)**  
+   Hands-on validation of theoretical access paths using controlled environments.
 
-5. **Reporting & Translation**
-   - Clear articulation of risk, assumptions, and operational relevance
+5. **Reporting & Translation**  
+   Clear articulation of findings, assumptions, and operational relevance.
 
 ---
 
-## 🚀 Featured Projects
+## 🚀 Featured AI-Driven Security Projects
 
-### 1. SentinelFlow — AI-Assisted Network Threat Classification
-📁 labs/sentinelflow/ | 📌 Completed
+All projects below live under:
 
-An end-to-end ML pipeline designed to analyze network behavior from an attacker and defender perspective, featuring:
+```
+ai-driven-security-projects/
+```
 
-• Synthetic network traffic generation  
-• Flow-level feature engineering  
-• RandomForest threat classification  
-• Schema persistence to prevent feature drift  
-• Real-time inference via FastAPI  
-
-**Tech:** Python, Pandas, Scikit-Learn, FastAPI, Uvicorn
+### 🔴 RedRiver — AI-Assisted Network Flow Analysis
+Models adversary-relevant network behaviors to support access-path reasoning and detection analysis.
 
 ---
 
-### 2. ShadowHound — Identity Attack Path Analysis
-📁 labs/shadowhound/ | 📌 Completed
-
-An Active Directory attack-path analysis engine that:
-
-• Parses and normalizes BloodHound data  
-• Identifies high-risk privilege escalation paths  
-• Applies reasoning logic to surface exploitable relationships  
-• Outputs structured access path recommendations  
-
-**Tech:** Python, Graph Analysis, JSON Processing
+### 🔵 ShadowHound — Identity Attack Path Analysis (Active Directory)
+Graph-based analysis of identity relationships and privilege escalation paths.
 
 ---
 
-### 3. CloudSentinel — Cloud IAM Misconfiguration Lab
-📁 labs/cloudsentinel/ | 📌 Completed
-
-A lab focused on cloud identity targeting, including:
-
-• IAM policy experimentation  
-• Common misconfiguration patterns  
-• Foundations for automated risk scoring and analysis APIs  
-
-**Tech:** Python, AWS & Azure IAM Concepts, JSON Policy Analysis
+### ☁️ CloudSentinel — Cloud Identity & IAM Misconfiguration Analysis
+Target-centric analysis of cloud IAM policies and privilege escalation via misconfiguration.
 
 ---
 
-### 4. PacketVision — Network Capture Analysis Lab
-📁 labs/packetvision/ | 📌 Completed
-
-A network-focused lab exploring offensive visibility and tradecraft:
-
-• Parsing and inspecting packet captures  
-• Identifying attacker-relevant visibility gaps  
-• Prototyping concepts for AI-assisted recon and evasion  
-
-**Tech:** Python, PCAP / Traffic Analysis
+### 🟣 PacketVision — Network Visibility & Packet Analysis
+Packet-level visibility analysis to understand attacker tradecraft and telemetry gaps.
 
 ---
 
-### 5. ZeroTrace — Stealth, Telemetry & Detection Gaps
-📁 labs/zerotrace/ | 📌 Completed
-
-An experimental space for:
-
-• Studying logging and telemetry blind spots  
-• Exploring stealth techniques and detection resistance  
-• Informing how offensive tooling is designed and tested  
-
-**Tech:** Python, Logging & Telemetry Concepts, Offensive R&D
+### 🟢 SentinelFlow — Network Behavior Classification
+End-to-end ML pipeline for classifying reconnaissance, scanning, and disruptive behaviors.
 
 ---
 
-## 🧪 Additional Projects (In Progress / Planned)
-
-• **RedRiver** — AI-assisted network flow analysis & adversary behavior modeling  
-• **AnomalyHunter** — Isolation Forest & One-Class SVM anomaly detection  
-• **MalScanAI** — Byte-level malware classification  
-• **WebGuard** — ML-based web exploit detection  
-• **AttackGraph Generator** — Graph-based AD escalation mapping  
-• **DockerSec Inspect** — Dockerfile vulnerability analysis  
-• **Credential Auditor** — Entropy & breach correlation engine  
+### 🟠 ZeroTrace — Stealth & Telemetry Gap Analysis
+Analysis of logging blind spots and detection boundaries that enable low-noise activity.
 
 ---
 
-## 🖥️ Hack The Box Writeups (Sanitized)
+## 🧪 Additional Projects (Planned)
 
-Writeups focus on **methodology and transferable patterns**, not box-specific trivia:
+- AttackGraph Generator — Graph-based AD escalation mapping  
+- Credential Auditor — Entropy and breach correlation engine  
+- DockerSec Inspect — Dockerfile vulnerability analysis  
+- MalScanAI — Byte-level malware classification  
 
-• Active — AD Enumeration & Kerberos Abuse  
-• Reel — Payload Delivery & Initial Access  
-• Archetype — Azure Hybrid Attack Paths  
-• Nineveh — Multi-Service Recon & Chaining  
-• Celestial — Application Logic & Reverse Engineering  
+---
+
+## 🖥️ Target Walkthroughs (Sanitized)
+
+Sanitized walkthroughs focused on **methodology and transferable patterns**, not box-specific trivia.
+
+Location:
+```
+target-walkthroughs/
+```
+
+Examples include:
+- Active — AD Enumeration & Kerberos Abuse  
+- Reel — Payload Delivery & Initial Access  
+- Archetype — Azure Hybrid Attack Paths  
+- Nineveh — Multi-Service Recon & Chaining  
+- Celestial — Application Logic & Reverse Engineering  
 
 ---
 
 ## 🧭 Repository Structure
 
+```
 tdna-dne-portfolio/
 │
-├── labs/
-│   ├── sentinelflow/
+├── ai-driven-security-projects/
+│   ├── redriver/
 │   ├── shadowhound/
 │   ├── cloudsentinel/
 │   ├── packetvision/
-│   ├── zerotrace/
-│   └── ...
+│   ├── sentinelflow/
+│   └── zerotrace/
 │
-├── writeups/
+├── target-walkthroughs/
 │   ├── active.md
 │   ├── reel.md
 │   ├── archetype.md
@@ -165,40 +134,40 @@ tdna-dne-portfolio/
 ├── assets/
 │
 └── README.md
+```
 
 ---
 
 ## 🔐 Core Competencies Demonstrated
 
 ### Target Digital Network Analysis & Exploitation
-• Attack-path reasoning and access vector identification  
-• Identity-centric targeting (AD, cloud IAM)  
-• Enumeration, exploitation, and privilege escalation workflows  
+- Attack-path reasoning and access vector identification  
+- Identity-centric targeting (AD, Cloud IAM)  
+- Enumeration, exploitation, and privilege escalation workflows  
 
 ### AI-Assisted Target Analytics
-• Synthetic traffic generation  
-• ML-based behavioral modeling  
-• AI-assisted attack surface mapping  
+- Synthetic data generation  
+- ML-based behavioral modeling  
+- AI-assisted attack surface mapping  
 
 ### Cloud & Identity Security
-• Azure & AWS IAM misconfiguration analysis  
-• Hybrid AD / cloud attack paths  
-• Detection and telemetry considerations  
+- Azure & AWS IAM misconfiguration analysis  
+- Hybrid AD / cloud attack paths  
+- Telemetry and detection considerations  
 
 ### Engineering & Architecture
-• Python-based tooling and automation  
-• FastAPI microservices  
-• Reproducible, GitHub-ready project structure  
+- Python-based tooling and automation  
+- FastAPI microservices  
+- Reproducible, GitHub-ready project structure  
 
 ---
 
 ## 🧭 Roadmap
 
-• Expand to 12+ mature TDNA/DNE projects  
-• Add Dockerized deployments for AI services  
-• Publish an Offensive Network Targeting handbook  
-• Launch a dedicated portfolio website  
-• Expand AI-assisted target analytics and access-path modeling  
+- Expand to 12+ mature TDNA/DNE projects  
+- Add Dockerized deployments for AI services  
+- Publish an Offensive Network Targeting handbook  
+- Launch a dedicated portfolio website  
 
 ---
 
@@ -206,16 +175,15 @@ tdna-dne-portfolio/
 
 **Jan Zabala**  
 Target Digital Network Analysis & Digital Network Exploitation  
-CEH | OSCP (in progress)  
+CEH | OSCP (in progress)
 
 Background in HUMINT & Special Operations–aligned intelligence  
-Cybersecurity Bachelor’s student  
 Focused on adversary-centric, AI-accelerated network targeting
 
 ---
 
 ## 📫 Contact
 
-GitHub: https://github.com/balajrmz  
+GitHub: https://github.com/balajimz  
 LinkedIn: https://www.linkedin.com/in/jan-zabala-5aaa59380  
 Email: jzabala81@protonmail.com

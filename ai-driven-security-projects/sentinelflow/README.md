@@ -1,114 +1,118 @@
-# 🌐 SentinelFlow — AI-Driven Network Threat Classifier
+# SentinelFlow — AI-Assisted Network Behavior Classification
+**Tags:** TDNA, DNE, Network Behavior Analysis, Machine Learning, Flow Analysis, FastAPI, Offensive Security
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![Machine Learning](https://img.shields.io/badge/ML-RandomForest-orange)
-![Network Security](https://img.shields.io/badge/Security-Network_Threats-red)
-![FastAPI](https://img.shields.io/badge/API-FastAPI-green)
-![Automation](https://img.shields.io/badge/Automation-Pipeline-lightgrey)
-
-**Status:** Completed
-**Category:** Network Security | Threat Classification | AI-Driven Detection
-
-SentinelFlow is an end-to-end ML pipeline for classifying network traffic into behavioral categories such as **normal**, **port scan**, and **DoS-like** activity. It generates synthetic traffic, engineers robust flow-level features, trains a RandomForest classifier, and serves predictions via a FastAPI microservice.
-
-This project demonstrates:
-
-* Synthetic network traffic generation for security modeling
-* Feature engineering for flow-based detection
-* Supervised ML for network threat classification
-* Schema-stable model deployment (persisted feature columns)
-* API-based inference suitable for integration into larger monitoring stacks
+Target-centric network behavior modeling to support Target Digital Network Analysis (TDNA) and Digital Network Exploitation (DNE) workflows.
 
 ---
 
-## 🚀 Key Capabilities
+## Overview
 
-* Generates labeled synthetic network traffic
-* Builds flow-level features (e.g., packet counts, byte volumes, timing)
-* Trains a RandomForest classifier on engineered features
-* Persists feature column order to prevent schema drift at inference time
-* Exposes a FastAPI endpoint for real-time predictions
-* Provides a simple CLI pipeline from raw data → model → API
+SentinelFlow is an end-to-end machine learning pipeline designed to classify network traffic based on adversary-relevant behaviors. The project generates synthetic network flows, engineers flow-level features, trains a supervised classification model, and exposes real-time predictions via a FastAPI microservice.
 
----
+SentinelFlow supports TDNA and DNE workflows by enabling structured analysis of how reconnaissance, scanning, and denial-style behaviors manifest in network telemetry, and how these behaviors can be detected, modeled, or potentially evaded.
 
-## 🧠 Technical Highlights
-
-* Synthetic data generator for controlled threat scenarios
-* Modular feature engineering layer with reproducible transforms
-* RandomForest model optimized for interpretability and robustness
-* FastAPI app wrapping model artifacts for production-style inference
-* Separation of concerns between data, model, and service layers
+This project is part of the TDNA & DNE portfolio of Jan Zabala.
 
 ---
 
-## 📁 Repository Structure
+## Why This Matters for TDNA & DNE
+
+Understanding network behavior at the flow level is critical when:
+
+- Characterizing exposed services and network attack surfaces
+- Identifying reconnaissance, scanning, and disruptive activity
+- Reasoning about attacker timing, volume, and protocol usage
+- Evaluating assumptions behind ML-based network detection systems
+
+SentinelFlow enables hands-on validation of these behaviors in a controlled, lab-based environment.
+
+---
+
+## Key Capabilities
+
+- Synthetic generation of labeled network traffic
+- Flow-level feature engineering (volume, timing, rates, ports)
+- Supervised machine learning using RandomForest
+- Persisted feature schemas to prevent inference-time drift
+- FastAPI-based real-time prediction service
+- Automated pipeline from data generation through deployment
+
+---
+
+## Technical Highlights
+
+- Modular Python architecture separating data, features, model, and service layers
+- Reproducible synthetic data generator for controlled experiments
+- Interpretable ML model focused on robustness over black-box accuracy
+- Production-style API design suitable for integration or experimentation
+
+---
+
+## Project Structure
 
 ```
-sentinelflow/
-│
+ai-driven-security-projects/sentinelflow/
 ├── data/
-│   ├── raw/                # synthetic or captured traffic (CSV/PCAP-derived)
-│   └── processed/          # feature matrices used for training
+│   ├── raw/                # synthetic network traffic
+│   └── processed/          # engineered feature matrices
 │
 ├── sentinelflow/
 │   ├── generate_data.py    # synthetic traffic generator
 │   ├── features.py         # feature engineering logic
-│   ├── ml.py               # model training & evaluation pipeline
+│   ├── ml.py               # model training & evaluation
 │   ├── api.py              # FastAPI inference service
-│   ├── schema.py           # feature column persistence utilities
-│   └── config.py           # paths, constants, and settings
+│   ├── schema.py           # feature column persistence
+│   └── config.py           # paths & constants
 │
 └── README.md
 ```
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 ```bash
+git clone https://github.com/balajimz/tdna-dne-portfolio.git
+cd tdna-dne-portfolio/ai-driven-security-projects/sentinelflow
+
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-**Dependencies:**
-
-* Python 3.10+
-* pandas
-* numpy
-* scikit-learn
-* joblib
-* fastapi
-* uvicorn
-
 ---
 
-## 🧪 How to Use
+## Usage
 
-### **1. Generate Synthetic Network Data**
+### 1. Generate Synthetic Network Data
 
 ```bash
 python -m sentinelflow.generate_data
 ```
 
-Outputs (example):
+Output:
 
-```text
+```
 data/raw/traffic.csv
 ```
 
-### **2. Build Feature Matrix**
+---
+
+### 2. Build Feature Matrix
 
 ```bash
 python -m sentinelflow.features
 ```
 
-Outputs:
+Output:
 
-```text
+```
 data/processed/features.csv
 ```
 
-### **3. Train the ML Model**
+---
+
+### 3. Train the ML Model
 
 ```bash
 python -m sentinelflow.ml
@@ -116,29 +120,31 @@ python -m sentinelflow.ml
 
 Artifacts:
 
-```text
+```
 model.joblib
 metrics.json
 feature_columns.json
 ```
 
-### **4. Start the Prediction API**
+---
+
+### 4. Start the Prediction API
 
 ```bash
 uvicorn sentinelflow.api:app --reload
 ```
 
-Swagger UI:
+Interactive API documentation:
 
-```text
 http://127.0.0.1:8000/docs
-```
 
 ---
 
-## 🔮 Example API Request (POST /predict)
+## Example Prediction Request
 
-**Input**
+POST /predict
+
+Example request body:
 
 ```json
 {
@@ -152,41 +158,45 @@ http://127.0.0.1:8000/docs
 }
 ```
 
-**Response**
+Example response:
 
 ```json
 {
   "prediction": {
     "class_label": "scan",
     "confidence": 0.91
-  },
-  "model_info": {
-    "feature_columns_used": [
-      "total_packets",
-      "total_bytes",
-      "duration_ms",
-      "src_port",
-      "dst_port",
-      "packet_rate",
-      "byte_rate"
-    ]
   }
 }
 ```
 
 ---
 
-## 🗺️ Architecture Overview
+## TDNA / DNE Use Cases
 
-* **Synthetic Traffic → Feature Engineering → ML Training → API Inference**
-* Designed as a blueprint for network detection pipelines
-* Easily extensible with new labels, models, and feature sets
-* Provides a foundation for more advanced anomaly detection labs (e.g., AnomalyHunter)
+- Network attack surface characterization
+- Detection and modeling of reconnaissance activity
+- Support for access-path reasoning through traffic analysis
+- Evaluation of ML-based network detection assumptions
+- Training and experimentation in lab environments
 
 ---
 
-## 👤 Author
+## Notes
 
-**Jan Zabala**
-AI-Driven Offensive Security Engineer
-Offensive Security Engineering Portfolio (2025)
+- All data is synthetic
+- No production or customer traffic is used
+- Project is OPSEC-safe and designed for reproducible experimentation
+
+---
+
+## License
+
+MIT License.
+
+---
+
+## Author
+
+Jan Zabala  
+Target Digital Network Analysis & Digital Network Exploitation  
+CEH | OSCP (in progress)

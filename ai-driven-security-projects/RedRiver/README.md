@@ -1,91 +1,67 @@
-# **RedRiver – AI-Driven Network Flow Classifier**
-### *Advanced ML-powered anomaly detection engine for offensive security engineers.*
+# RedRiver — AI-Assisted Network Flow Analysis
+**Tags:** TDNA, DNE, Network Behavior Analysis, Machine Learning, FastAPI, Offensive Security, AI Security
 
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
-![Python](https://img.shields.io/badge/Python-3.10+-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-teal)
-![Machine%20Learning](https://img.shields.io/badge/ML-RandomForest-yellow)
-![License](https://img.shields.io/badge/License-MIT-purple)
+Target-centric network behavior modeling to support Target Digital Network Analysis (TDNA) and Digital Network Exploitation (DNE) workflows.
 
 ---
 
-## ⭐ Overview
+## Overview
 
-**RedRiver** is an AI-driven network flow classification engine designed for offensive-security modeling, detection evasion research, and practical machine-learning integration into cyber operations workflows.
+RedRiver is an AI-assisted network flow analysis project designed to model adversary-relevant network behaviors in a controlled, lab-based environment. The project generates synthetic network traffic, engineers behavioral features, trains a supervised machine learning classifier, and exposes real-time scoring through a FastAPI service.
 
-It simulates realistic network traffic, engineers meaningful behavioral features, trains a supervised ML classifier, and exposes real-time scoring through a FastAPI microservice.
+RedRiver supports TDNA and DNE workflows by enabling hands-on experimentation with network behaviors such as scanning, brute-force attempts, and command-and-control beaconing, and by demonstrating how these behaviors appear at the flow level.
 
-This project is part of the **AI-Driven Offensive Security Engineering Portfolio** of Jan Zabala.
-
----
-
-## 🚀 Features
-
-- **Synthetic Traffic Engine**  
-  Generates labeled network flows: `benign`, `brute_force`, `port_scan`, `c2_beacon`.
-
-- **Feature Engineering Pipeline**  
-  Extracts bytes, packet rate, flags, protocol indicators, privileged-port behavior, and timing characteristics.
-
-- **Supervised Machine Learning Model**  
-  RandomForest classifier trained on engineered features with strong multi-class accuracy.
-
-- **Production-Ready REST API**  
-  Real-time scoring via FastAPI endpoints:  
-  - `POST /predict`  
-  - `GET /health`
-
-- **End-to-End Automation**  
-  `python -m redriver.pipeline` generates data → builds features → trains model.
+This project is part of the TDNA & DNE portfolio of Jan Zabala.
 
 ---
 
-## 🏗️ Architecture
+## Why This Matters for TDNA & DNE
+
+Understanding network behavior is critical when:
+
+- Characterizing target networks and exposed services
+- Identifying anomalous or attacker-like traffic patterns
+- Reasoning about beaconing, scanning, and brute-force activity
+- Evaluating how defensive analytics may respond to adversary actions
+
+RedRiver enables practical validation of how offensive network behaviors manifest in telemetry and how they may be classified, detected, or potentially evaded.
+
+---
+
+## Features
+
+- Synthetic traffic generation for multiple behavior classes
+- Flow-level feature engineering focused on timing, byte rates, and protocol usage
+- Supervised machine learning classification using RandomForest
+- Persisted feature schemas to prevent training/inference drift
+- Real-time prediction via a FastAPI REST service
+- End-to-end automation from data generation through model deployment
+
+---
+
+## Architecture
+
+Synthetic traffic is generated, transformed into engineered features, used to train a machine learning model, and then loaded into a FastAPI service for inference.
+
+Key components include:
+- synthetic.py – synthetic flow generation
+- features.py – feature engineering pipeline
+- ml.py – model training and evaluation
+- pipeline.py – end-to-end execution
+- api.py – FastAPI inference service
+
+---
+
+## Project Structure
 
 ```
-              ┌──────────────────────┐
-              │  synthetic.py         │
-              │  (Generate flows)     │
-              └───────────┬──────────┘
-                          │ flows.csv
-                          ▼
-              ┌──────────────────────┐
-              │  features.py          │
-              │  (Engineer features)  │
-              └───────────┬──────────┘
-                       features.csv
-                          ▼
-              ┌──────────────────────┐
-              │  ml.py                │
-              │  (Train RandomForest) │
-              ├──────────────────────┤
-              │ model.joblib          │
-              │ feature_columns.json  │
-              │ report.json           │
-              └───────────┬──────────┘
-                          ▼
-              ┌──────────────────────┐
-              │  FastAPI Service     │
-              │  (api.py)            │
-              ├──────────────────────┤
-              │ /health              │
-              │ /predict             │
-              └──────────────────────┘
-```
-
----
-
-## 📁 Project Structure
-
-```
-redriver/
-│
-├── synthetic.py          
-├── features.py           
-├── ml.py                 
-├── pipeline.py           
-├── api.py                
-├── config.py             
+ai-driven-security-projects/redriver/
+├── synthetic.py
+├── features.py
+├── ml.py
+├── pipeline.py
+├── api.py
+├── config.py
 │
 ├── data/
 │   ├── raw/flows.csv
@@ -99,57 +75,45 @@ redriver/
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 ```bash
-git clone https://github.com/balajrmz/pentest-portfolio.git
-cd pentest-portfolio/labs/RedRiver
-python -m venv venv
+git clone https://github.com/balajimz/tdna-dne-portfolio.git
+cd tdna-dne-portfolio/ai-driven-security-projects/redriver
+
+python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
 
 ---
 
-## 🔄 Run the Full Pipeline
+## Run the Full Pipeline
 
 ```bash
-python -m redriver.pipeline
+python pipeline.py
 ```
 
-Outputs:
-
-```
-data/raw/flows.csv
-data/processed/features.csv
-model/model.joblib
-model/feature_columns.json
-model/report.json
-```
+This will generate synthetic data, engineer features, train the model, and produce trained artifacts in the model directory.
 
 ---
 
-## 🌐 Start the API
+## Start the API
 
 ```bash
-uvicorn redriver.api:app --reload
+uvicorn api:app --reload
 ```
 
-Open Swagger UI:
-
-```
+Interactive API documentation:
 http://127.0.0.1:8000/docs
-```
 
 ---
 
-## 🩺 Health Check
+## Health Check
 
-```
 GET /health
-```
 
-Example:
+Example response:
 
 ```json
 {
@@ -162,13 +126,11 @@ Example:
 
 ---
 
-## 🔍 Prediction Endpoint
+## Prediction Endpoint
 
-```
 POST /predict
-```
 
-### Example Request
+Example request body:
 
 ```json
 {
@@ -184,60 +146,52 @@ POST /predict
 }
 ```
 
-### Example Response
+Example response:
 
 ```json
 {
   "prediction": {
     "class_label": "benign",
-    "class_index": 0,
-    "confidence": 0.92,
-    "probs": {
-      "benign": 0.92,
-      "brute_force": 0.03,
-      "c2_beacon": 0.01,
-      "port_scan": 0.04
-    }
+    "confidence": 0.92
   }
 }
 ```
 
 ---
 
-## 📊 Model Performance
+## Model Performance
 
-- Accuracy: **92–96%**
-- Strong separation between benign and malicious patterns
-- Reliable identification of beaconing behaviors based on byte-rate dynamics
-
----
-
-## 🔒 Offensive Security Use Cases
-
-- Simulating attacker traffic patterns  
-- Red Team behavioral detection tuning  
-- Evasion-testing ML-based NDR/UEBA systems  
-- Automated threat classification workflows  
-- Teaching Blue Teams how ML responds to adversarial flows  
+- Typical accuracy between 92% and 96%
+- Strong separation between benign traffic and malicious behaviors
+- Effective identification of beaconing patterns using timing-based features
 
 ---
 
-## 🧭 Future Enhancements
+## TDNA / DNE Use Cases
 
-- Anomaly detection (Isolation Forest, One-Class SVM)
-- PCAP ingestion and flow extraction
-- Docker container build
-- Batch prediction endpoint
-- Model versioning + history tracking
+- Adversary network behavior modeling
+- Support for attack-path reasoning and access validation
+- Evaluation of ML-based network detection assumptions
+- Training and experimentation in lab or synthetic environments
 
 ---
 
-## 📝 License
+## Notes
+
+- All data is synthetic
+- No production or customer traffic is used
+- Project is OPSEC-safe and designed for reproducible experimentation
+
+---
+
+## License
 
 MIT License.
 
 ---
 
-## 📚 Author
+## Author
 
-Developed by **Jan Zabala** as part of the *AI-Driven Offensive Security Engineering Portfolio*.
+Jan Zabala  
+Target Digital Network Analysis & Digital Network Exploitation  
+CEH | OSCP (in progress)

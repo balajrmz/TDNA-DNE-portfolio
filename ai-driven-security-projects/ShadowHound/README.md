@@ -1,91 +1,94 @@
-# 🐺 ShadowHound — AI-Assisted Active Directory Attack Path Analysis
+# ShadowHound — Identity Attack Path Analysis (Active Directory)
+**Tags:** TDNA, DNE, Identity Attack Paths, Active Directory, Graph Analysis, Machine Learning, Offensive Security
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![Machine Learning](https://img.shields.io/badge/ML-RandomForest-orange)
-![Graph Analysis](https://img.shields.io/badge/Graph-NetworkX-lightgrey)
-![FastAPI](https://img.shields.io/badge/API-FastAPI-green)
-![Offensive Security](https://img.shields.io/badge/OffSec-Red_Team-red)
-
-**Status:** Completed
-**Category:** Active Directory | Attack Path Analysis | AI-Driven Offensive Security
-
-ShadowHound is an AI-assisted engine designed to identify high-risk identities, privilege relationships, and lateral movement paths inside Active Directory environments. It analyzes BloodHound-like graph data, extracts structural and behavioral features, trains an ML model, and serves real-time predictions through an API.
-
-This project demonstrates:
-
-* Offensive data engineering
-* Graph theory for red-team operations
-* Machine learning applied to domain privilege relationships
-* Automated reasoning around escalation paths
-* API-based inference for attacker simulation and detection
+Target-centric analysis of identity relationships and privilege escalation paths in Active Directory environments to support Target Digital Network Analysis (TDNA) and Digital Network Exploitation (DNE).
 
 ---
 
-## 🚀 Key Capabilities
+## Overview
 
-* Parses and normalizes BloodHound-style AD graphs
-* Detects suspicious edges and privilege relationships
-* Computes graph metrics: degree, reachability, admin edges, shortest-path
-* Trains a RandomForest ML model for classification
-* Exposes predictions via FastAPI microservice
-* Full CLI pipeline: synthetic → features → ML → inference
+ShadowHound is an identity-focused analysis engine designed to identify high-risk identities, privilege relationships, and lateral movement paths within Active Directory environments. The project ingests BloodHound-style graph data, engineers graph-based features, applies machine learning to identify risky nodes and paths, and exposes predictions through an API.
 
----
+ShadowHound supports TDNA and DNE workflows by treating identity infrastructure as a target surface and by enabling structured reasoning about how trust relationships and permissions can be chained into viable access paths.
 
-## 🧠 Technical Highlights
-
-* **Graph-based feature engineering** using NetworkX
-* **RandomForest classifier** with persisted artifacts (model + schema)
-* **Synthetic graph generator** for red-team simulation
-* **FastAPI microservice** for real-time privilege-path scoring
-* Modular Python package with clean, extensible architecture
+This project is part of the TDNA & DNE portfolio of Jan Zabala.
 
 ---
 
-## 📁 Repository Structure
+## Why This Matters for TDNA & DNE
+
+In many enterprise environments, identity is the primary control plane. Misconfigured permissions and trust relationships can:
+
+- Enable privilege escalation without exploiting software vulnerabilities
+- Provide lateral movement paths across domains and systems
+- Collapse security boundaries through group membership abuse
+- Create stealthy escalation chains that evade traditional detection
+
+ShadowHound enables repeatable, lab-based analysis of these identity-driven attack paths.
+
+---
+
+## Key Capabilities
+
+- Parsing and normalization of BloodHound-style Active Directory graphs
+- Identification of high-risk privilege relationships and escalation paths
+- Graph metric computation (degree, reachability, shortest paths)
+- Supervised machine learning classification using RandomForest
+- Persisted model artifacts and feature schemas
+- FastAPI-based inference for real-time scoring
+- End-to-end pipeline from synthetic data to prediction
+
+---
+
+## Technical Highlights
+
+- Graph-based feature engineering using NetworkX
+- Synthetic Active Directory graph generation for experimentation
+- Modular Python architecture for extensibility
+- Separation of data generation, feature engineering, modeling, and inference
+- Designed for attack-path reasoning rather than tool-specific exploitation
+
+---
+
+## Project Structure
 
 ```
-shadowhound/
-│
+ai-driven-security-projects/shadowhound/
 ├── data/
-│   ├── raw/                # synthetic AD edges (BloodHound-like)
-│   └── processed/          # engineered feature matrix
+│   ├── raw/                    # synthetic AD edges (BloodHound-like)
+│   └── processed/              # engineered feature matrix
 │
 ├── shadowhound/
-│   ├── synthetic.py        # synthetic graph generation
-│   ├── features.py         # graph metrics + feature engineering
-│   ├── ml.py               # model training pipeline
-│   ├── api.py              # FastAPI inference service
-│   ├── graph.py            # graph loading & utilities
-│   └── config.py           # file paths and constants
+│   ├── synthetic.py            # synthetic graph generation
+│   ├── features.py             # graph metrics + feature engineering
+│   ├── ml.py                   # model training pipeline
+│   ├── api.py                  # FastAPI inference service
+│   ├── graph.py                # graph loading & utilities
+│   └── config.py               # file paths and constants
 │
 └── README.md
 ```
 
 ---
 
-## ⚙️ Installation
+## Installation
 
-```
+```bash
+git clone https://github.com/balajimz/tdna-dne-portfolio.git
+cd tdna-dne-portfolio/ai-driven-security-projects/shadowhound
+
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-**Dependencies:**
-
-* pandas
-* networkx
-* scikit-learn
-* joblib
-* fastapi
-* uvicorn
-
 ---
 
-## 🧪 How to Use
+## Usage
 
-### **1. Generate Synthetic AD Graph**
+### 1. Generate Synthetic Active Directory Graph
 
-```
+```bash
 python -m shadowhound.synthetic
 ```
 
@@ -95,9 +98,11 @@ Output:
 data/raw/ad_edges.json
 ```
 
-### **2. Generate Feature Matrix**
+---
 
-```
+### 2. Generate Feature Matrix
+
+```bash
 python -m shadowhound.features
 ```
 
@@ -107,9 +112,11 @@ Output:
 data/processed/features.csv
 ```
 
-### **3. Train the ML Model**
+---
 
-```
+### 3. Train the Machine Learning Model
+
+```bash
 python -m shadowhound.ml
 ```
 
@@ -121,23 +128,25 @@ report.json
 feature_columns.json
 ```
 
-### **4. Start the Prediction API**
+---
 
-```
+### 4. Start the Prediction API
+
+```bash
 uvicorn shadowhound.api:app --reload
 ```
 
-Swagger UI:
+Interactive API documentation:
 
-```
 http://127.0.0.1:8000/docs
-```
 
 ---
 
-## 🔮 Example API Request (POST /predict)
+## Example Prediction Request
 
-**Input**
+POST /predict
+
+Example request body:
 
 ```json
 {
@@ -153,36 +162,45 @@ http://127.0.0.1:8000/docs
 }
 ```
 
-**Response**
+Example response:
 
 ```json
 {
   "prediction": {
     "class_label": "benign",
     "confidence": 1.0
-  },
-  "model_info": {
-    "feature_columns_used": [
-      "degree",
-      "num_admin_edges",
-      "num_group_edges"
-    ]
   }
 }
 ```
 
 ---
 
-## 🗺️ Architecture Overview
+## TDNA / DNE Use Cases
 
-* **Synthetic Graph → Feature Extraction → ML Model → API Inference**
-* Identifies abnormal privilege paths or identity misconfigurations
-* Supports attacker-simulation and detection engineering
+- Identity attack-path analysis and privilege escalation reasoning
+- Target characterization of Active Directory environments
+- Support for lateral movement modeling and access validation
+- Training and experimentation in lab or synthetic environments
+- Evaluation of identity-focused detection assumptions
 
 ---
 
-## 👤 Author
+## Notes
 
-**Jan Zabala**
-AI-Driven Offensive Security Engineer
-Offensive Security Engineering Portfolio (2025)
+- All graph data is synthetic or derived from publicly documented schemas
+- No production or customer environments are used
+- Project is OPSEC-safe and designed for reproducible experimentation
+
+---
+
+## License
+
+MIT License.
+
+---
+
+## Author
+
+Jan Zabala  
+Target Digital Network Analysis & Digital Network Exploitation  
+CEH | OSCP (in progress)
