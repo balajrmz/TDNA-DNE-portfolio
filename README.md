@@ -1,127 +1,146 @@
-# 🛡️ Offensive Security Engineering Portfolio
+🛡️ Target Digital Network Analysis & Digital Network Exploitation Portfolio
+By Jan Zabala — TDNA | DNE | AI-Assisted Target Analytics | Identity & Network Attack Paths
 
-**By Jan Zabala — AI‑Driven Offensive Security | Red Team Engineering | Cloud Identity Threats**
+Welcome to my Target Digital Network Analysis (TDNA) and Digital Network Exploitation (DNE) portfolio.  
+This repository showcases work focused on analyzing digital networks as adversary targets — identifying access vectors, attack paths, and exploitation opportunities across identity, applications, and infrastructure.
 
-Welcome to my Offensive Security Engineering portfolio. This repository showcases the work I do at the intersection of:
+My work sits at the intersection of:
 
-* **Red Team Operations**
-* **Active Directory & Cloud Identity Attacks**
-* **AI/ML‑Driven Offensive Security**
-* **Automation, Tooling, and Attack Simulation**
-* **OSCP‑style methodologies**
+• Target Digital Network Analysis (TDNA)  
+• Digital Network Exploitation (DNE)  
+• Identity-centric attack path analysis (AD, Cloud IAM)  
+• AI/ML-assisted target analytics  
+• Automation, tooling, and exploitation validation  
+• OSCP-style offensive tradecraft  
 
-Everything here reflects **real-world offensive engineering**, built as tools, pipelines, and frameworks designed for reliability, reproducibility, and clarity.
+All content is developed in lab, synthetic, or public environments and is designed for clarity, reproducibility, and operational realism.
 
 ---
 
-# 🚀 Featured Projects
+## 🧭 How I Approach TDNA & DNE
 
-## 1. **SentinelFlow — AI Network Threat Classifier**
+My work follows a **target-centric methodology**, rather than tool-driven exploitation:
 
-📁 `labs/sentinelflow/`
-📌 *Completed*
+1. **Target Characterization**
+   - Network topology, identity boundaries, exposed services
+   - Trust relationships (Active Directory, cloud identity, applications)
 
-An end-to-end ML detection pipeline featuring:
+2. **Access Vector Identification**
+   - Authentication paths
+   - Misconfigurations
+   - Protocol weaknesses
+   - Application logic flaws
 
-* Synthetic traffic generation
-* Feature engineering for flows
-* RandomForest threat classifier
-* Persisted schema to prevent drift
-* Real-time API inference (FastAPI)
+3. **Attack Path Analysis**
+   - Chaining access across systems, identities, and services
+   - Evaluating feasibility, impact, and persistence
+
+4. **Exploitation Validation (Lab / Synthetic)**
+   - Hands-on testing in controlled environments
+   - OSCP-style validation of theoretical access paths
+
+5. **Reporting & Translation**
+   - Clear articulation of risk, assumptions, and operational relevance
+
+---
+
+## 🚀 Featured Projects
+
+### 1. SentinelFlow — AI-Assisted Network Threat Classification
+📁 labs/sentinelflow/ | 📌 Completed
+
+An end-to-end ML pipeline designed to analyze network behavior from an attacker and defender perspective, featuring:
+
+• Synthetic network traffic generation  
+• Flow-level feature engineering  
+• RandomForest threat classification  
+• Schema persistence to prevent feature drift  
+• Real-time inference via FastAPI  
 
 **Tech:** Python, Pandas, Scikit-Learn, FastAPI, Uvicorn
 
 ---
 
-## 2. **ShadowHound — AI-Assisted AD Attack Path Analysis**
+### 2. ShadowHound — Identity Attack Path Analysis
+📁 labs/shadowhound/ | 📌 Completed
 
-📁 `labs/shadowhound/`
-📌 *Completed*
+An Active Directory attack-path analysis engine that:
 
-A BloodHound ingestion + AI analysis engine that:
-
-* Parses & normalizes BloodHound JSON
-* Surfaces high-risk attack paths
-* Applies LLM-style reasoning for privilege escalation
-* Outputs structured recommendations for red-teamers or defenders
+• Parses and normalizes BloodHound data  
+• Identifies high-risk privilege escalation paths  
+• Applies reasoning logic to surface exploitable relationships  
+• Outputs structured access path recommendations  
 
 **Tech:** Python, Graph Analysis, JSON Processing
 
 ---
 
-## 3. **CloudSentinel — Cloud IAM Misconfiguration Lab**
+### 3. CloudSentinel — Cloud IAM Misconfiguration Lab
+📁 labs/cloudsentinel/ | 📌 Completed
 
-📁 `labs/cloudsentinel/`
-📌 *Completed*
+A lab focused on cloud identity targeting, including:
 
-A lab focused on:
+• IAM policy experimentation  
+• Common misconfiguration patterns  
+• Foundations for automated risk scoring and analysis APIs  
 
-* Experimenting with IAM policies
-* Exploring common misconfiguration patterns
-* Laying the groundwork for automated risk scoring and analysis APIs
-
-**Tech:** Python, AWS/Azure IAM Concepts, JSON Policies
+**Tech:** Python, AWS & Azure IAM Concepts, JSON Policy Analysis
 
 ---
 
-## 4. **PacketVision — Network Capture Exploration Lab**
+### 4. PacketVision — Network Capture Analysis Lab
+📁 labs/packetvision/ | 📌 Completed
 
-📁 `labs/packetvision/`
-📌 *Completed*
+A network-focused lab exploring offensive visibility and tradecraft:
 
-A lab centered on offensive use-cases for packet inspection, where I:
+• Parsing and inspecting packet captures  
+• Identifying attacker-relevant visibility gaps  
+• Prototyping concepts for AI-assisted recon and evasion  
 
-* Parse and inspect network captures
-* Explore visibility gaps and attacker tradecraft
-* Prototype ideas that may later feed into AI-assisted recon or detection bypass tooling
-
-**Tech:** Python, PCAP/Traffic Analysis
+**Tech:** Python, PCAP / Traffic Analysis
 
 ---
 
-## 5. **ZeroTrace — Offensive Stealth & Telemetry Lab**
-
-📁 `labs/zerotrace/`
-📌 *Completed*
+### 5. ZeroTrace — Stealth, Telemetry & Detection Gaps
+📁 labs/zerotrace/ | 📌 Completed
 
 An experimental space for:
 
-* Studying logging and telemetry gaps
-* Exploring stealth techniques and detection resistance
-* Prototyping concepts that inform how I design and test offensive tooling
+• Studying logging and telemetry blind spots  
+• Exploring stealth techniques and detection resistance  
+• Informing how offensive tooling is designed and tested  
 
-**Tech:** Python, Logging/Telemetry Concepts, Offensive R&D
-
----
-
-# 🧪 Additional Projects Coming Soon
-
-* **RedRiver — AI-driven phishing & payload delivery framework (In Progress — folder scaffolding completed)**
-* **AnomalyHunter** — Isolation Forest & One-Class SVM anomaly detection suite
-* **MalScanAI** — Byte-level malware classifier
-* **WebGuard** — ML-based web exploit detection
-* **AttackGraph Generator** — Graph-based AD escalation mapping
-* **DockerSec Inspect** — Dockerfile vulnerability scanner
-* **Credential Auditor** — Entropy + breach correlation engine
+**Tech:** Python, Logging & Telemetry Concepts, Offensive R&D
 
 ---
 
-# 🖥️ Hack The Box Writeups (Coming Soon)
+## 🧪 Additional Projects (In Progress / Planned)
 
-These links will be populated with full writeups including enumeration, exploitation, privilege escalation, and methodology.
-
-* **[Active — AD Enumeration & Kerberoasting](writeups/active.md)**
-* **[Reel — Macro Payload Delivery](writeups/reel.md)**
-* **[Archetype — Azure Hybrid Attack Path](writeups/archetype.md)**
-* **[Nineveh — Multi‑Service Recon & Chaining](writeups/nineveh.md)**
-* **[Celestial — Node.js Reverse Engineering](writeups/celestial.md)**
+• **RedRiver** — AI-assisted network flow analysis & adversary behavior modeling  
+• **AnomalyHunter** — Isolation Forest & One-Class SVM anomaly detection  
+• **MalScanAI** — Byte-level malware classification  
+• **WebGuard** — ML-based web exploit detection  
+• **AttackGraph Generator** — Graph-based AD escalation mapping  
+• **DockerSec Inspect** — Dockerfile vulnerability analysis  
+• **Credential Auditor** — Entropy & breach correlation engine  
 
 ---
 
-# 🧭 Repository Structure
+## 🖥️ Hack The Box Writeups (Sanitized)
 
-```
-pentest-portfolio/
+Writeups focus on **methodology and transferable patterns**, not box-specific trivia:
+
+• Active — AD Enumeration & Kerberos Abuse  
+• Reel — Payload Delivery & Initial Access  
+• Archetype — Azure Hybrid Attack Paths  
+• Nineveh — Multi-Service Recon & Chaining  
+• Celestial — Application Logic & Reverse Engineering  
+
+---
+
+## 🧭 Repository Structure
+
+tdna-dne-portfolio/
 │
 ├── labs/
 │   ├── sentinelflow/
@@ -138,73 +157,65 @@ pentest-portfolio/
 │   ├── nineveh.md
 │   └── celestial.md
 │
-├── offensive-tools/
-├── active-directory-attacks/
-├── cloud-attacks/
-├── web-app-attacks/
-├── oscp-style/
+├── dne-automation/
+├── identity-attack-paths/
+├── cloud-identity-and-access/
+├── application-access-vectors/
+├── offensive-tradecraft-workflows/
 ├── assets/
 │
 └── README.md
-```
 
 ---
 
-# 🔐 Core Competencies Demonstrated
+## 🔐 Core Competencies Demonstrated
 
-### **Offensive Security Engineering**
+### Target Digital Network Analysis & Exploitation
+• Attack-path reasoning and access vector identification  
+• Identity-centric targeting (AD, cloud IAM)  
+• Enumeration, exploitation, and privilege escalation workflows  
 
-* Enumeration, exploitation, privilege escalation
-* Active Directory attack paths & Kerberos abuse
-* Payload development & delivery
-* Automation-focused red team tooling
+### AI-Assisted Target Analytics
+• Synthetic traffic generation  
+• ML-based behavioral modeling  
+• AI-assisted attack surface mapping  
 
-### **AI‑Driven Offensive Security**
+### Cloud & Identity Security
+• Azure & AWS IAM misconfiguration analysis  
+• Hybrid AD / cloud attack paths  
+• Detection and telemetry considerations  
 
-* AI‑assisted recon & attack surface mapping
-* LLM‑powered privilege escalation reasoning
-* Synthetic traffic generation & ML detection
-* Behavioral modeling & anomaly detection
-
-### **Cloud & Identity Security**
-
-* Azure & AWS IAM misconfig analysis
-* Hybrid AD/Azure attack paths
-* Cloud logging, detection engineering
-
-### **Engineering & Architecture**
-
-* FastAPI microservices
-* Python modules + structured code
-* Automated pipelines & modeling workflows
-* GitHub‑ready, production‑style tooling
+### Engineering & Architecture
+• Python-based tooling and automation  
+• FastAPI microservices  
+• Reproducible, GitHub-ready project structure  
 
 ---
 
-# 🧭 Roadmap
+## 🧭 Roadmap
 
-* Add 12+ mature projects
-* Add Docker images for all ML/AI services
-* Convert projects into an "Offensive Security Engineering Handbook"
-* Publish a full portfolio website
-* Expand AI‑offensive engines for real‑time recon and exploit generation
-
----
-
-# 👤 About Me
-
-**Jan Zabala**
-*AI-Driven Offensive Security Engineer | OSCP Candidate | Cloud Identity & Red Team Automation*
-
-* Active CEH, OSCP in progress
-* Background in HUMINT / Special Operations
-* Cybersecurity Bachelor’s Student
-* Focused on AI‑accelerated offensive security analysis
+• Expand to 12+ mature TDNA/DNE projects  
+• Add Dockerized deployments for AI services  
+• Publish an Offensive Network Targeting handbook  
+• Launch a dedicated portfolio website  
+• Expand AI-assisted target analytics and access-path modeling  
 
 ---
 
-# 📫 Contact
+## 👤 About Me
 
-* GitHub: [https://github.com/balajimz](https://github.com/balajimz)
-* LinkedIn: [www.linkedin.com/in/jan-zabala-5aaa59380](http://www.linkedin.com/in/jan-zabala-5aaa59380)
-* Email:
+**Jan Zabala**  
+Target Digital Network Analysis & Digital Network Exploitation  
+CEH | OSCP (in progress)  
+
+Background in HUMINT & Special Operations–aligned intelligence  
+Cybersecurity Bachelor’s student  
+Focused on adversary-centric, AI-accelerated network targeting
+
+---
+
+## 📫 Contact
+
+GitHub: https://github.com/balajrmz  
+LinkedIn: https://www.linkedin.com/in/jan-zabala-5aaa59380  
+Email: jzabala81@protonmail.com
