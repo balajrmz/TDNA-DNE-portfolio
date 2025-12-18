@@ -1,62 +1,82 @@
-# Lame – Hack The Box
-![Status](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
-![OSCP](https://img.shields.io/badge/OSCP-Recommended-blue)
-![Linux](https://img.shields.io/badge/Target-Linux-yellow)
+# Lame — Target Walkthrough (Linux)
+
+## Overview
+
+This walkthrough analyzes a legacy Linux target exposing multiple network services with known, high-impact vulnerabilities. It demonstrates how disciplined service enumeration can quickly identify **catastrophic, unauthenticated access paths** resulting from outdated software.
+
+The focus of this walkthrough is **attack-path reasoning** — recognizing when a target fails at the perimeter and prioritizing the most reliable access vector rather than chaining lower-confidence techniques.
 
 ---
 
-## 🧩 Overview
-Lame is a classic entry-level Hack The Box Linux machine focused on basic service enumeration and exploitation of known vulnerabilities in Samba and DistCC. This box mirrors common OSCP-style fundamentals: scanning, service identification, and leveraging public exploits.
+## 🧭 Methodology Focus
+
+This walkthrough emphasizes:
+
+- Broad service enumeration and version identification
+- Rapid prioritization of high-confidence vulnerabilities
+- Assessing when exploitation results in immediate root access
+- Understanding the operational risk of unpatched legacy services
+- Avoiding unnecessary exploitation complexity
+
+The focus is on **decision-making and access-path analysis**, not exploit novelty.
 
 ---
 
 ## 🔍 Enumeration
 
+Enumeration focused on identifying exposed services and their versions.
+
 ```bash
-nmap -sCV -p- -oN nmap_lame.txt 10.10.10.3
+nmap -sC -sV -p- <target_ip>
 ```
 
-Key findings:
-- **Port 21** – FTP (vsftpd 2.3.4)
-- **Port 22** – SSH
-- **Port 139/445** – Samba smbd 3.0.20
-- **Port 3632** – distccd
+Key observations:
 
-Samba version is **vulnerable to a remote code execution exploit (CVE-2007-2447).**
+- FTP service exposed (vsftpd 2.3.4)
+- SSH service available but not required for access
+- Samba service running a legacy version
+- Additional services indicating poor patch hygiene
+
+Service version analysis revealed **Samba 3.0.20**, a version associated with a well-known remote code execution vulnerability.
 
 ---
 
-## 🎯 Exploitation – Samba (CVE-2007-2447)
+## 🎯 Initial Access
 
-```bash
-python3 37170.py 10.10.10.3 445
-```
+The Samba service was vulnerable to **CVE-2007-2447**, allowing unauthenticated remote command execution.
 
-This provides a remote root shell due to command injection in the `username` field.
+Key access characteristics:
 
----
+- Network-based exploitation
+- No authentication required
+- Immediate execution with root privileges
 
-## 🔼 Privilege Escalation
-The Samba exploit drops us directly into a root shell.
-
-```bash
-id
-whoami
-cat /root/root.txt
-```
+This represented a **single-step compromise** with no requirement for lateral movement or local privilege escalation.
 
 ---
 
-## 🏆 Flags
+## 🔼 Privilege Context
 
-```bash
-cat /root/root.txt
-cat /home/makis/user.txt
-```
+No additional privilege escalation was required.
+
+Key implications:
+
+- The vulnerability provided direct root access
+- Demonstrates total failure of perimeter defense
+- Highlights the risk of running end-of-life services in exposed environments
 
 ---
 
-## 📌 Lessons Learned
-- Samba 3.0.20 is instantly recognizable as vulnerable.
-- Public exploits often give immediate root access.
-- Always verify service versions during enumeration.
+## ✅ Lessons Learned
+
+- Version awareness during enumeration is critical
+- Some targets fail entirely at the service exposure layer
+- High-confidence exploits should be prioritized over complex chains
+- Legacy services dramatically increase attack surface and risk
+
+---
+
+## 🔐 OPSEC Note
+
+This walkthrough is based on a publicly available training environment.  
+No production systems, credentials, or customer data are referenced.

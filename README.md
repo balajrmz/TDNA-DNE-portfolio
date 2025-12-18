@@ -11,12 +11,12 @@ All content is developed in **lab, synthetic, or public environments** and is de
 
 ## 🔍 Areas of Focus
 
-- Target Digital Network Analysis (TDNA)  
-- Digital Network Exploitation (DNE)  
-- Identity-centric attack path analysis (Active Directory & Cloud IAM)  
-- AI / ML–assisted target analytics  
-- Automation and exploitation validation  
-- OSCP-style offensive tradecraft workflows  
+- Target Digital Network Analysis (TDNA)
+- Digital Network Exploitation (DNE)
+- Identity-centric attack path analysis (Active Directory & Cloud IAM)
+- AI / ML–assisted target analytics
+- Automation and exploitation validation
+- OSCP-style offensive tradecraft workflows
 
 ---
 
@@ -24,19 +24,19 @@ All content is developed in **lab, synthetic, or public environments** and is de
 
 My work follows a **target-centric methodology**, rather than tool-driven exploitation:
 
-1. **Target Characterization**  
+1. **Target Characterization**
    Network topology, identity boundaries, exposed services, and trust relationships.
 
-2. **Access Vector Identification**  
+2. **Access Vector Identification**
    Authentication paths, misconfigurations, protocol weaknesses, and application logic flaws.
 
-3. **Attack Path Analysis**  
+3. **Attack Path Analysis**
    Chaining access across identities, services, and systems to assess feasibility and impact.
 
-4. **Exploitation Validation (Lab / Synthetic)**  
+4. **Exploitation Validation (Lab / Synthetic)**
    Hands-on validation of theoretical access paths using controlled environments.
 
-5. **Reporting & Translation**  
+5. **Reporting & Translation**
    Clear articulation of findings, assumptions, and operational relevance.
 
 ---
@@ -52,57 +52,46 @@ ai-driven-security-projects/
 ### 🔴 RedRiver — AI-Assisted Network Flow Analysis
 Models adversary-relevant network behaviors to support access-path reasoning and detection analysis.
 
----
-
 ### 🔵 ShadowHound — Identity Attack Path Analysis (Active Directory)
 Graph-based analysis of identity relationships and privilege escalation paths.
-
----
 
 ### ☁️ CloudSentinel — Cloud Identity & IAM Misconfiguration Analysis
 Target-centric analysis of cloud IAM policies and privilege escalation via misconfiguration.
 
----
-
 ### 🟣 PacketVision — Network Visibility & Packet Analysis
 Packet-level visibility analysis to understand attacker tradecraft and telemetry gaps.
 
----
-
 ### 🟢 SentinelFlow — Network Behavior Classification
 End-to-end ML pipeline for classifying reconnaissance, scanning, and disruptive behaviors.
-
----
 
 ### 🟠 ZeroTrace — Stealth & Telemetry Gap Analysis
 Analysis of logging blind spots and detection boundaries that enable low-noise activity.
 
 ---
 
-## 🧪 Additional Projects (Planned)
-
-- AttackGraph Generator — Graph-based AD escalation mapping  
-- Credential Auditor — Entropy and breach correlation engine  
-- DockerSec Inspect — Dockerfile vulnerability analysis  
-- MalScanAI — Byte-level malware classification  
-
----
-
 ## 🖥️ Target Walkthroughs (Sanitized)
 
-Sanitized walkthroughs focused on **methodology and transferable patterns**, not box-specific trivia.
+This section contains **sanitized, methodology-focused walkthroughs** derived from publicly available training environments. These are not step-by-step exploit guides; they are **analyst-style breakdowns** emphasizing decision-making, attack-path reasoning, and transferable patterns relevant to TDNA and DNE work.
 
-Location:
+All walkthroughs are OPSEC-safe and focus on *how to think*, not just *what to type*.
+
+### Available Target Walkthroughs
+
+Located under:
 ```
 target-walkthroughs/
 ```
 
-Examples include:
-- Active — AD Enumeration & Kerberos Abuse  
-- Reel — Payload Delivery & Initial Access  
-- Archetype — Azure Hybrid Attack Paths  
-- Nineveh — Multi-Service Recon & Chaining  
-- Celestial — Application Logic & Reverse Engineering  
+Current walkthroughs include:
+
+- **Bashed** — Web enumeration leading to command execution and privilege escalation
+- **Beep** — Service discovery, credential reuse, and multi-vector exploitation
+- **Blue** — SMB exploitation and post-exploitation privilege escalation
+- **Devel** — Web shell access and Windows privilege escalation
+- **Lame** — Multi-service enumeration and legacy service exploitation
+- **SolidState** — Credential harvesting, service abuse, and escalation chains
+
+Each directory contains a dedicated README with sanitized notes and methodology.
 
 ---
 
@@ -120,11 +109,12 @@ tdna-dne-portfolio/
 │   └── zerotrace/
 │
 ├── target-walkthroughs/
-│   ├── active.md
-│   ├── reel.md
-│   ├── archetype.md
-│   ├── nineveh.md
-│   └── celestial.md
+│   ├── Bashed/
+│   ├── Beep/
+│   ├── Blue/
+│   ├── Devel/
+│   ├── Lame/
+│   └── SolidState/
 │
 ├── dne-automation/
 ├── identity-attack-paths/
@@ -141,49 +131,49 @@ tdna-dne-portfolio/
 ## 🔐 Core Competencies Demonstrated
 
 ### Target Digital Network Analysis & Exploitation
-- Attack-path reasoning and access vector identification  
-- Identity-centric targeting (AD, Cloud IAM)  
-- Enumeration, exploitation, and privilege escalation workflows  
+- Attack-path reasoning and access vector identification
+- Identity-centric targeting (AD, Cloud IAM)
+- Enumeration, exploitation, and privilege escalation workflows
 
 ### AI-Assisted Target Analytics
-- Synthetic data generation  
-- ML-based behavioral modeling  
-- AI-assisted attack surface mapping  
+- Synthetic data generation
+- ML-based behavioral modeling
+- AI-assisted attack surface mapping
 
 ### Cloud & Identity Security
-- Azure & AWS IAM misconfiguration analysis  
-- Hybrid AD / cloud attack paths  
-- Telemetry and detection considerations  
+- Azure & AWS IAM misconfiguration analysis
+- Hybrid AD / cloud attack paths
+- Telemetry and detection considerations
 
 ### Engineering & Architecture
-- Python-based tooling and automation  
-- FastAPI microservices  
-- Reproducible, GitHub-ready project structure  
+- Python-based tooling and automation
+- FastAPI microservices
+- Reproducible, GitHub-ready project structure
 
 ---
 
 ## 🧭 Roadmap
 
-- Expand to 12+ mature TDNA/DNE projects  
-- Add Dockerized deployments for AI services  
-- Publish an Offensive Network Targeting handbook  
-- Launch a dedicated portfolio website  
+- Expand to 12+ mature TDNA/DNE projects
+- Add Dockerized deployments for AI services
+- Publish an Offensive Network Targeting handbook
+- Launch a dedicated portfolio website
 
 ---
 
 ## 👤 About Me
 
-**Jan Zabala**  
-Target Digital Network Analysis & Digital Network Exploitation  
+**Jan Zabala**
+Target Digital Network Analysis & Digital Network Exploitation
 CEH | OSCP (in progress)
 
-Background in HUMINT & Special Operations–aligned intelligence  
+Background in HUMINT & Special Operations–aligned intelligence
 Focused on adversary-centric, AI-accelerated network targeting
 
 ---
 
 ## 📫 Contact
 
-GitHub: https://github.com/balajimz  
-LinkedIn: https://www.linkedin.com/in/jan-zabala-5aaa59380  
+GitHub: https://github.com/balajrmz
+LinkedIn: https://www.linkedin.com/in/jan-zabala-5aaa59380
 Email: jzabala81@protonmail.com
