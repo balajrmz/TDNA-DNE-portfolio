@@ -1,6 +1,19 @@
 # 🛡️ Target Digital Network Analysis & Digital Network Exploitation Portfolio
 **By Jan Zabala — TDNA | DNE | AI-Assisted Target Analytics | Identity & Network Attack Paths**
 
+---
+
+## ⭐ Flagship Project: ShadowHound
+
+**ShadowHound** is an identity attack-path analysis engine for **Active Directory**, designed to support **Target Digital Network Analysis (TDNA)** and **Digital Network Exploitation (DNE)** missions.
+
+It treats identity infrastructure as a **target surface**, enabling analysts to reason about privilege escalation paths, lateral movement, and exploitation feasibility using graph analysis and ML-assisted risk scoring.
+
+📂 **Start here:** `ai-driven-security-projects/shadowhound/`  
+➡️ This is the best single project to review for understanding my approach to adversary-centric network analysis.
+
+---
+
 Welcome to my **Target Digital Network Analysis (TDNA)** and **Digital Network Exploitation (DNE)** portfolio.
 
 This repository showcases work focused on analyzing digital networks as **adversary targets** — identifying access vectors, attack paths, and exploitation opportunities across **identity, applications, and infrastructure**.
@@ -24,19 +37,19 @@ All content is developed in **lab, synthetic, or public environments** and is de
 
 My work follows a **target-centric methodology**, rather than tool-driven exploitation:
 
-1. **Target Characterization**
+1. **Target Characterization**  
    Network topology, identity boundaries, exposed services, and trust relationships.
 
-2. **Access Vector Identification**
+2. **Access Vector Identification**  
    Authentication paths, misconfigurations, protocol weaknesses, and application logic flaws.
 
-3. **Attack Path Analysis**
+3. **Attack Path Analysis**  
    Chaining access across identities, services, and systems to assess feasibility and impact.
 
-4. **Exploitation Validation (Lab / Synthetic)**
+4. **Exploitation Validation (Lab / Synthetic)**  
    Hands-on validation of theoretical access paths using controlled environments.
 
-5. **Reporting & Translation**
+5. **Reporting & Translation**  
    Clear articulation of findings, assumptions, and operational relevance.
 
 ---
@@ -49,11 +62,11 @@ All projects below live under:
 ai-driven-security-projects/
 ```
 
+### 🔵 ShadowHound — Identity Attack Path Analysis (Active Directory)
+Graph-based analysis of identity relationships and privilege escalation paths using ML-assisted risk scoring.
+
 ### 🔴 RedRiver — AI-Assisted Network Flow Analysis
 Models adversary-relevant network behaviors to support access-path reasoning and detection analysis.
-
-### 🔵 ShadowHound — Identity Attack Path Analysis (Active Directory)
-Graph-based analysis of identity relationships and privilege escalation paths.
 
 ### ☁️ CloudSentinel — Cloud Identity & IAM Misconfiguration Analysis
 Target-centric analysis of cloud IAM policies and privilege escalation via misconfiguration.
@@ -163,17 +176,17 @@ tdna-dne-portfolio/
 
 ## 👤 About Me
 
-**Jan Zabala**
-Target Digital Network Analysis & Digital Network Exploitation
+**Jan Zabala**  
+Target Digital Network Analysis & Digital Network Exploitation  
 CEH | OSCP (in progress)
 
-Background in HUMINT & Special Operations–aligned intelligence
+Background in HUMINT & Special Operations–aligned intelligence  
 Focused on adversary-centric, AI-accelerated network targeting
 
 ---
 
 ## 📫 Contact
 
-GitHub: https://github.com/balajrmz
-LinkedIn: https://www.linkedin.com/in/jan-zabala-5aaa59380
+GitHub: https://github.com/balajrmz  
+LinkedIn: https://www.linkedin.com/in/jan-zabala-5aaa59380  
 Email: jzabala81@protonmail.com

@@ -1,152 +1,65 @@
-# ShadowHound — Identity Attack Path Analysis (Active Directory)
-**Tags:** TDNA, DNE, Identity Attack Paths, Active Directory, Graph Analysis, Machine Learning, Offensive Security
+# ShadowHound — Identity Attack-Path Analysis for Active Directory (TDNA/DNE)
 
-Target-centric analysis of identity relationships and privilege escalation paths in Active Directory environments to support Target Digital Network Analysis (TDNA) and Digital Network Exploitation (DNE).
+**ShadowHound** is a target-centric analysis engine for **Active Directory identity attack paths**.  
+It ingests BloodHound-style graph data, computes graph-based features, applies ML-assisted risk scoring, and exposes results via an API.
 
----
-
-## Overview
-
-ShadowHound is an identity-focused analysis engine designed to identify high-risk identities, privilege relationships, and lateral movement paths within Active Directory environments. The project ingests BloodHound-style graph data, engineers graph-based features, applies machine learning to identify risky nodes and paths, and exposes predictions through an API.
-
-ShadowHound supports TDNA and DNE workflows by treating identity infrastructure as a target surface and by enabling structured reasoning about how trust relationships and permissions can be chained into viable access paths.
-
-This project is part of the TDNA & DNE portfolio of Jan Zabala.
+**Tags:** TDNA, DNE, Active Directory, Identity Attack Paths, BloodHound, Graph Analysis, FastAPI, Machine Learning
 
 ---
 
-## Why This Matters for TDNA & DNE
+## Why ShadowHound
 
-In many enterprise environments, identity is the primary control plane. Misconfigured permissions and trust relationships can:
+In real environments, **identity is the control plane**. Misconfigured permissions and trust relationships can enable:
 
-- Enable privilege escalation without exploiting software vulnerabilities
-- Provide lateral movement paths across domains and systems
-- Collapse security boundaries through group membership abuse
-- Create stealthy escalation chains that evade traditional detection
+- Privilege escalation without software exploitation  
+- Lateral movement across domains and systems  
+- Stealthy escalation chains that bypass traditional defenses  
 
-ShadowHound enables repeatable, lab-based analysis of these identity-driven attack paths.
-
----
-
-## Key Capabilities
-
-- Parsing and normalization of BloodHound-style Active Directory graphs
-- Identification of high-risk privilege relationships and escalation paths
-- Graph metric computation (degree, reachability, shortest paths)
-- Supervised machine learning classification using RandomForest
-- Persisted model artifacts and feature schemas
-- FastAPI-based inference for real-time scoring
-- End-to-end pipeline from synthetic data to prediction
+ShadowHound supports **Target Digital Network Analysis (TDNA)** and **Digital Network Exploitation (DNE)** by treating identity infrastructure as a target surface and enabling structured **attack-path reasoning**.
 
 ---
 
-## Technical Highlights
+## What It Does
 
-- Graph-based feature engineering using NetworkX
-- Synthetic Active Directory graph generation for experimentation
-- Modular Python architecture for extensibility
-- Separation of data generation, feature engineering, modeling, and inference
-- Designed for attack-path reasoning rather than tool-specific exploitation
-
----
-
-## Project Structure
-
-```
-ai-driven-security-projects/shadowhound/
-├── data/
-│   ├── raw/                    # synthetic AD edges (BloodHound-like)
-│   └── processed/              # engineered feature matrix
-│
-├── shadowhound/
-│   ├── synthetic.py            # synthetic graph generation
-│   ├── features.py             # graph metrics + feature engineering
-│   ├── ml.py                   # model training pipeline
-│   ├── api.py                  # FastAPI inference service
-│   ├── graph.py                # graph loading & utilities
-│   └── config.py               # file paths and constants
-│
-└── README.md
-```
+- Ingests BloodHound-style relationships (synthetic or exported schemas)
+- Computes graph metrics and path features (reachability, degrees, shortest paths)
+- Scores identities/nodes for risk using a supervised model (RandomForest)
+- Persists a stable feature schema to prevent drift
+- Serves predictions through a **FastAPI** inference endpoint
 
 ---
 
-## Installation
+## Quick Demo (60 seconds)
 
 ```bash
-git clone https://github.com/balajimz/tdna-dne-portfolio.git
-cd tdna-dne-portfolio/ai-driven-security-projects/shadowhound
+git clone https://github.com/balajrmz/TDNA-DNE-portfolio.git
+cd TDNA-DNE-portfolio/ai-driven-security-projects/shadowhound
 
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-```
 
----
-
-## Usage
-
-### 1. Generate Synthetic Active Directory Graph
-
-```bash
+# 1) Generate synthetic AD graph
 python -m shadowhound.synthetic
-```
 
-Output:
-
-```
-data/raw/ad_edges.json
-```
-
----
-
-### 2. Generate Feature Matrix
-
-```bash
+# 2) Build graph features
 python -m shadowhound.features
-```
 
-Output:
-
-```
-data/processed/features.csv
-```
-
----
-
-### 3. Train the Machine Learning Model
-
-```bash
+# 3) Train model + export artifacts
 python -m shadowhound.ml
-```
 
-Artifacts:
-
-```
-model.joblib
-report.json
-feature_columns.json
-```
-
----
-
-### 4. Start the Prediction API
-
-```bash
+# 4) Run inference API
 uvicorn shadowhound.api:app --reload
 ```
 
-Interactive API documentation:
-
-http://127.0.0.1:8000/docs
+Open:
+`http://127.0.0.1:8000/docs`
 
 ---
 
-## Example Prediction Request
+## Example Prediction
 
-POST /predict
-
-Example request body:
+**POST** `/predict`
 
 ```json
 {
@@ -162,45 +75,84 @@ Example request body:
 }
 ```
 
-Example response:
-
+**Response:**
 ```json
 {
   "prediction": {
-    "class_label": "benign",
-    "confidence": 1.0
+    "class_label": "high_risk",
+    "confidence": 0.93
   }
 }
 ```
 
 ---
 
-## TDNA / DNE Use Cases
+## Architecture
+
+```text
+Graph Data (Synthetic / BloodHound-like)
+        |
+        v
+Graph Loader + Normalization
+        |
+        v
+Feature Engineering (NetworkX metrics + path features)
+        |
+        v
+Model Training (RandomForest) + Artifact Export
+        |
+        v
+FastAPI Inference Service
+```
+
+---
+
+## Project Structure
+
+```text
+ai-driven-security-projects/shadowhound/
+├── data/
+│   ├── raw/
+│   └── processed/
+├── shadowhound/
+│   ├── synthetic.py
+│   ├── features.py
+│   ├── ml.py
+│   ├── api.py
+│   ├── graph.py
+│   └── config.py
+└── README.md
+```
+
+---
+
+## TDNA/DNE Use Cases
 
 - Identity attack-path analysis and privilege escalation reasoning
-- Target characterization of Active Directory environments
-- Support for lateral movement modeling and access validation
-- Training and experimentation in lab or synthetic environments
-- Evaluation of identity-focused detection assumptions
+- Target characterization of AD environments
+- Lateral movement modeling and access validation
+- Analyst support tooling for path prioritization
 
 ---
 
-## Notes
+## OPSEC Note
 
-- All graph data is synthetic or derived from publicly documented schemas
-- No production or customer environments are used
-- Project is OPSEC-safe and designed for reproducible experimentation
+All data is **synthetic** or derived from **public schemas**.  
+No production environments or sensitive customer details are used.
 
 ---
 
-## License
+## Roadmap
 
-MIT License.
+- [ ] Add path-ranking output (top-N candidate escalation chains)
+- [ ] Add report generator (JSON + Markdown)
+- [ ] Add export format compatibility for BloodHound CSV/JSON
+- [ ] Add model evaluation notebook + metrics visualization
 
 ---
 
 ## Author
 
 Jan Zabala  
-Target Digital Network Analysis & Digital Network Exploitation  
+**Target Digital Network Analysis & Digital Network Exploitation**  
 CEH | OSCP (in progress)
