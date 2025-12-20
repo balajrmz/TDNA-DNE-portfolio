@@ -1,9 +1,18 @@
-# AI-Driven Security Projects
+# 🤖 AI-Driven Security Projects
 ### Target Digital Network Analysis (TDNA) & Digital Network Exploitation (DNE)
 
-This collection of projects demonstrates applied work at the intersection of **AI/ML engineering** and **offensive cyber operations**, with a focus on **target-centric analysis** rather than tool-centric exploitation.
+This directory contains AI/ML-assisted projects focused on **offensive security, target analysis, and adversary-centric reasoning**.
 
-These projects support **Target Digital Network Analysis (TDNA)** and **Digital Network Exploitation (DNE)** by modeling adversary behaviors, access paths, identity misuse, and network visibility gaps using reproducible, OPSEC-safe lab environments.
+---
+
+## ⭐ Flagship Project: ShadowHound
+
+**ShadowHound** is an identity attack-path analysis engine for **Active Directory**, designed to support **Target Digital Network Analysis (TDNA)** and **Digital Network Exploitation (DNE)** missions.
+
+It applies graph analysis and ML-assisted risk scoring to reason about **privilege escalation paths, lateral movement, and exploitation feasibility**, treating identity infrastructure as a primary target surface.
+
+📂 **Start here:** `shadowhound/`  
+➡️ If you only review one AI-driven project, this is the recommended entry point.
 
 ---
 
@@ -23,19 +32,6 @@ With emphasis on:
 
 ## Project Suite Overview
 
-### 🔴 RedRiver — AI-Assisted Network Flow Analysis
-Models adversary-relevant network behaviors to support access-path reasoning and detection analysis.
-
-**Focus areas:**
-- Synthetic flow generation
-- Behavioral feature engineering
-- ML-based traffic classification
-- FastAPI-based inference
-
-Supports TDNA by characterizing network exposure and attacker tradecraft at the flow level.
-
----
-
 ### 🔵 ShadowHound — Identity Attack Path Analysis (Active Directory)
 Analyzes identity relationships and privilege escalation paths using graph-based analytics.
 
@@ -46,6 +42,19 @@ Analyzes identity relationships and privilege escalation paths using graph-based
 - ML-assisted risk scoring
 
 Supports TDNA/DNE by treating identity as a primary access surface.
+
+---
+
+### 🔴 RedRiver — AI-Assisted Network Flow Analysis
+Models adversary-relevant network behaviors to support access-path reasoning and detection analysis.
+
+**Focus areas:**
+- Synthetic flow generation
+- Behavioral feature engineering
+- ML-based traffic classification
+- FastAPI-based inference
+
+Supports TDNA by characterizing network exposure and attacker tradecraft at the flow level.
 
 ---
 
