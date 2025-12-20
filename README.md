@@ -2,6 +2,19 @@
 **By Jan Zabala — TDNA | DNE | AI-Assisted Target Analytics | Identity & Network Attack Paths**
 
 ---
+## What This Portfolio Is
+
+This portfolio shows how I analyze digital networks the way an attacker would —
+not just looking for vulnerabilities, but understanding how systems, identities,
+and trust relationships connect and can be abused together.
+
+Instead of focusing on individual tools or exploits, the work here emphasizes
+attack-path reasoning: how access is realistically gained, how it spreads, and
+which paths are actually worth pursuing.
+
+The projects combine offensive security techniques, intelligence-style analysis,
+and automation to demonstrate how complex environments can be broken down,
+understood, and targeted in a deliberate way.
 
 ## ⭐ Flagship Project: ShadowHound
 

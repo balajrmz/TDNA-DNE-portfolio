@@ -3,6 +3,19 @@
 **ShadowHound** is a target-centric analysis engine for **Active Directory identity attack paths**.  
 It ingests BloodHound-style graph data, computes graph-based features, applies ML-assisted risk scoring, and exposes results via an API.
 
+## What ShadowHound Does
+
+ShadowHound is a project built to understand how attackers move through Active
+Directory by abusing identity relationships rather than exploiting software bugs.
+
+In most real environments, attackers don’t need zero-days — they rely on
+misconfigured permissions, group memberships, and trust relationships that
+already exist. ShadowHound maps those relationships and highlights which ones
+can realistically be chained together to gain higher levels of access.
+
+The goal is to help analysts decide where an attack is most likely to succeed,
+so effort is focused on the paths that actually matter.
+
 **Tags:** TDNA, DNE, Active Directory, Identity Attack Paths, BloodHound, Graph Analysis, FastAPI, Machine Learning
 
 ---

@@ -3,6 +3,19 @@
 
 This directory contains AI/ML-assisted projects focused on **offensive security, target analysis, and adversary-centric reasoning**.
 
+## What These Projects Are
+
+These projects explore how automation and machine learning can help analysts
+understand complex attack surfaces faster and more clearly.
+
+Rather than using AI for alerting or dashboards, the focus here is on analysis:
+modeling attacker behavior, identifying meaningful patterns, and highlighting
+where effort is most likely to pay off.
+
+Each project is designed to support offensive security and target analysis by
+reducing guesswork and helping analysts reason about risk, access, and impact
+before taking action.
+
 ---
 
 ## ⭐ Flagship Project: ShadowHound
