@@ -1,6 +1,7 @@
-## Network Segmentation
+## Baseline Controls
 
-- Domain Controllers on isolated DC VLAN
-- Member servers on server VLAN
-- Client workstations on user VLAN
-- Attacker host located on same logical client network
+- Default Windows Event Auditing enabled
+- No custom SIEM correlation rules
+- No ASR rules blocking Kerberos abuse
+- No gMSA usage for legacy SQL service
+
