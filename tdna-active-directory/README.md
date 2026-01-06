@@ -1,19 +1,20 @@
 # TDNA – Active Directory Kerberos Assessment
 
-This repository contains a two-part Active Directory assessment conducted using a **Trust-Driven Network Analysis (TDNA)** methodology.  
-The purpose of this work is to demonstrate how Kerberos attack feasibility changes based on **service account design and configuration**.
+This repository contains a **two-part Active Directory Kerberos assessment** conducted using a **Trust-Driven Network Analysis (TDNA)** methodology.
 
-This repository is intentionally structured to show **cause-and-effect**, not just exploitation.
+The purpose of this work is to demonstrate **how Kerberos attack feasibility changes based on service account design and configuration**, not just how to execute an attack.
+
+This repository is intentionally structured to show **cause-and-effect**, rather than exploitation in isolation.
 
 ---
 
 ## What This Repository Demonstrates
 
-- A **hardened Active Directory baseline** where Kerberoasting is not possible
-- A **deliberately misconfigured Active Directory environment** where Kerberoasting becomes viable
-- A controlled, evidence-backed comparison using identical attacker positioning
-- Windows-native attacker workflows aligned with real enterprise environments
-- Clear documentation of both **offensive impact** and **defensive visibility**
+- A **hardened Active Directory baseline** where Kerberoasting is not possible  
+- A **deliberately misconfigured Active Directory environment** where Kerberoasting becomes viable  
+- A controlled comparison using **identical attacker positioning**  
+- Windows-native attacker workflows aligned with real enterprise environments  
+- Clear defensive visibility through Kerberos and security event logging  
 
 ---
 
@@ -21,73 +22,61 @@ This repository is intentionally structured to show **cause-and-effect**, not ju
 
 ```
 tdna-active-directory/
-│
 ├── reports/
 │   ├── report-01-hardened-ad/
-│   │   └── TDNA_Report_1_Hardened_AD_Final.docx
-│   │
+│   │   └── Report_01_Hardened_AD.pdf
 │   └── report-02-vulnerable-ad/
-│       └── TDNA_Report_2_Vulnerable_AD_Final_Formatted.docx
+│       └── Report_02_Vulnerable_AD.pdf
 │
 ├── methodology/
 │   ├── tdna-phases.md
 │   └── kerberos-attack-model.md
 │
-└── lab-environment/
-    ├── ad-architecture.md
-    └── assumptions.md
+├── lab-environment/
+│   └── .gitkeep
+│
+└── README.md
 ```
 
 ---
 
-## Report Overview
+## Reports
 
-### Report 1 – Hardened Active Directory (Baseline / Control)
-This report documents a secure Active Directory configuration where:
-- No user-based service accounts with SPNs exist
-- Kerberos service tickets are issued only to machine principals
-- Kerberoasting is **not applicable**
+### Report 01 – Hardened Active Directory  
+**Kerberoasting Not Possible**
 
-This report serves as the **control baseline** for comparison.
+📄 **PDF:**  
+[Report_01_Hardened_AD.pdf](reports/report-01-hardened-ad/Report_01_Hardened_AD.pdf)
 
 ---
 
-### Report 2 – Vulnerable Active Directory (Intentional Misconfiguration)
-This report demonstrates Kerberoasting feasibility after a **controlled security regression**, including:
-- Introduction of a user-managed service account
-- Registration of a Service Principal Name (SPN)
-- Use of non-expiring credentials and legacy encryption
+### Report 02 – Vulnerable Active Directory  
+**Kerberoasting Enabled by Design**
 
-The report documents:
-- Attacker-side enumeration
-- Kerberos ticket issuance
-- Event log correlation
-- Risk validation
+📄 **PDF:**  
+[Report_02_Vulnerable_AD.pdf](reports/report-02-vulnerable-ad/Report_02_Vulnerable_AD.pdf)
 
 ---
 
 ## Methodology
 
-Assessments follow TDNA-aligned phases:
-
-1. Environment & Trust Validation  
-2. Authentication & Kerberos Analysis  
-3. Controlled Configuration Change  
-4. Exploitation & Impact Validation  
-5. Defensive Signal Mapping  
-
-This approach mirrors how enterprise security teams evaluate identity-based risk.
+This assessment follows a **Trust-Driven Network Analysis (TDNA)** approach:
+1. Establish trust boundaries  
+2. Validate default behavior  
+3. Introduce controlled misconfiguration  
+4. Observe attacker feasibility  
+5. Correlate attacker actions with defender telemetry  
 
 ---
 
 ## Disclaimer
 
-All vulnerabilities demonstrated in this repository were **introduced intentionally** for training, research, and portfolio purposes.  
-This repository does **not** represent a production environment.
+This repository is for **educational and defensive research purposes only**.  
+All environments are **isolated lab systems** with no production data.
 
 ---
 
 ## Author
 
-Jan Zabala  
-TDNA / Active Directory Security Research  
+**Jan Zabala**  
+
