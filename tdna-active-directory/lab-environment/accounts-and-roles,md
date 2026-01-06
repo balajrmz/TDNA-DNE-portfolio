@@ -1,0 +1,6 @@
+## Service Accounts
+
+| Account  | Purpose          | Privileges        | Password Policy |
+|--------|------------------|-------------------|-----------------|
+| svc_sql | SQL Server SPN   | Domain User       | Never Expires   |
+| SRV-RTR$ | SQL host machine | Computer Account | Managed         |
