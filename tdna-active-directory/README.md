@@ -2,9 +2,20 @@
 
 This repository contains a **two-part Active Directory Kerberos assessment** conducted using a **Trust-Driven Network Analysis (TDNA)** methodology.
 
-The purpose of this work is to demonstrate **how Kerberos attack feasibility changes based on service account design and configuration**, not just how to execute an attack.
+To maintain professional clarity, **internal lab hostnames have been abstracted** in documentation to reflect enterprise-typical naming conventions. The technical findings and workflows remain unchanged.
 
-This repository is intentionally structured to show **cause-and-effect**, rather than exploitation in isolation.
+---
+
+## Naming Abstraction
+
+| Lab Hostname | Documented Name |
+|-------------|-----------------|
+| CaramelDC   | DC-PRIMARY      |
+| OnlyFanDC  | DC-SECONDARY    |
+| SRV-RTR    | SQL-SRV-01      |
+| ATTACKER   | WKSTN-ATTACK-01 |
+
+All reports and documentation below use the **Documented Name** column.
 
 ---
 
@@ -79,4 +90,5 @@ All environments are **isolated lab systems** with no production data.
 ## Author
 
 **Jan Zabala**  
-
+Senior Cybersecurity Analyst  
+Identity, Active Directory, and Kerberos Security
