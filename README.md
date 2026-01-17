@@ -121,7 +121,7 @@ Each directory contains a dedicated README with sanitized notes and methodology.
 
 ---
 
----## 🧩 Identity as a Control Plane (On-Prem → Hybrid → Cloud)
+## 🧩 Identity as a Control Plane (On-Prem → Hybrid → Cloud)
 
 This portfolio places particular emphasis on **identity as a control plane** across modern enterprise environments.
 
