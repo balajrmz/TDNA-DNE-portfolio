@@ -203,3 +203,25 @@ Focused on adversary-centric, AI-accelerated network targeting
 GitHub: https://github.com/balajrmz  
 LinkedIn: https://www.linkedin.com/in/jan-zabala-5aaa59380  
 Email: jzabala81@protonmail.com
+
+
+---
+
+## 🧩 Identity as a Control Plane (On-Prem → Hybrid → Cloud)
+
+This portfolio places particular emphasis on **identity as a control plane** across modern enterprise environments.
+
+Rather than treating Active Directory, hybrid identity, and cloud IAM as separate problems, the work here models how **trust, privilege, and attack paths evolve** as organizations transition from on‑prem infrastructure to hybrid and cloud operating models.
+
+### Highlighted Identity Work
+
+- **Hybrid Identity Attack Paths**  
+  Conceptual modeling of how identity risk and Tier 0 control shift from on‑prem Active Directory into hybrid identity and cloud control planes. Emphasizes enterprise guardrails, risk prioritization, and operational safety during cloud adoption.
+
+- **Identity Attack Paths**  
+  On‑prem Active Directory trust and privilege analysis using attack‑path reasoning to identify high‑impact escalation and lateral movement opportunities.
+
+- **ShadowHound**  
+  Identity attack‑path analysis focused on **prioritization and impact**, designed to reduce noise and help security teams focus remediation efforts on the paths that matter most.
+
+Together, these projects demonstrate a cohesive approach to identity‑centric targeting that aligns offensive insight with defensive and operational reality.
